@@ -14,6 +14,7 @@ public class Test {
 			System.out.println("먹는 거에 진심");
 			System.out.println("??");
 			System.out.println("??");
+			System.out.println("???");
 			System.out.println("??");
 			System.out.println("??");
 			System.out.println("??");
