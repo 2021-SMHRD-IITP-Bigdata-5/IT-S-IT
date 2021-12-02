@@ -3,12 +3,13 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		// Github È¯°æ¼³Á¤
-		// 1. JDK ¹öÀü
-		// 2. Tomcat ¹öÀü
-		// 3. Encoding ¹æ½Ä (UTF-8)
+		// Github í™˜ê²½ì„¤ì •
+		// 1. JDK ë²„ì „
+		// 2. Tomcat ë²„ì „
+		// 3. Encoding ë°©ì‹(UTF-8)
 		
 		System.out.println("Tomorrow lunch is hansot..");
+		System.out.println("ë¨¹ëŠ” ê±°ì— ì§„ì‹¬");
 	}
 
 }
