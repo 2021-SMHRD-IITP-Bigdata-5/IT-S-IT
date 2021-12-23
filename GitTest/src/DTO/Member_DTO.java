@@ -38,6 +38,18 @@ public class Member_DTO {
 		this.mem_edu = mem_edu;
 		this.admin_yn = admin_yn;
 	}
+	
+	public Member_DTO(String mem_id, String mem_pw, String mem_name, int mem_age, String mem_region, String mem_phone,
+			String mem_edu) {
+		super();
+		this.mem_id = mem_id;
+		this.mem_pw = mem_pw;
+		this.mem_name = mem_name;
+		this.mem_age = mem_age;
+		this.mem_region = mem_region;
+		this.mem_phone = mem_phone;
+		this.mem_edu = mem_edu;
+	}
 
 	public String getMem_id() {
 		return mem_id;
