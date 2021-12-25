@@ -3,8 +3,15 @@ package DAO;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import DTO.Member_DTO;
 
 public class Member_DAO {
+	
+	ResultSet rs = null;
+	
 	
 	public int Join(String mem_id, String mem_pw, String mem_name, int mem_age, String mem_region, String mem_phone,
 			String mem_edu) {
@@ -56,4 +63,57 @@ public class Member_DAO {
 		}
 		return cnt;
 	}
+	
+	public Member_DTO Login(String mem_id, String mem_pw)  {
+		Connection conn = null;
+		PreparedStatement psmt = null;
+		Member_DTO dto = new Member_DTO(mem_id,mem_pw);
+		int cnt = 0;
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524";
+			String dbid = "cgi_7_3_1216";
+			String dbpw = "smhrd3";
+
+			conn = DriverManager.getConnection(url, dbid, dbpw);
+			
+			String sql = "select * from tbl_member where mem_id = ? and mem_pw = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, mem_id);
+			psmt.setString(2, mem_pw);
+			rs = psmt.executeQuery();
+			
+			if (rs.next()) {
+				dto = new Member_DTO(rs.getString(1),
+						rs.getString(2),rs.getString(3),rs.getInt(4),
+						rs.getString(5),rs.getString(6),rs.getString(7),
+						rs.getString(8),rs.getString(10));
+				if(mem_id.equals(dto.getMem_id())&&mem_pw.equals(dto.getMem_pw()))
+				{
+					
+				}
+				
+			}
+			
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			System.out.println("무조건실행");
+			try {
+				if (psmt != null) {
+					psmt.close();
+				}
+				if (conn != null) {
+					conn.close();
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return dto;
+		}
 }
