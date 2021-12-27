@@ -11,9 +11,12 @@ public class Member_DTO {
 	private String mem_edu;
 	private String mem_c_edu;
 	private String admin_yn;
+	private String mem_nick;
 	
+	
+
 	public Member_DTO(String mem_id, String mem_pw, String mem_name, int mem_age, String mem_region, String mem_phone,
-			String mem_edu, String mem_c_edu, String admin_yn) {
+			String mem_edu, String mem_c_edu, String admin_yn, String mem_nick) {
 		super();
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;
@@ -24,10 +27,11 @@ public class Member_DTO {
 		this.mem_edu = mem_edu;
 		this.mem_c_edu = mem_c_edu;
 		this.admin_yn = admin_yn;
+		this.mem_nick = mem_nick;
 	}
 
 	public Member_DTO(String mem_id, String mem_pw, String mem_name, int mem_age, String mem_region, String mem_phone,
-			String mem_edu, String admin_yn) {
+			String mem_edu, String admin_yn, String mem_nick) {
 		super();
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;
@@ -37,6 +41,7 @@ public class Member_DTO {
 		this.mem_phone = mem_phone;
 		this.mem_edu = mem_edu;
 		this.admin_yn = admin_yn;
+		this.mem_nick = mem_nick;
 	}
 	
 	public Member_DTO(String mem_id, String mem_pw, String mem_name, int mem_age, String mem_region, String mem_phone,
@@ -49,6 +54,14 @@ public class Member_DTO {
 		this.mem_region = mem_region;
 		this.mem_phone = mem_phone;
 		this.mem_edu = mem_edu;
+	}
+	
+	public String getMem_nick() {
+		return mem_nick;
+	}
+
+	public void setMem_nick(String mem_nick) {
+		this.mem_nick = mem_nick;
 	}
 
 	public String getMem_id() {
