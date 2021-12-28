@@ -37,7 +37,6 @@ public class Member_DAO {
 	public int Join(String mem_id, String mem_pw, String mem_name, int mem_age, String mem_region, String mem_phone,
 			String mem_edu, String mem_nick) {
 
-		int cnt = 0;
 
 		try {
 			getConn();
@@ -77,18 +76,10 @@ public class Member_DAO {
 
 
 	public Member_DTO Login(String mem_id, String mem_pw)  {
-		Connection conn = null;
-		PreparedStatement psmt = null;
 		Member_DTO dto = new Member_DTO(mem_id,mem_pw);
-		int cnt = 0;
+		Member_DAO dao = new Member_DAO();
 		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-
-			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524";
-			String dbid = "cgi_7_3_1216";
-			String dbpw = "smhrd3";
-
-			conn = DriverManager.getConnection(url, dbid, dbpw);
+			dao.getConn();
 			
 			String sql = "select * from tbl_member where mem_id = ? and mem_pw = ?";
 			psmt = conn.prepareStatement(sql);
