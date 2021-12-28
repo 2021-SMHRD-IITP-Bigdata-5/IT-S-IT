@@ -24,8 +24,9 @@ public class JoinCon extends HttpServlet {
 		String mem_area = request.getParameter("mem_area");
 		String mem_phone = request.getParameter("mem_phone");
 		String mem_edu = request.getParameter("mem_edu");
+		String mem_nick = request.getParameter("mem_nick");
 		Member_DAO dao = new Member_DAO();
-		int cnt = dao.Join(mem_id, mem_pw, mem_name, mem_age,mem_area,mem_phone,mem_edu);
+		int cnt = dao.Join(mem_id, mem_pw, mem_name, mem_age,mem_area,mem_phone,mem_edu,mem_nick);
 		Member_DTO dto = new Member_DTO(mem_id, mem_pw, mem_name, mem_age,mem_area,mem_phone,mem_edu);
 	}
 

@@ -12,31 +12,31 @@ import javax.servlet.http.HttpServletResponse;
 import DAO.Member_DAO;
 import DAO.UserDAO;
 
-@WebServlet("/UserCon")
-public class UserCon extends HttpServlet {
+@WebServlet("/NickCon")
+public class NickCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 	request.setCharacterEncoding("utf-8");
 	
-	String user_id = request.getParameter("user_id");
+	String user_nick = request.getParameter("user_nick");
 	
 	PrintWriter out = response.getWriter();
 	
 	UserDAO dao = new UserDAO();
 	
-	int id_check = dao.id_check(user_id);
-		System.out.println(user_id);
+	int nick_check = dao.nick_check(user_nick);
+		System.out.println(user_nick);
 	
-	if(id_check == 0) {
+	if(nick_check == 0) {
 		// 중복된 아이디일때 0을 반환
-		System.out.println("이미 존재하는 아이디 입니다.");
-	}else if(id_check == 1) {
+		System.out.println("이미 존재하는 닉네임 입니다.");
+	}else if(nick_check == 1) {
 		// 중복된 아이디가 아닐때 1을 반환
-		System.out.println("사용 가능한 아이디 입니다.");
+		System.out.println("사용 가능한 닉네임 입니다.");
 	}
 	
-	out.print(id_check + "");
+	out.print(nick_check + "");
 	
 	
 	}

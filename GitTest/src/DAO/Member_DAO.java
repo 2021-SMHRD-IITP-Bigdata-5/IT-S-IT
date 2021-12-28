@@ -8,16 +8,17 @@ import java.sql.SQLException;
 
 import DTO.Member_DTO;
 
+import DTO.Member_DTO;
+
 public class Member_DAO {
-	
+	Connection conn = null;
+	PreparedStatement psmt = null;
+	int cnt = 0;
 	ResultSet rs = null;
 	
 	
-	public int Join(String mem_id, String mem_pw, String mem_name, int mem_age, String mem_region, String mem_phone,
-			String mem_edu) {
-		Connection conn = null;
-		PreparedStatement psmt = null;
-		int cnt = 0;
+	public void getConn()
+	{
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
@@ -26,9 +27,21 @@ public class Member_DAO {
 			String dbpw = "smhrd3";
 
 			conn = DriverManager.getConnection(url, dbid, dbpw);
+		} catch (Exception e) {
+			System.out.println("클래스파일 로딩실패");
+			e.printStackTrace(); // 어떤 오류가 생겼는지 변수e로 받아서 출력print해줌
+		}
+	}
 		
 
-			String sql = "insert into tbl_member values(?, ?, ?, ?, ?, ?, ?,'N',sysdate,'N')";
+	public int Join(String mem_id, String mem_pw, String mem_name, int mem_age, String mem_region, String mem_phone,
+			String mem_edu, String mem_nick) {
+
+
+		try {
+			getConn();
+
+			String sql = "insert into tbl_member values(?, ?, ?, ?, ?, ?, ?,'N',sysdate,'N',?)";
 
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, mem_id);
@@ -38,14 +51,11 @@ public class Member_DAO {
 			psmt.setString(5, mem_region);
 			psmt.setString(6, mem_phone);
 			psmt.setString(7, mem_edu);
-			
+			psmt.setString(8, mem_nick);
 			cnt = psmt.executeUpdate();
-			
-
-		
 
 		} catch (Exception e) {
-			System.out.println("클래스파일 로딩실패");
+			System.out.println("db연결실패");
 			e.printStackTrace(); // 어떤 오류가 생겼는지 변수e로 받아서 출력print해줌
 		} finally {
 			System.out.println("무조건실행");
@@ -63,20 +73,13 @@ public class Member_DAO {
 		}
 		return cnt;
 	}
-	
+
+
 	public Member_DTO Login(String mem_id, String mem_pw)  {
-		Connection conn = null;
-		PreparedStatement psmt = null;
 		Member_DTO dto = new Member_DTO(mem_id,mem_pw);
-		int cnt = 0;
+		Member_DAO dao = new Member_DAO();
 		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-
-			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524";
-			String dbid = "cgi_7_3_1216";
-			String dbpw = "smhrd3";
-
-			conn = DriverManager.getConnection(url, dbid, dbpw);
+			dao.getConn();
 			
 			String sql = "select * from tbl_member where mem_id = ? and mem_pw = ?";
 			psmt = conn.prepareStatement(sql);
@@ -115,5 +118,5 @@ public class Member_DAO {
 			}
 		}
 		return dto;
-		}
+	}
 }
