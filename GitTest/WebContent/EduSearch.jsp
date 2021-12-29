@@ -88,9 +88,9 @@
 			</tr>
 			</thead>
 
-			<tobody id="tbody"> 
+			<tbody id="tbody"> 
  
- 			</tobody>
+ 			</tbody>
 		</table>
 		
 	</div>
@@ -98,11 +98,15 @@
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
 	function EduSearch() {
-
+		console.log($('input[name=edu_info]').val())
+		console.log($('#area_sel').val())
+		console.log($('#part_sel').val())
+		console.log($('#kind_sel').val())
 		$.ajax({
 			url : "EduCon",
-			type : "get",
+			type : "post",
 			data : {
+				
 				"edu_info" : $('input[name=edu_info]').val(),
 				// edu_name, edu_org
 				
@@ -112,20 +116,26 @@
 			},
 			success : function(res) {
 				console.log(res);
-				
 				$('#tbody').html('');
-				for(let i = 0; i < res.length; i++){
+				for(var i = 0; i < res.length; i++){
 					// 태그 만들기
 					// 1. 빈문자열을 가진 변수를 하나 생성
 					// 2. 그 안에 태그값을 누적
 					let table = '';
 					table += '<tr>';
-					table += '<td>' + res[i].email + '</td>';
-					table += '<td>' + res[i].tel + '</td>';
-					table += '<td>' + res[i].address + '</td>';
-					table += "<td><a href='DeleteCon.do?delete_email="+res[i].email+"'>삭제</a></td>"
+					table += '<td>' + res[i].edu_name + '</td>';
+					table += '<td>' + res[i].edu_price + '</td>';
+					table += '<td>' + res[i].edu_total + '</td>';
+					table += '<td>' + res[i].edu_edu_org + '</td>';
+					table += '<td>' + res[i].edu_org_phone + '</td>';
+					table += '<td>' + res[i].edu_start_date + '</td>';
+					table += '<td>' + res[i].edu_end_date + '</td>';
+					table += '<td>' + res[i].edu_homepage + '</td>';
+					table += '<td>' + res[i].edu_ministry + '</td>';
+					table += '<td>' + res[i].edu_hrdlink + '</td>';
+					table += '<td>' + res[i].edu_addr + '</td>';
+					table += '<td>' + res[i].edu_kind + '</td>';
 					table += '</tr>';
-					
 					// javascript로 html 태그 제작하는 4가지 방법
 					// .html()
 					// .after()

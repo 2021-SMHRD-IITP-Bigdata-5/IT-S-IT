@@ -16,7 +16,6 @@ public class EduDAO {
 
 	int cnt = 0;
 	EduDTO dto = null;
-	private boolean check;
 
 	public void getConn() {
 		try {
@@ -62,10 +61,6 @@ public class EduDAO {
 	public ArrayList<EduDTO> Search(String s_edu_info, String s_edu_addr, String s_edu_part, String s_edu_kind) {
 
 		ArrayList<EduDTO> search_list = new ArrayList<EduDTO>();
-		// memberDTO dto만 변수로 return하면 한행씩만 실행되어
-		// 마지막 한 행만 html에 표시하게 됨 (이전값은 덮어씌움)
-		// DB의 모든 행을 출력하기 위해서는
-		// memberDTO를 arraylist로 묶어줌 (가변성있는 리스트)
 
 		try {
 
@@ -73,19 +68,17 @@ public class EduDAO {
 
 			// ---------------------------DB연결
 
-			String sql = "Select * from tbl_education "
-					+ "where (edu_name like ? or edu_org like ?)"
+			String sql = "Select * from tbl_education where edu_name like ? "
 					+ "and edu_addr like ?"
 					+ "and edu_part like ?"
-					+ "and edu_kind is ?";
+					+ "and edu_kind like ?";
 
 			psmt = conn.prepareStatement(sql);
 			psmt.setNString(1, "%"+s_edu_info+"%");
-			psmt.setNString(2, "%"+s_edu_info+"%");
-			
-			psmt.setNString(3, "%"+s_edu_addr+"%");
-			psmt.setNString(4, "%"+s_edu_part+"%");
-			psmt.setNString(5, "%"+s_edu_kind+"%");
+//			psmt.setNString(2, "%"+s_edu_info+"%");
+			psmt.setNString(2, "%"+s_edu_addr+"%");
+			psmt.setNString(3, "%"+s_edu_part+"%");
+			psmt.setNString(4, "%"+s_edu_kind+"%");
 
 			rs = psmt.executeQuery();
 
@@ -114,9 +107,8 @@ public class EduDAO {
 				// arr[0] = dto(email이 smart사용자 행의 정보)
 				// arr[1] = 다음사용자의 정보를 dto에 담아줌
 
-				System.out.println("");
 			}
-
+			System.out.println(search_list);
 		} catch (Exception e) {
 			// ClassNotFoundException, SQLException도 가능가능
 			System.out.println("클래스파일 로딩실패");
