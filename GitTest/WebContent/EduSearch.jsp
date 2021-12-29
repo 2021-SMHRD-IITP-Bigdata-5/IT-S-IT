@@ -114,27 +114,30 @@
 				"edu_part" : $('#part_sel').val(),
 				"edu_kind" : $('#kind_sel').val()
 			},
+			dataType:"json",
 			success : function(res) {
-				console.log(res);
+				
+				
 				$('#tbody').html('');
-				for(var i = 0; i < res.length; i++){
+				for(var i = 0; i < res.length; i++){3
 					// 태그 만들기
 					// 1. 빈문자열을 가진 변수를 하나 생성
 					// 2. 그 안에 태그값을 누적
+					let result = JSON.parse(res[i]);
 					let table = '';
 					table += '<tr>';
-					table += '<td>' + res[i].edu_name + '</td>';
-					table += '<td>' + res[i].edu_price + '</td>';
-					table += '<td>' + res[i].edu_total + '</td>';
-					table += '<td>' + res[i].edu_edu_org + '</td>';
-					table += '<td>' + res[i].edu_org_phone + '</td>';
-					table += '<td>' + res[i].edu_start_date + '</td>';
-					table += '<td>' + res[i].edu_end_date + '</td>';
-					table += '<td>' + res[i].edu_homepage + '</td>';
-					table += '<td>' + res[i].edu_ministry + '</td>';
-					table += '<td>' + res[i].edu_hrdlink + '</td>';
-					table += '<td>' + res[i].edu_addr + '</td>';
-					table += '<td>' + res[i].edu_kind + '</td>';
+					table += '<td>' + result.edu_name + '</td>';
+					table += '<td>' + result.edu_price + '</td>';
+					table += '<td>' + result.edu_total + '</td>';
+					table += '<td>' + result.edu_edu_org + '</td>';
+					table += '<td>' + result.edu_org_phone + '</td>';
+					table += '<td>' + result.edu_start_date + '</td>';
+					table += '<td>' + result.edu_end_date + '</td>';
+					table += '<td>' + result.edu_homepage + '</td>';
+					table += '<td>' + result.edu_ministry + '</td>';
+					table += '<td>' + result.edu_hrdlink + '</td>';
+					table += '<td>' + result.edu_addr + '</td>';
+					table += '<td>' + result.edu_kind + '</td>';
 					table += '</tr>';
 					// javascript로 html 태그 제작하는 4가지 방법
 					// .html()
