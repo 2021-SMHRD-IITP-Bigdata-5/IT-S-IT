@@ -11,7 +11,7 @@ public class Education_DAO {
 		ArrayList<Education_DTO> latest_dto = new ArrayList<Education_DTO>();
 		try {
 			dao.getConn();
-			String sql = "select distinct edu_name, edu_org, edu_start_date, edu_end_date from tbl_education where edu_start_date>=sysdate order by edu_start_date";
+			String sql = "select distinct edu_name, edu_homepage, edu_start_date, edu_end_date from tbl_education where edu_start_date>=sysdate order by edu_start_date";
 			dao.psmt = dao.conn.prepareStatement(sql);
 			dao.rs = dao.psmt.executeQuery();
 			
@@ -24,6 +24,7 @@ public class Education_DAO {
 				end_date = end_date.substring(0,10);
 				Education_DTO edu_dto = new Education_DTO(dao.rs.getString(1),dao.rs.getString(2),start_date,end_date);
 				latest_dto.add(edu_dto);
+				System.out.println(latest_dto.get(i).getEdu_homepage());
 			}	
 			
 			
