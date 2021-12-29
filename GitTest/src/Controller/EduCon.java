@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
-import com.message.DAO.memberDAO;
-import com.message.DTO.memberDTO;
 
 import DAO.EduDAO;
 import DAO.UserDAO;
