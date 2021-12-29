@@ -18,9 +18,12 @@ public class Education_DAO {
 			for(int i=0;i<6;i++)
 			{
 				dao.rs.next();
-				Education_DTO edu_dto = new Education_DTO(dao.rs.getString(1),dao.rs.getString(2),dao.rs.getString(3),dao.rs.getString(4));
+				String start_date = dao.rs.getString(3);
+				start_date = start_date.substring(0, 10);
+				String end_date = dao.rs.getString(4);
+				end_date = end_date.substring(0,10);
+				Education_DTO edu_dto = new Education_DTO(dao.rs.getString(1),dao.rs.getString(2),start_date,end_date);
 				latest_dto.add(edu_dto);
-				System.out.println(latest_dto.get(i));
 			}	
 			
 			
