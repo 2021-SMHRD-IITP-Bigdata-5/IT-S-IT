@@ -871,7 +871,7 @@
                                                                  ArrayList<Education_DTO> latest_dto = dao.latest();
                                                                  %>                                                                                                   <li>
                                         <article class="event_area event_card">
-                                            <a class="gtag_bn_item_type1" href="/cs/a/68288?url=%2Fevent%2F248598" target="_blank" title="[비전공자 환영] 프로젝트형 SW인재양성 교육생 모집" data-c="hotissue1"
+                                            <a class="gtag_bn_item_type1" href="https://<%=latest_dto.get(0).getEdu_homepage() %>/" target="_blank" title="[비전공자 환영] 프로젝트형 SW인재양성 교육생 모집" data-c="hotissue1"
                                                data-event_no="248598" data-event_title="[비전공자 환영] 프로젝트형 SW인재양성 교육생 모집" data-creative_name="PC_메인_모임상단 타입2" data-creative_slot="1">
                                                 <!-- 이미지 -->
                                                 <div class="event_thumbnail">
@@ -899,7 +899,7 @@
                                     </li>
                                                                                                                     <li>
                                         <article class="event_area event_card">
-                                            <a class="gtag_bn_item_type1" href="/cs/a/68678?url=%2Fevent%2F248052" target="_blank" title="[국비지원] 빅데이터 비즈니스를 위한 데이터 애널리스트 양성과정 2기 모집" data-c="hotissue2"
+                                            <a class="gtag_bn_item_type1" href="https://<%=latest_dto.get(1).getEdu_homepage() %>/" target="_blank" title="[국비지원] 빅데이터 비즈니스를 위한 데이터 애널리스트 양성과정 2기 모집" data-c="hotissue2"
                                                data-event_no="248052" data-event_title="[국비지원] 빅데이터 비즈니스를 위한 데이터 애널리스트 양성과정 2기 모집" data-creative_name="PC_메인_모임상단 타입2" data-creative_slot="2">
                                                 <!-- 이미지 -->
                                                 <div class="event_thumbnail">
@@ -910,7 +910,7 @@
                                                     <!-- 타이틀 -->
                                                     <div class="title_area">
                                                         <h5 class="title ellipsis">
-                                                            [국비지원] 빅데이터 비즈니스를 위한 데이터 애널리스트 양성과정 2기 모집                                                </h5>
+                                                            <%=latest_dto.get(1).getEdu_name()%>                                               </h5>
                                                     </div>
                                                     <!-- 정보 -->
                                                     <div class="event_info">
@@ -919,7 +919,7 @@
                                                                     무료    
                                                                 </span>
                                                                                                             </div>
-                                                        <div class="date">1.6 (목) ~ 6.16 (목)</div>
+                                                        <div class="date"><%=latest_dto.get(1).getEdu_start_date()%> ~ <%=latest_dto.get(1).getEdu_end_date() %></div>
                                                     </div>
                                                 </div>
                                             </a>
@@ -927,7 +927,7 @@
                                     </li>
                                                                                                                     <li>
                                         <article class="event_area event_card">
-                                            <a class="gtag_bn_item_type1" href="/cs/a/68852?url=%2Fevent%2F249483" target="_blank" title="작가와의 대화-노세환 개인전 MELTDOWN 다다프로젝트" data-c="hotissue3"
+                                            <a class="gtag_bn_item_type1" href="https://<%=latest_dto.get(2).getEdu_homepage() %>/" target="_blank" title="작가와의 대화-노세환 개인전 MELTDOWN 다다프로젝트" data-c="hotissue3"
                                                data-event_no="249483" data-event_title="작가와의 대화-노세환 개인전 MELTDOWN 다다프로젝트" data-creative_name="PC_메인_모임상단 타입2" data-creative_slot="3">
                                                 <!-- 이미지 -->
                                                 <div class="event_thumbnail">
@@ -938,7 +938,7 @@
                                                     <!-- 타이틀 -->
                                                     <div class="title_area">
                                                         <h5 class="title ellipsis">
-                                                            작가와의 대화-노세환 개인전 MELTDOWN 다다프로젝트                                                </h5>
+                                                            <%=latest_dto.get(2).getEdu_name()%>                                                </h5>
                                                     </div>
                                                     <!-- 정보 -->
                                                     <div class="event_info">
@@ -947,7 +947,7 @@
                                                                     무료    
                                                                 </span>
                                                                                                             </div>
-                                                        <div class="date">12.27 (월)</div>
+                                                        <div class="date"><%=latest_dto.get(2).getEdu_start_date()%> ~ <%=latest_dto.get(2).getEdu_end_date() %></div>
                                                     </div>
                                                 </div>
                                             </a>
@@ -955,7 +955,7 @@
                                     </li>
                                                                                                                     <li>
                                         <article class="event_area event_card">
-                                            <a class="gtag_bn_item_type1" href="/cs/a/68551?url=%2Fevent%2F248730" target="_blank" title="2021 KAMA 미술품 감정 및 유통기반 구축 컨퍼런스" data-c="hotissue4"
+                                            <a class="gtag_bn_item_type1" href="https://<%=latest_dto.get(3).getEdu_homepage() %>/" target="_blank" title="2021 KAMA 미술품 감정 및 유통기반 구축 컨퍼런스" data-c="hotissue4"
                                                data-event_no="248730" data-event_title="2021 KAMA 미술품 감정 및 유통기반 구축 컨퍼런스" data-creative_name="PC_메인_모임상단 타입2" data-creative_slot="4">
                                                 <!-- 이미지 -->
                                                 <div class="event_thumbnail">
@@ -966,7 +966,7 @@
                                                     <!-- 타이틀 -->
                                                     <div class="title_area">
                                                         <h5 class="title ellipsis">
-                                                            2021 KAMA 미술품 감정 및 유통기반 구축 컨퍼런스                                                </h5>
+                                                            <%=latest_dto.get(3).getEdu_name()%>                                                </h5>
                                                     </div>
                                                     <!-- 정보 -->
                                                     <div class="event_info">
@@ -975,7 +975,7 @@
                                                                     무료    
                                                                 </span>
                                                                                                             </div>
-                                                        <div class="date">12.17 (금)</div>
+                                                        <div class="date"><%=latest_dto.get(3).getEdu_start_date()%> ~ <%=latest_dto.get(3).getEdu_end_date() %></div>
                                                     </div>
                                                 </div>
                                             </a>
@@ -983,7 +983,7 @@
                                     </li>
                                                                                                                     <li>
                                         <article class="event_area event_card">
-                                            <a class="gtag_bn_item_type1" href="/cs/a/68840?url=%2Fevent%2F249457" target="_blank" title="[매일경제-멀티캠퍼스] 2022 CES 디브리핑 라이브 세미나" data-c="hotissue5"
+                                            <a class="gtag_bn_item_type1" href="https://<%=latest_dto.get(4).getEdu_homepage() %>/" target="_blank" title="[매일경제-멀티캠퍼스] 2022 CES 디브리핑 라이브 세미나" data-c="hotissue5"
                                                data-event_no="249457" data-event_title="[매일경제-멀티캠퍼스] 2022 CES 디브리핑 라이브 세미나" data-creative_name="PC_메인_모임상단 타입2" data-creative_slot="5">
                                                 <!-- 이미지 -->
                                                 <div class="event_thumbnail">
@@ -994,7 +994,7 @@
                                                     <!-- 타이틀 -->
                                                     <div class="title_area">
                                                         <h5 class="title ellipsis">
-                                                            [매일경제-멀티캠퍼스] 2022 CES 디브리핑 라이브 세미나                                                </h5>
+                                                            <%=latest_dto.get(4).getEdu_name()%>                                                </h5>
                                                     </div>
                                                     <!-- 정보 -->
                                                     <div class="event_info">
@@ -1003,7 +1003,7 @@
                                                                     유료    
                                                                 </span>
                                                                                                             </div>
-                                                        <div class="date">1.11 (화)</div>
+                                                        <div class="date"><%=latest_dto.get(4).getEdu_start_date()%> ~ <%=latest_dto.get(4).getEdu_end_date() %></div>
                                                     </div>
                                                 </div>
                                             </a>
@@ -1011,7 +1011,7 @@
                                     </li>
                                                                                                                     <li>
                                         <article class="event_area event_card">
-                                            <a class="gtag_bn_item_type1" href="/cs/a/68862?url=%2Fevent%2F249310" target="_blank" title="ALTER EGO 12월 전시 25인 작가 다다프로젝트" data-c="hotissue6"
+                                            <a class="gtag_bn_item_type1" href="http://<%=latest_dto.get(5).getEdu_homepage() %>/" target="_blank" title="ALTER EGO 12월 전시 25인 작가 다다프로젝트" data-c="hotissue6"
                                                data-event_no="249310" data-event_title="ALTER EGO 12월 전시 25인 작가 다다프로젝트" data-creative_name="PC_메인_모임상단 타입2" data-creative_slot="6">
                                                 <!-- 이미지 -->
                                                 <div class="event_thumbnail">
@@ -1022,7 +1022,7 @@
                                                     <!-- 타이틀 -->
                                                     <div class="title_area">
                                                         <h5 class="title ellipsis">
-                                                            ALTER EGO 12월 전시 25인 작가 다다프로젝트                                                </h5>
+                                                            <%=latest_dto.get(5).getEdu_name()%>                                                </h5>
                                                     </div>
                                                     <!-- 정보 -->
                                                     <div class="event_info">
@@ -1031,7 +1031,7 @@
                                                                     무료    
                                                                 </span>
                                                                                                             </div>
-                                                        <div class="date">12.20 (월) ~ 1.14 (금)</div>
+                                                        <div class="date"><%=latest_dto.get(5).getEdu_start_date()%> ~ <%=latest_dto.get(5).getEdu_end_date() %></div>
                                                     </div>
                                                 </div>
                                             </a>
