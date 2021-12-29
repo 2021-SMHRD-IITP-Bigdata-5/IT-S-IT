@@ -1,3 +1,6 @@
+<%@page import="DAO.Education_DAO"%>
+<%@page import="DTO.Education_DTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -863,7 +866,10 @@
                     <div class="content_wrap wide_max_width_area">
                         <div class="area_top">
                             <ul class="event_list">
-                                                                                                                                                                    <li>
+                                                                 <% 
+                                                                 Education_DAO dao = new Education_DAO();
+                                                                 ArrayList<Education_DTO> latest_dto = dao.latest();
+                                                                 %>                                                                                                   <li>
                                         <article class="event_area event_card">
                                             <a class="gtag_bn_item_type1" href="/cs/a/68288?url=%2Fevent%2F248598" target="_blank" title="[비전공자 환영] 프로젝트형 SW인재양성 교육생 모집" data-c="hotissue1"
                                                data-event_no="248598" data-event_title="[비전공자 환영] 프로젝트형 SW인재양성 교육생 모집" data-creative_name="PC_메인_모임상단 타입2" data-creative_slot="1">
@@ -876,7 +882,7 @@
                                                     <!-- 타이틀 -->
                                                     <div class="title_area">
                                                         <h5 class="title ellipsis">
-                                                            [비전공자 환영] 프로젝트형 SW인재양성 교육생 모집                                                </h5>
+                                                                  <%=latest_dto.get(0).getEdu_name() %>                                          </h5>
                                                     </div>
                                                     <!-- 정보 -->
                                                     <div class="event_info">
@@ -885,7 +891,7 @@
                                                                     무료    
                                                                 </span>
                                                                                                             </div>
-                                                        <div class="date">12.27 (월) ~ 6.8 (수)</div>
+                                                        <div class="date"><%=latest_dto.get(0).getEdu_start_date()%> ~ <%=latest_dto.get(0).getEdu_end_date() %></div>
                                                     </div>
                                                 </div>
                                             </a>
