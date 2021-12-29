@@ -16,7 +16,6 @@ public class Member_DAO {
 	int cnt = 0;
 	ResultSet rs = null;
 	
-	
 	public void getConn()
 	{
 		try {
