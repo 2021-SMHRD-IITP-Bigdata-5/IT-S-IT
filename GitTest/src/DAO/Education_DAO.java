@@ -68,7 +68,6 @@ public class Education_DAO {
 				for(int j=0;j<4;j++)
 				{
 					if(dao.rs.next()) {
-					System.out.println(list[i]+'\n'+j);
 					String start_date = dao.rs.getString(3);
 					start_date = start_date.substring(0, 10);
 					String end_date = dao.rs.getString(4);

@@ -27,8 +27,8 @@ public class LoginCon extends HttpServlet {
 		
 		
 		Member_DTO dto = dao.Login(mem_id,mem_pw);
-		
-		if(dto != null) {
+
+		if(dto!=null) {
 			session.setAttribute("dto", dto);
 			response.sendRedirect("main.jsp");
 		}else {

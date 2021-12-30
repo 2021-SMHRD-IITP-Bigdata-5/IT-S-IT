@@ -86,17 +86,14 @@ public class Member_DAO {
 			rs = psmt.executeQuery();
 			
 			if (rs.next()) {
-				if(mem_pw.equals(rs.getString(2)))
-				{
 					dto = new Member_DTO(rs.getString(1),
 							rs.getString(2),rs.getString(3),rs.getInt(4),
 							rs.getString(5),rs.getString(6),rs.getString(7),
 							rs.getString(8),rs.getString(10));
-				}
-				else {
+			}else {
 					dto =  null;
-				}
 			}
+			
 			
 			
 		} catch(Exception e) {
@@ -105,6 +102,9 @@ public class Member_DAO {
 		} finally {
 			System.out.println("무조건실행");
 			try {
+				if (rs != null) {
+					rs.close();
+				}
 				if (psmt != null) {
 					psmt.close();
 				}
