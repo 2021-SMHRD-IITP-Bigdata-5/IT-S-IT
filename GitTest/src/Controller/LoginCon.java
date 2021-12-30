@@ -28,11 +28,9 @@ public class LoginCon extends HttpServlet {
 		
 		
 		Member_DTO dto = dao.Login(mem_id,mem_pw);
-		
-		if(dto!=null) {
+		System.out.println(dto.getMem_id()+"\n"+dto.getMem_pw());
+		if(dto.getMem_id()!=null) {
 			session.setAttribute("dto", dto);
-			PrintWriter out = response.getWriter();
-			out.print("Login success");
 			response.sendRedirect("main.jsp");
 		}else {
 			response.sendRedirect("LoginFalse.jsp");

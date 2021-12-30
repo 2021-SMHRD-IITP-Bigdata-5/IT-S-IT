@@ -16,7 +16,6 @@ public class Member_DAO {
 	int cnt = 0;
 	ResultSet rs = null;
 	
-	
 	public void getConn()
 	{
 		try {
@@ -76,27 +75,26 @@ public class Member_DAO {
 
 
 	public Member_DTO Login(String mem_id, String mem_pw)  {
-		Member_DTO dto = new Member_DTO(mem_id,mem_pw);
-		Member_DAO dao = new Member_DAO();
+		Member_DTO dto = new Member_DTO();
 		try {
-			dao.getConn();
+			getConn();
 			
-			String sql = "select * from tbl_member where mem_id = ? and mem_pw = ?";
+			String sql = "select * from tbl_member where mem_id = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, mem_id);
-			psmt.setString(2, mem_pw);
 			rs = psmt.executeQuery();
 			
 			if (rs.next()) {
-				dto = new Member_DTO(rs.getString(1),
-						rs.getString(2),rs.getString(3),rs.getInt(4),
-						rs.getString(5),rs.getString(6),rs.getString(7),
-						rs.getString(8),rs.getString(10));
-				if(mem_id.equals(dto.getMem_id())&&mem_pw.equals(dto.getMem_pw()))
+				if(mem_pw.equals(rs.getString(2)))
 				{
-					
+					dto = new Member_DTO(rs.getString(1),
+							rs.getString(2),rs.getString(3),rs.getInt(4),
+							rs.getString(5),rs.getString(6),rs.getString(7),
+							rs.getString(8),rs.getString(10));
 				}
-				
+				else {
+					dto =  null;
+				}
 			}
 			
 			
