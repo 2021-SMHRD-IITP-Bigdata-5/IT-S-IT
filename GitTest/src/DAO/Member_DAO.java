@@ -79,9 +79,10 @@ public class Member_DAO {
 		try {
 			getConn();
 			
-			String sql = "select * from tbl_member where mem_id = ?";
+			String sql = "select * from tbl_member where mem_id = ? and mem_pw = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, mem_id);
+			psmt.setString(2, mem_pw);
 			rs = psmt.executeQuery();
 			
 			if (rs.next()) {
@@ -119,7 +120,7 @@ public class Member_DAO {
 	}
 
 
-	public int Update(  String mem_name, String mem_pw, String mem_phone, String mem_nick, String mem_id) {
+	public int Update(String mem_name, String mem_pw, String mem_phone, String mem_nick, String mem_id) {
 
 		Member_DTO dto = new Member_DTO(mem_id, mem_pw, mem_name, mem_phone, mem_nick);
 		try {
