@@ -1,3 +1,4 @@
+<%@page import="DTO.Member_DTO"%>
 <%@page import="DAO.Education_DAO"%>
 <%@page import="DTO.Education_DTO"%>
 <%@page import="java.util.ArrayList"%>
@@ -166,6 +167,7 @@
         </style>
         </head>
         <body class="onoffmix">
+        <% Member_DTO dto = (Member_DTO)session.getAttribute("dto");%>
         <article class="ie_end_support_popup_wrap">
             <h1>인터넷 익스플로러 (IE) 브라우저 지원 종료 안내</h1>
             <p>
@@ -235,8 +237,12 @@
         
                         <div class="user_area">
                             <ul class="service_menu">
+                            								<%if(dto==null){ %>
                                                             <li class="list_item login"><a href="./Login.html">로그인</a></li>
                                     <li class="list_item join"><a href="./Join.html">회원가입</a></li>
+                                    <%}else{ %>
+                                    <li class="list_item login"><a href="LogoutCon">로그아웃</a></li>
+                                    <%} %>
                                                         <li class="list_item service"><a href="/service">서비스안내</a></li>
                                 <li class="list_item customer"><a href="/cs/main">고객센터</a></li>
                             </ul>

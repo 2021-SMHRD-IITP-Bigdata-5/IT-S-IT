@@ -31,7 +31,6 @@ public class LoginCon extends HttpServlet {
 		System.out.println(dto.getMem_id()+"\n"+dto.getMem_pw());
 		if(dto.getMem_id()!=null) {
 			session.setAttribute("dto", dto);
-			PrintWriter out = response.getWriter();
 			response.sendRedirect("main.jsp");
 		}else {
 			response.sendRedirect("LoginFalse.jsp");
