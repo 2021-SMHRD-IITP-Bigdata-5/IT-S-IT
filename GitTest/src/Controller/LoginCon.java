@@ -29,7 +29,7 @@ public class LoginCon extends HttpServlet {
 		
 		Member_DTO dto = dao.Login(mem_id,mem_pw);
 		System.out.println(dto.getMem_id()+"\n"+dto.getMem_pw());
-		if(dto.getMem_id()!=null) {
+		if(dto.getMem_id()!=null||dto.getMem_pw()!=null) {
 			session.setAttribute("dto", dto);
 			response.sendRedirect("main.jsp");
 		}else {

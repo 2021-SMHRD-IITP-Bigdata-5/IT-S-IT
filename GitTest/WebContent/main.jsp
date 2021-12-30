@@ -167,7 +167,7 @@
         </style>
         </head>
         <body class="onoffmix">
-        <% Member_DTO dto = (Member_DTO)session.getAttribute("dto");%>
+        <%Member_DTO dto = (Member_DTO)session.getAttribute("dto");%>
         <article class="ie_end_support_popup_wrap">
             <h1>인터넷 익스플로러 (IE) 브라우저 지원 종료 안내</h1>
             <p>
