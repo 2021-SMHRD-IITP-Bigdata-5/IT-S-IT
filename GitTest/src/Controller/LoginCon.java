@@ -33,7 +33,7 @@ public class LoginCon extends HttpServlet {
 			session.setAttribute("dto", dto);
 			PrintWriter out = response.getWriter();
 			out.print("Login success");
-			//response.sendRedirect("main.jsp");
+			response.sendRedirect("main.jsp");
 		}else {
 			response.sendRedirect("LoginFalse.jsp");
 		}
