@@ -13,8 +13,18 @@ public class Member_DTO {
 	private String admin_yn;
 	private String mem_nick;
 	
-	
-	
+
+			
+
+	public Member_DTO(String mem_id, String mem_pw, String mem_name, String mem_phone, String mem_nick) {
+		super();
+		this.mem_id = mem_id;
+		this.mem_pw = mem_pw;
+		this.mem_name = mem_name;
+		this.mem_phone = mem_phone;
+		this.mem_nick = mem_nick;
+	}
+		
 	public Member_DTO() {
 		super();
 	}

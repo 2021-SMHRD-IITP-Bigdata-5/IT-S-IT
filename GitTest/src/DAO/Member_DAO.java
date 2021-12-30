@@ -117,4 +117,36 @@ public class Member_DAO {
 		}
 		return dto;
 	}
+
+
+	public int Update(  String mem_name, String mem_pw, String mem_phone, String mem_nick, String mem_id) {
+
+		Member_DTO dto = new Member_DTO(mem_id, mem_pw, mem_name, mem_phone, mem_nick);
+		try {
+			
+			getConn();
+			
+			String sql = "Update tbl_member Set mem_pw = ?, mem_name =?, mem_phone=?, mem_nick=? where mem_id=?";
+			psmt = conn.prepareStatement(sql);			
+			psmt.setString(1, mem_pw);
+			psmt.setString(2, mem_name);
+			psmt.setString(3, mem_phone);
+			psmt.setString(4, mem_nick);
+			psmt.setString(5, mem_id);
+					
+			cnt = psmt.executeUpdate();
+																																		
+	      } catch (Exception e) {
+	          // ClassNotFoundException, SQLException도 가능가능
+	          System.out.println("클래스파일 로딩실패");
+	          e.printStackTrace(); // 어떤 오류가 생겼는지 변수e로 받아서 출력print해줌
+	       } finally {
+	          
+	          
+	       }
+
+	       return cnt;
+
+	    }
 }
+
