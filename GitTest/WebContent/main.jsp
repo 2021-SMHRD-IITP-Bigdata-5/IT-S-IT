@@ -249,10 +249,17 @@
         
                             <ul class="member_menu">
                                 <li class="list_item mypage" tabindex="0">
+                                <%if(dto==null){%>
+                                  <li class="list_item eventopen"><a href="/event/add">모임개설</a></li>
+                                                        <li class="list_item notice">
+                                                                <a href="/account/login?returnUrl=/">알림</a>
+                                                            </li>
+                                                            <%}else {%>
                                     <a href="/account/main">마이페이지</a>
                                     <div class="sub_menu">
                                         <ul class="sub_list mypage_list">
-                                            <li><a href="/account/login?returnUrl=/account/edit" class="site_link edit">회원정보수정</a></li>
+                                        	                                     
+                                            <li><a href="Update.jsp" class="site_link edit">회원정보수정</a></li>                                           
                                             <li><a href="/account/login?returnUrl=/account/pass" class="site_link pass">비밀번호변경</a></li>
                                             <li><a href="/account/login?returnUrl=/account/event" class="site_link event">신청내역</a></li>
                                             <!-- <li><a href="/account/login?returnUrl=/account/payment" class="site_link payment">결제내역</a></li> -->
@@ -264,6 +271,7 @@
                                                         <li class="list_item notice">
                                                                 <a href="/account/login?returnUrl=/">알림</a>
                                                             </li>
+                                                            <%} %>
                             </ul>
                         </div>
                         <div class="search_area">

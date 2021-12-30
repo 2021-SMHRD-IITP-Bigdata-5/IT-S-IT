@@ -13,10 +13,10 @@ public class Member_DTO {
 	private String admin_yn;
 	private String mem_nick;
 	
-//<<<<<<< HEAD
+
 			
 
-	public Member_DTO(String mem_id,String mem_pw, String mem_name, String mem_phone, String mem_nick) {
+	public Member_DTO(String mem_id, String mem_pw, String mem_name, String mem_phone, String mem_nick) {
 		super();
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;

@@ -119,12 +119,12 @@ public class Member_DAO {
 	}
 
 
-	public Member_DTO Update(String mem_id, String mem_pw, String mem_name, String mem_phone, String mem_nick) {
+	public int Update(  String mem_name, String mem_pw, String mem_phone, String mem_nick, String mem_id) {
 
-		Member_DTO dto = new Member_DTO(mem_id,mem_pw, mem_name, mem_phone, mem_nick);
-		Member_DAO dao = new Member_DAO();
+		Member_DTO dto = new Member_DTO(mem_id, mem_pw, mem_name, mem_phone, mem_nick);
 		try {
-			dao.getConn();
+			
+			getConn();
 			
 			String sql = "Update tbl_member Set mem_pw = ?, mem_name =?, mem_phone=?, mem_nick=? where mem_id=?";
 			psmt = conn.prepareStatement(sql);			
@@ -133,34 +133,20 @@ public class Member_DAO {
 			psmt.setString(3, mem_phone);
 			psmt.setString(4, mem_nick);
 			psmt.setString(5, mem_id);
-			rs = psmt.executeQuery();
-			
-			if (rs.next()) {
-				dto = new Member_DTO(rs.getString(1),
-						rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
-				
-																											
-			}
-			
-			
-		} catch(Exception e) {
-			e.printStackTrace();
-			
-		} finally {
-			System.out.println("무조건실행");
-			try {
-				if (psmt != null) {
-					psmt.close();
-				}
-				if (conn != null) {
-					conn.close();
-				}
+					
+			cnt = psmt.executeUpdate();
+																																		
+	      } catch (Exception e) {
+	          // ClassNotFoundException, SQLException도 가능가능
+	          System.out.println("클래스파일 로딩실패");
+	          e.printStackTrace(); // 어떤 오류가 생겼는지 변수e로 받아서 출력print해줌
+	       } finally {
+	          
+	          
+	       }
 
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-		
-			return null;
-	}
+	       return cnt;
+
+	    }
 }
+

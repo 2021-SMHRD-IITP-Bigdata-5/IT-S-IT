@@ -1,3 +1,4 @@
+<%@page import="DTO.Member_DTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -40,13 +41,23 @@
   </style>
 </head>
 <body>
-<form action="UpdateCon" method="post">
+<script type="text/javascript">
+function fnSubmit() { if(confirm("정말 수정하시겠습니까?")) { 
+	return true; 
+	} 
+	return false; 
+	}
+
+</script>
+<form action="UpdateCon" method="post" onsubmit="fnSubmit()">
+
 <div>
   <div class="container">
     <div class="input-form-backgroud row">
       <div class="input-form col-md-12 mx-auto">
         <h4 class="mb-3">회원정보수정</h4>
-        
+        <%Member_DTO dto = (Member_DTO)session.getAttribute("dto");   %>
+     	<p><%dto.getMem_id(); %></p>
         <form class="validation-form" novalidate>
           <div class="row">
           

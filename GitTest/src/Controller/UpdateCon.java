@@ -14,30 +14,35 @@ import DTO.Member_DTO;
 @WebServlet("/UpdateCon")
 public class UpdateCon extends HttpServlet {
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		HttpSession session = request.getSession();
+		Member_DTO dto = (Member_DTO) session.getAttribute("dto");
+
 		request.setCharacterEncoding("utf-8");
-		String mem_id = request.getParameter("mem_id");
 		String mem_name = request.getParameter("mem_name");
 		String mem_nick = request.getParameter("mem_nick");
 		String mem_phone = request.getParameter("mem_phone");
 		String mem_pw = request.getParameter("mem_pw");
+		String mem_id = dto.getMem_id();
 		
-		Member_DTO dto1 = new Member_DTO(mem_id,mem_name,mem_nick,mem_phone, mem_pw);
+		
 		Member_DAO dao = new Member_DAO();
-				
-		Member_DTO dto = dao.Update(mem_id, mem_pw, mem_name,mem_nick,mem_phone);
-		System.out.println(dto.getMem_id());
-		if(dto.getMem_id()!=null) {
-			session.setAttribute("dto", dto);
-			response.sendRedirect("main.jsp");
-		}else {
+		
+		int cnt = dao.Update(mem_name, mem_pw, mem_phone, mem_nick, mem_id);
+
+		if (cnt > 0) {
+
+			Member_DTO update_dto = new Member_DTO(mem_id, mem_name, mem_nick, mem_phone, mem_pw);
+
+			session.setAttribute("dto", update_dto);
+
+			response.sendRedirect("main.jsp"); // 회원가입 성공후에 메인페이지로 이동
+
+		} else {
 			
 		}
-	
-	
-	
+		
 	}
-
 }
