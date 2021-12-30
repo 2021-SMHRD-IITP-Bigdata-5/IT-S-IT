@@ -23,13 +23,11 @@ public class LoginCon extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		String mem_id = request.getParameter("mem_id");
 		String mem_pw = request.getParameter("mem_pw");
-		Member_DTO dto1 = new Member_DTO(mem_id,mem_pw);
 		Member_DAO dao = new Member_DAO();
 		
 		
 		Member_DTO dto = dao.Login(mem_id,mem_pw);
-		System.out.println(dto.getMem_id()+"\n"+dto.getMem_pw());
-		if(dto.getMem_id()!=null||dto.getMem_pw()!=null) {
+		if(dto!=null) {
 			session.setAttribute("dto", dto);
 			response.sendRedirect("main.jsp");
 		}else {

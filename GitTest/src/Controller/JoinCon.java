@@ -28,6 +28,10 @@ public class JoinCon extends HttpServlet {
 		Member_DAO dao = new Member_DAO();
 		int cnt = dao.Join(mem_id, mem_pw, mem_name, mem_age,mem_area,mem_phone,mem_edu,mem_nick);
 		Member_DTO dto = new Member_DTO(mem_id, mem_pw, mem_name, mem_age,mem_area,mem_phone,mem_edu);
+		if(cnt>0)
+		{
+			response.sendRedirect("main.jsp");
+		}
 	}
 
 }
