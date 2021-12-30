@@ -23,13 +23,10 @@ public class Member_DTO {
 		this.mem_name = mem_name;
 		this.mem_phone = mem_phone;
 		this.mem_nick = mem_nick;
-
-	
-	
-	
+	}
+		
 	public Member_DTO() {
 		super();
-//>>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-5/ITS_IT.git
 	}
 
 	public Member_DTO(String mem_id, String mem_pw) {
