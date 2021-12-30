@@ -235,8 +235,8 @@
         
                         <div class="user_area">
                             <ul class="service_menu">
-                                                            <li class="list_item login"><a href="/account/login">로그인</a></li>
-                                    <li class="list_item join"><a href="/account/join">회원가입</a></li>
+                                                            <li class="list_item login"><a href="./Login.html">로그인</a></li>
+                                    <li class="list_item join"><a href="./Join.html">회원가입</a></li>
                                                         <li class="list_item service"><a href="/service">서비스안내</a></li>
                                 <li class="list_item customer"><a href="/cs/main">고객센터</a></li>
                             </ul>

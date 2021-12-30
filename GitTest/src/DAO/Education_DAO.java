@@ -24,7 +24,6 @@ public class Education_DAO {
 				end_date = end_date.substring(0,10);
 				Education_DTO edu_dto = new Education_DTO(dao.rs.getString(1),dao.rs.getString(2),start_date,end_date);
 				latest_dto.add(edu_dto);
-				System.out.println(latest_dto.get(i).getEdu_homepage());
 			}	
 			
 			

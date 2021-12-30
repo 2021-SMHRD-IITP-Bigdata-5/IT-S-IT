@@ -15,7 +15,9 @@ public class Member_DTO {
 	
 	
 	
-	
+	public Member_DTO() {
+		super();
+	}
 
 	public Member_DTO(String mem_id, String mem_pw) {
 		super();
