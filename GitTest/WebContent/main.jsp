@@ -1070,6 +1070,7 @@
                 </section>
         
                 <!-- all the best -->
+                <%ArrayList<Education_DTO> Popular_dto = dao.Popular(); %>
                 <section class="section_event_best">
                     <div class="title_area">
                         <h1 class="title">
@@ -1107,7 +1108,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/245267/s" alt="[K-Digital 특화 교육] 빅테크/유니콘(디지털 혁신 선도 기업) 취업 집중 대비반">
                                                 </div>
-                                                <h5 class="ellipsis">[K-Digital 특화 교육] 빅테크/유니콘(디지털 혁신 선도 기업) 취업 집중 대비반</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(0).getEdu_name() %></h5>
+                                            	<br> <h5 class="ellipsis"><%=Popular_dto.get(0).getEdu_start_date()%> ~ <%=Popular_dto.get(0).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1116,7 +1118,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/248930/s" alt="(전자책) 상위1% 만드는 초등학생 엄마의 국제중학교 입학 준비 방법">
                                                 </div>
-                                                <h5 class="ellipsis">(전자책) 상위1% 만드는 초등학생 엄마의 국제중학교 입학 준비 방법</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(1).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(1).getEdu_start_date()%> ~ <%=Popular_dto.get(1).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1125,7 +1128,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/248969/s" alt="[부의 나침반] 재테크 투자 심층상담(1:1 개인맞춤 재무컨설팅)">
                                                 </div>
-                                                <h5 class="ellipsis">[부의 나침반] 재테크 투자 심층상담(1:1 개인맞춤 재무컨설팅)</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(2).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(2).getEdu_start_date()%> ~ <%=Popular_dto.get(2).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1134,7 +1138,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/248363/s" alt="[온라인 무료 영상편집특강]  12월_곰앤컴퍼니 공식인증강좌 곰믹스프로, 곰캠, 곰믹스맥스">
                                                 </div>
-                                                <h5 class="ellipsis">[온라인 무료 영상편집특강]  12월_곰앤컴퍼니 공식인증강좌 곰믹스프로, 곰캠, 곰믹스맥스</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(3).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(3).getEdu_start_date()%> ~ <%=Popular_dto.get(3).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                 </ul>
@@ -1145,7 +1150,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/249277/s" alt="[한국인공지능법학회 월례 웨비나] AI정책포럼 &quot;인공지능 거버넌스의 통합적 고찰&quot;">
                                                 </div>
-                                                <h5 class="ellipsis">[한국인공지능법학회 월례 웨비나] AI정책포럼 &quot;인공지능 거버넌스의 통합적 고찰&quot;</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(4).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(4).getEdu_start_date()%> ~ <%=Popular_dto.get(4).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1154,7 +1160,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/249198/s" alt="2021 알면 돈이되는 부동산 정보 특강 [원금손실Zero,세금No,고수익]">
                                                 </div>
-                                                <h5 class="ellipsis">2021 알면 돈이되는 부동산 정보 특강 [원금손실Zero,세금No,고수익]</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(5).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(5).getEdu_start_date()%> ~ <%=Popular_dto.get(5).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1163,7 +1170,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/249217/s" alt="[무료 세미나] CCCR TaB 2021 : 차세대 DB기술 동향과 전망">
                                                 </div>
-                                                <h5 class="ellipsis">[무료 세미나] CCCR TaB 2021 : 차세대 DB기술 동향과 전망</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(6).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(6).getEdu_start_date()%> ~ <%=Popular_dto.get(6).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1172,7 +1180,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/249191/s" alt="&lt;GE의 혁신 DNA&gt;저자와 함께하는 다섯 번째 줌 커뮤니티에 초대합니다.">
                                                 </div>
-                                                <h5 class="ellipsis">&lt;GE의 혁신 DNA&gt;저자와 함께하는 다섯 번째 줌 커뮤니티에 초대합니다.</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(7).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(7).getEdu_start_date()%> ~ <%=Popular_dto.get(7).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                 </ul>
@@ -1183,7 +1192,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/248572/s" alt="일상 철학 - 체험 수업">
                                                 </div>
-                                                <h5 class="ellipsis">일상 철학 - 체험 수업</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(8).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(8).getEdu_start_date()%> ~ <%=Popular_dto.get(8).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1192,7 +1202,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/229992/s" alt="&lt;방송&gt; 모임 개설 가이드">
                                                 </div>
-                                                <h5 class="ellipsis">&lt;방송&gt; 모임 개설 가이드</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(9).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(9).getEdu_start_date()%> ~ <%=Popular_dto.get(9).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1201,7 +1212,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/248738/s" alt="The Third COVID Winter : 세 번째 겨울">
                                                 </div>
-                                                <h5 class="ellipsis">The Third COVID Winter : 세 번째 겨울</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(10).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(10).getEdu_start_date()%> ~ <%=Popular_dto.get(10).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1210,7 +1222,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/244942/s" alt="[19차앵콜]쇼핑호스트에 모든 것 하루 1분에게만 알려드립니다. (라이브커머스&amp;홈쇼핑)">
                                                 </div>
-                                                <h5 class="ellipsis">[19차앵콜]쇼핑호스트에 모든 것 하루 1분에게만 알려드립니다. (라이브커머스&amp;홈쇼핑)</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(11).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(11).getEdu_start_date()%> ~ <%=Popular_dto.get(11).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                 </ul>
@@ -1221,7 +1234,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/249308/s" alt="[요즘것들 오리지널] 콘테스트위너 2기 선착순 9명 모집!">
                                                 </div>
-                                                <h5 class="ellipsis">[요즘것들 오리지널] 콘테스트위너 2기 선착순 9명 모집!</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(12).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(12).getEdu_start_date()%> ~ <%=Popular_dto.get(12).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1230,7 +1244,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/247022/s" alt="2021 메타버스 장르소설 공모전">
                                                 </div>
-                                                <h5 class="ellipsis">2021 메타버스 장르소설 공모전</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(13).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(13).getEdu_start_date()%> ~ <%=Popular_dto.get(13).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1239,7 +1254,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/249215/s" alt="2021 강원 애니메이션 데이터톤">
                                                 </div>
-                                                <h5 class="ellipsis">2021 강원 애니메이션 데이터톤</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(14).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(14).getEdu_start_date()%> ~ <%=Popular_dto.get(14).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1248,7 +1264,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/249082/s" alt="2021 산림수종 데이터 온라인 해커톤">
                                                 </div>
-                                                <h5 class="ellipsis">2021 산림수종 데이터 온라인 해커톤</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(15).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(15).getEdu_start_date()%> ~ <%=Popular_dto.get(15).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                 </ul>
@@ -1259,7 +1276,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/244940/s" alt="단 하루만에 누구나 배울 수 있는 모바일 영상편집!!">
                                                 </div>
-                                                <h5 class="ellipsis">단 하루만에 누구나 배울 수 있는 모바일 영상편집!!</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(16).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(16).getEdu_start_date()%> ~ <%=Popular_dto.get(16).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1268,7 +1286,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/249381/s" alt="[12/19] 오픈마인드를 지닌 프리랜서 상글남녀들이 함께 사는 홈오피스형 아파트 공유주택 탐방하기">
                                                 </div>
-                                                <h5 class="ellipsis">[12/19] 오픈마인드를 지닌 프리랜서 상글남녀들이 함께 사는 홈오피스형 아파트 공유주택 탐방하기</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(17).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(17).getEdu_start_date()%> ~ <%=Popular_dto.get(17).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1277,7 +1296,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/249143/s" alt="대구 최대 직장인/대학생 시간관리, 자기계발 모임! 청바지 20기 멤버모집">
                                                 </div>
-                                                <h5 class="ellipsis">대구 최대 직장인/대학생 시간관리, 자기계발 모임! 청바지 20기 멤버모집</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(18).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(18).getEdu_start_date()%> ~ <%=Popular_dto.get(18).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1286,7 +1306,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/248806/s" alt="작고 소중한 월급! 월급관리를 통해 반짝반짝 빛나기 프로젝트">
                                                 </div>
-                                                <h5 class="ellipsis">작고 소중한 월급! 월급관리를 통해 반짝반짝 빛나기 프로젝트</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(19).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(19).getEdu_start_date()%> ~ <%=Popular_dto.get(19).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                 </ul>
@@ -1297,7 +1318,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/248622/s" alt="2021 스마트시티 융합 얼라이언스 신규 회원기업 모집 (상시모집)">
                                                 </div>
-                                                <h5 class="ellipsis">2021 스마트시티 융합 얼라이언스 신규 회원기업 모집 (상시모집)</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(20).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(20).getEdu_start_date()%> ~ <%=Popular_dto.get(20).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1306,7 +1328,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/248002/s" alt="2022년 상반기 KDB NextONE 제4기 모집">
                                                 </div>
-                                                <h5 class="ellipsis">2022년 상반기 KDB NextONE 제4기 모집</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(21).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(21).getEdu_start_date()%> ~ <%=Popular_dto.get(21).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
@@ -1315,7 +1338,8 @@
                                                 <div class="img_wrapper">
                                                     <img src="https://cfile1.onoffmix.com/images/event/249479/s" alt="[무료교육] 대학생 멘토와 함께하는 온라인 릴레이 AI수업 수강생 모집 안내">
                                                 </div>
-                                                <h5 class="ellipsis">[무료교육] 대학생 멘토와 함께하는 온라인 릴레이 AI수업 수강생 모집 안내</h5>
+                                                <h5 class="ellipsis"><%=Popular_dto.get(22).getEdu_name() %></h5>
+                                                <br> <h5 class="ellipsis"><%=Popular_dto.get(22).getEdu_start_date()%> ~ <%=Popular_dto.get(22).getEdu_end_date()%></h5>
                                             </a>
                                         </li>
                                                                                                                                     <li class="event_card_list">
