@@ -1,7 +1,6 @@
 package Controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,14 +19,13 @@ public class LoginCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		request.setCharacterEncoding("utf-8");
+				
 		String mem_id = request.getParameter("mem_id");
 		String mem_pw = request.getParameter("mem_pw");
 		Member_DAO dao = new Member_DAO();
-		
-		
+			
 		Member_DTO dto = dao.Login(mem_id,mem_pw);
-
+		
 		if(dto!=null) {
 			session.setAttribute("dto", dto);
 			response.sendRedirect("main.jsp");
