@@ -1290,12 +1290,6 @@ table.type04 td {
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
 	function EduSearch() {
-		
-		let totalData; //총 데이터 수
-		let dataPerPage; //한 페이지에 나타낼 글 수
-		let pageCount = 10; //페이징에 나타낼 페이지 수
-		let globalCurrentPage=1; //현재 페이지
-		
 		$.ajax({
 			url : "EduCon",
 			type : "post",
@@ -1345,9 +1339,7 @@ table.type04 td {
 						// .before()
 						// .append() --> 선택한 태그 내부에 추가
 					$('#tbody').append(table);
-						
-						
-				
+
 					//$(page_move active disabled에 하단 번호 추가)
 					//총 데이터 갯수는 res.length
 				}

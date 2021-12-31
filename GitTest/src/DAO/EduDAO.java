@@ -68,19 +68,58 @@ public class EduDAO {
 
 			// ---------------------------DB연결
 
+			
 			String sql = "select * from tbl_education "
 					+ "where (edu_name like ? "
 					+ "or edu_org like ?)"
 					+ "and edu_addr like ? "
-					+ "and edu_part like ? "
-					+ "and edu_kind like ?";
-
+					+ "and edu_kind like ? ";
+			
+			if (s_edu_part.equals("백엔드")) {
+				s_edu_part = "and (edu_part like '%백엔드,%'";
+				s_edu_part += "or edu_part like '%c언어,%'";
+				s_edu_part += "or edu_part like '%자바,%'";
+				s_edu_part += "or edu_part like '%파이썬,%'";
+				s_edu_part += "or edu_part like '%코틀린,%'";
+				s_edu_part += "or edu_part like '%스프링,%')";
+				
+				sql += s_edu_part;
+			} else if (s_edu_part.equals("프론트엔드")) {
+				s_edu_part = "and (edu_part like '%프론트엔드,%'";
+				s_edu_part += "or edu_part like '%자바스크립트,%'";
+				s_edu_part += "or edu_part like '%html,%'";
+				s_edu_part += "or edu_part like '%css,%')";
+				
+				sql += s_edu_part;
+			} else if (s_edu_part.equals("보안.네트워크.클라우드")) {
+				s_edu_part = "and (edu_part like '%정보보안,%'";
+				s_edu_part += "or edu_part like '%클라우드,%'";
+				s_edu_part += "or edu_part like '%네트워크,%')";
+				
+				sql += s_edu_part;
+			} else if (s_edu_part.equals("융합기술")) {
+				s_edu_part = "and (edu_part like '%iot,%'";
+				s_edu_part += "or edu_part like '%금융융합,%'";
+				s_edu_part += "or edu_part like '%산업융합,%'";
+				s_edu_part += "or edu_part like '%기타융합,%')";
+				
+				sql += s_edu_part;
+			} else if (s_edu_part.equals("콘텐츠제작")) {
+				s_edu_part = "and edu_part like '%콘텐츠,%'";
+				
+				sql += s_edu_part;
+			} else {
+				sql += "and edu_part like " + "'%" + s_edu_part + "%'";
+			}
+			
+			System.out.println(sql);
+			
+//			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, '%'+s_edu_info+'%');
 			psmt.setString(2, '%'+s_edu_info+'%');
 			psmt.setString(3, '%'+s_edu_addr+'%');
-			psmt.setString(4, '%'+s_edu_part+'%');
-			psmt.setString(5, '%'+s_edu_kind+'%');
+			psmt.setString(4, '%'+s_edu_kind+'%');
 
 			rs = psmt.executeQuery();
 
@@ -100,7 +139,6 @@ public class EduDAO {
 				String edu_hrdlink = rs.getString(14);
 				String edu_addr = rs.getString(15);
 				
-				System.out.println(edu_kind);
 				if(edu_kind.equals("내일배움카드(구직자)")){
 					edu_kind = "구직자 : 내일배움카드 ";
 				}else if(edu_kind.equals("국가기간전략산업직종")){
