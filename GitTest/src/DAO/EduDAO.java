@@ -135,7 +135,6 @@ public class EduDAO {
 				String edu_org_phone = rs.getString(6);
 				String edu_homepage = rs.getString(9);
 				String edu_ministry = rs.getString(10);
-
 				String edu_hrdlink = rs.getString(14);
 				String edu_addr = rs.getString(15);
 				
@@ -147,6 +146,12 @@ public class EduDAO {
 					edu_kind = "근로자 : 일반훈련";
 				}else if(edu_kind.equals("사업주지원")){
 					edu_kind = "구직자 : 기업훈련";
+				}
+				
+				if(edu_homepage.contains("http")) {
+	
+				} else {
+					edu_homepage = "https://" + edu_homepage;
 				}
 
 				dto = new EduDTO(edu_name, edu_price, edu_total, //
