@@ -18,15 +18,15 @@ public class Education_DAO {
 			
 			for(int i=0;i<6;i++)
 			{
-				dao.rs.next();
-				String start_date = dao.rs.getString(3);
-				start_date = start_date.substring(0, 10);
-				String end_date = dao.rs.getString(4);
-				end_date = end_date.substring(0,10);
-				Education_DTO edu_dto = new Education_DTO(dao.rs.getString(1),dao.rs.getString(2),start_date,end_date);
-				latest_dto.add(edu_dto);
-			}	
-			
+				if(dao.rs.next()) {
+					String start_date = dao.rs.getString(3);
+					start_date = start_date.substring(0, 10);
+					String end_date = dao.rs.getString(4);
+					end_date = end_date.substring(0,10);
+					Education_DTO edu_dto = new Education_DTO(dao.rs.getString(1),dao.rs.getString(2),start_date,end_date);
+					latest_dto.add(edu_dto);
+				}else break;	
+			}
 			
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -68,7 +68,6 @@ public class Education_DAO {
 				for(int j=0;j<4;j++)
 				{
 					if(dao.rs.next()) {
-					System.out.println(list[i]+'\n'+j);
 					String start_date = dao.rs.getString(3);
 					start_date = start_date.substring(0, 10);
 					String end_date = dao.rs.getString(4);

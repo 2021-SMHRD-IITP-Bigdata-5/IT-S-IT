@@ -63,6 +63,7 @@
                 gtag('js', new Date());
                 gtag('config', 'UA-25312010-14');
             </script>
+<<<<<<< HEAD
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <style>
 .ie_end_support_popup_wrap {
@@ -243,6 +244,142 @@
 				for="today_no_view_check">오늘 하루 보지 않기</label>
 		</div>
 		<script>
+=======
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <style>
+        .ie_end_support_popup_wrap{
+            display: none;
+            width: 900px;
+            height: 608px;
+            padding: 62px 100px 0;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #c8c8c8;
+            box-sizing: border-box;
+            text-align: center;
+            letter-spacing: -1px;
+            line-height: 28px;
+            color: #333;
+            z-index: 1000;
+            background-color: #fff;
+        }
+        .ie_end_support_popup_wrap h1{
+            margin-bottom: 37px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4195f5;
+            letter-spacing: -1.2px
+        }
+        .ie_end_support_popup_wrap p{
+            font-size: 16px;
+        }
+        .ie_end_support_popup_wrap p + p{margin-top: 10px;}
+        .ie_end_support_popup_wrap p span{ font-weight: bold; }
+        .ie_end_support_popup_wrap p span:last-child{ color: #4195f5;  }
+        .browser_link{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 15px; 
+            margin-top: 39px;
+            border-top: 1px solid #d8d8d8;
+        }
+        .browser_link > span{
+            display: block;
+            width: 100%;
+            margin-top: 36px;
+            margin-bottom: 24px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .browser_link a{
+            display: block;
+            width: 140px;
+            height: 160px;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            letter-spacing: 0;
+            background-color: #f7f8fa;
+            border-radius: 10px;
+        }
+        .browser_link a span{
+            display: block;
+            font-weight: normal;
+            letter-spacing: -1px;
+            color: #666;
+        }
+        .browser_link a::before{
+            content: "";
+            display: block;
+            width: 72px;
+            height: 72px;
+            margin: 21px auto 9px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .browser_link a:nth-child(2)::before{background-image: url("https://static.onoffmix.com/images/pc/ie_end_support_popup/chrome.png");}
+        .browser_link a:nth-child(3)::before{background-image: url("https://static.onoffmix.com/images/pc/ie_end_support_popup/edge.png");}
+        .browser_link a:nth-child(4)::before{background-image: url("https://static.onoffmix.com/images/pc/ie_end_support_popup/whale.png");}
+        .browser_link a:nth-child(5)::before{background-image: url("https://static.onoffmix.com/images/pc/ie_end_support_popup/firefox.png");}
+        .ie_end_support_popup_wrap button{
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 19px;
+            right: 19px;
+            cursor: pointer;
+            border: 0 none;
+            overflow: hidden;
+            text-indent: -9999rem;
+            background-color: transparent;
+            background-image: url("https://static.onoffmix.com/images/pc/svg/menu-close-gray.svg");
+        }
+        .close_check{
+            position: absolute;
+            right: 21px;
+            bottom: 15px;
+        }
+        .close_check input{
+            width: 13px;
+            height: 13px;
+            vertical-align: middle;
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+        .close_check label{
+            margin-left: 7px;
+            font-size: 12px;
+            letter-spacing: -1px;
+            line-height: 14px;
+            vertical-align: middle;
+            color: #333;
+        }
+        </style>
+        </head>
+        <body class="onoffmix">
+        <%Member_DTO dto2 = (Member_DTO)session.getAttribute("dto");%>
+        <article class="ie_end_support_popup_wrap">
+            <h1>인터넷 익스플로러 (IE) 브라우저 지원 종료 안내</h1>
+            <p>
+                마이크로소프트 사의 <span>인터넷 익스플로러(이하 IE)의 지원이 중단</span>됨에 따라<br><span>온오프믹스 사이트의</span> <span>IE 지원이 종료</span>됩니다.
+            </p>
+            <p>
+                IE 브라우저 내에서는 사이트 이용이 원활하지 않을 수 있으니<br>온오프믹스의 더 나은 사용 경험을 위해 아래 브라우저 중 하나를 선택하여 이용해 주세요.
+            </p>
+            <div class="browser_link">
+                <span>지원 브라우저 설치 바로가기</span>
+                <a href="https://www.google.com/intl/ko/chrome/" target="_blank">Google Chrome<span>구글 크롬</span></a>
+                <a href="https://www.microsoft.com/ko-kr/edge" target="_blank">Microsoft Edge<span>마이크로소프트 엣지</span></a>
+                <a href="https://whale.naver.com/ko/download" target="_blank">Naver Whale<span>네이버 웨일</span></a>
+                <a href="https://www.mozilla.org/ko/firefox/new/" target="_blank">Firefox<span>파이어폭스</span></a>
+            </div>
+        
+            <button type="button">팝업 닫기</button>
+            <div class="close_check"><input type="checkbox" id="today_no_view_check"><label for="today_no_view_check">오늘 하루 보지 않기</label></div>
+        <script>
         (function(global, cookie){"use strict";
         var ie_end_support_popup_wrap = document.getElementsByClassName("ie_end_support_popup_wrap")[0];
         var today_no_view_check = ie_end_support_popup_wrap.getElementsByTagName("input")[0];
@@ -272,6 +409,7 @@
         });
         })(window, $.cookie)
         </script>
+<<<<<<< HEAD
 	</article>
 
 	<div class="kakao_js_key" data-key="" style="display: none;"></div>
@@ -346,6 +484,73 @@
 						data-creative_name="PC_메인_검색창광고" data-creative_slot="1">외국어
 						음성데이터를 활용한 창업 경진대회 →</span>
 					<script>
+=======
+        </article>
+        
+        <div class="kakao_js_key" data-key="" style="display:none;"></div>
+        <div class="apple_client_key" data-key="" data-url="https://www.onoffmix.com/account/login/apple" style="display:none;"></div>
+        <div class="api_onoffmix_domain" data-domain="https://api.onoffmix.com" style="display:none;"></div>
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5ZBGC5"
+                              height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+            <!-- =================================== Header Start =================================== -->
+            <header id="header" class="header_wrap ">
+                            <div class="header_top wide_max_width_area">
+                                        <h1 class="ofm_logo" style="top:-135px;left:-130px;">
+                                            <a href="/">
+                                <span class="text_logo">잇츠잇 홈</span>
+                                                        <img src="img/itsit2.png" alt="ONOFFMIX">
+                                                    </a>
+                        </h1>
+        
+                        <div class="user_area">
+                            <ul class="service_menu">
+                            								<%if(dto==null){ %>
+                                                            <li class="list_item login"><a href="./Login.html">로그인</a></li>
+                                    <li class="list_item join"><a href="./Join.html">회원가입</a></li>
+                                    <%}else{ %>
+                                    <li class="list_item login"><a href="LogoutCon">로그아웃</a></li>
+                                    <%} %>
+                                                        <li class="list_item service"><a href="/service">서비스안내</a></li>
+                                <li class="list_item customer"><a href="/cs/main">고객센터</a></li>
+                            </ul>
+        
+                            <ul class="member_menu">
+                                <li class="list_item mypage" tabindex="0">
+                                <%if(dto==null){%>
+                                  <li class="list_item eventopen"><a href="EduSearch.jsp">교육과정검색</a></li>
+                                                        <li class="list_item notice">
+                                                                <a href="/account/login?returnUrl=/">알림</a>
+                                                            </li>
+                                                            <%}else {%>
+                                    <a href="/account/main">마이페이지</a>
+                                    <div class="sub_menu">
+                                        <ul class="sub_list mypage_list">
+                                        	                                     
+                                            <li><a href="Update.jsp" class="site_link edit">회원정보수정</a></li>                                           
+                                            <li><a href="/account/login?returnUrl=/account/pass" class="site_link pass">비밀번호변경</a></li>
+                                            <li><a href="/account/login?returnUrl=/account/event" class="site_link event">신청내역</a></li>
+                                            <!-- <li><a href="/account/login?returnUrl=/account/payment" class="site_link payment">결제내역</a></li> -->
+                                            <li><a href="/account/login?returnUrl=/account/pin" class="site_link pin">관심내역</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                                            <li class="list_item eventopen"><a href="EduSearch.jsp">교육과정검색</a></li>
+                                                        <li class="list_item notice">
+                                                                <a href="/account/login?returnUrl=/">알림</a>
+                                                            </li>
+                                                            <%} %>
+                            </ul>
+                        </div>
+                        <div class="search_area">
+                            <form class="search_form" action="/event/main" method="GET">
+                                <label for="searchInput">검색할 모임을 입력해주세요.</label>
+                                <input type="text" id="searchInput" class="search_input" name="s" value="" title="키워드로 모임을 검색하세요" data-event="249118">
+                                                        <span class="ofm_keyword_value"
+                                      data-event_no="249118" data-event_title="외국어 음성데이터를 활용한 비즈니스 창출 교육 및 데이터 활용 경진대회" data-creative_name="PC_메인_검색창광고" data-creative_slot="1">외국어 음성데이터를 활용한 창업 경진대회 →</span>
+                                <script>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-5/ITS_IT.git
                                     gtag('event', 'view_promotion', {
                                         "non_interaction": true,
                                         "promotions": [
