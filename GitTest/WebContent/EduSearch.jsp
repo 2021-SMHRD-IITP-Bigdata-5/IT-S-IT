@@ -1321,7 +1321,8 @@ table.type04 td {
 						table += '<td>' + result.edu_total + '</td>';
 						table += '<td>' + result.edu_kind + '</td></tr>';
 						table += '<tr><td></td><td></td><td></td><td>' + 1 + '</td>';
-						table += '<td>' + 2 + '</td>';
+						table += '<td><a href="' + result.edu_homepage + '">홈페이지</a></td>';
+						// <a href="/account/login">로그인</a>
 						table += '<td>' + 3 + '</td>';
 						table += '<td>' + 4 + '</td>';
 						table += '<td>' + 5 + '</td>';
