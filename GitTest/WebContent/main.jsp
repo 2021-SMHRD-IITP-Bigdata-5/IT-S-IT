@@ -63,7 +63,7 @@
                 gtag('js', new Date());
                 gtag('config', 'UA-25312010-14');
             </script>
-<<<<<<< HEAD
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <style>
 .ie_end_support_popup_wrap {
