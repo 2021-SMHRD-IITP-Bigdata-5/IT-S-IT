@@ -18,20 +18,20 @@ public class Education_DTO {
 	private String edu_kind;
 	private int edu_cnt;
 	
-	public Education_DTO(String edu_name, String edu_org, String edu_start_date, String edu_end_date) {
+	public Education_DTO(String edu_name, String edu_homepage, String edu_start_date, String edu_end_date) {
 		super();
 		this.edu_name = edu_name;
-		this.edu_org = edu_org;
+		this.edu_homepage = edu_homepage;
 		this.edu_start_date = edu_start_date;
 		this.edu_end_date = edu_end_date;
 		
 	
 	}
 
-	public Education_DTO(String edu_name, String edu_org, String edu_start_date, String edu_end_date, int edu_cnt) {
+	public Education_DTO(String edu_name, String edu_homepage, String edu_start_date, String edu_end_date, int edu_cnt) {
 		super();
 		this.edu_name = edu_name;
-		this.edu_org = edu_org;
+		this.edu_homepage = edu_homepage;
 		this.edu_start_date = edu_start_date;
 		this.edu_end_date = edu_end_date;
 		this.edu_cnt = edu_cnt;
