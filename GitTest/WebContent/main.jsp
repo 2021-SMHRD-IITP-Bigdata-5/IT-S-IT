@@ -250,7 +250,7 @@
                             <ul class="member_menu">
                                 <li class="list_item mypage" tabindex="0">
                                 <%if(dto==null){%>
-                                  <li class="list_item eventopen"><a href="/event/add">모임개설</a></li>
+                                  <li class="list_item eventopen"><a href="EduSearch.jsp">교육과정검색</a></li>
                                                         <li class="list_item notice">
                                                                 <a href="/account/login?returnUrl=/">알림</a>
                                                             </li>
@@ -267,7 +267,7 @@
                                         </ul>
                                     </div>
                                 </li>
-                                                            <li class="list_item eventopen"><a href="/event/add">모임개설</a></li>
+                                                            <li class="list_item eventopen"><a href="EduSearch.jsp">교육과정검색</a></li>
                                                         <li class="list_item notice">
                                                                 <a href="/account/login?returnUrl=/">알림</a>
                                                             </li>
