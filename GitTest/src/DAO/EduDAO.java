@@ -68,7 +68,6 @@ public class EduDAO {
 
 			// ---------------------------DB연결
 
-			
 			String sql = "select * from tbl_education "
 					+ "where (edu_name like ? "
 					+ "or edu_org like ?)"
@@ -112,9 +111,10 @@ public class EduDAO {
 				sql += "and edu_part like " + "'%" + s_edu_part + "%'";
 			}
 			
+			// sql += "order by edu_start_date"
+			
 			System.out.println(sql);
 			
-//			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, '%'+s_edu_info+'%');
 			psmt.setString(2, '%'+s_edu_info+'%');
