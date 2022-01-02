@@ -1321,8 +1321,11 @@ table.type04 td {
 				
 				"edu_addr" : $('#area_sel').val(),
 				"edu_part" : $('#part_sel').val(),
-				"edu_kind" : $('#kind_sel').val()
-			},
+				"edu_kind" : $('#kind_sel').val(),
+				"out_time_data" : $('input[name=out_time_data]:checked').val()
+					
+				},
+				
 			dataType:"json",
 			success : function(res) {				
 					$('#tbody').html('');

@@ -58,7 +58,7 @@ public class EduDAO {
 		}
 	}
 	
-	public ArrayList<EduDTO> Search(String s_edu_info, String s_edu_addr, String s_edu_part, String s_edu_kind) {
+	public ArrayList<EduDTO> Search(String s_edu_info, String s_edu_addr, String s_edu_part, String s_edu_kind, String out_time_data) {
 
 		ArrayList<EduDTO> search_list = new ArrayList<EduDTO>();
 
@@ -112,6 +112,12 @@ public class EduDAO {
 			}
 			
 			// sql += "order by edu_start_date"
+			
+			if (out_time_data.equals("Y")) {
+				
+			} else {
+				sql += "and edu_start_date >= sysdate";
+			}
 			
 			System.out.println(sql);
 			
