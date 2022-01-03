@@ -301,6 +301,12 @@
    font-weight: bold;
 }
 
+#교육분야 {
+	background-image: url("img/빅데이터.png");
+	width: 100%;
+	height: 90%;
+	object-fit: cover;
+}
 
 </style>
 </head>
@@ -974,119 +980,14 @@
 			<h2 class="main_title">
 				<span class="keyword"></span> 검색결과 <span class="total"></span>
 			</h2>
+			
+			
+			
+			<div id="교육분야">
+				
+			</div>
 			<!-- keyword search area -->
-			<section class="keyword_search_area">
-				<form name="searchBoxEventForm" action="/event?s="
-					origaction="https://www.onoffmix.com/event?s="
-					class="keyword_search_form" origtarget>
-					<input type="hidden" name="pageRows" value="12" _default="12"
-						_search="12"> <input type="hidden" name="page" value="1"
-						id="page"> <input type="hidden" id="sort-category"
-						value="categoryIdx|ASC"> <input type="hidden" name="order"
-						value="popularity"> <input type="hidden" name="searchAll"
-						value=""> <input type="hidden" name="research" value="">
-					<input type="hidden" name="search_date" id="search_date" value="">
-					<input type="hidden" name="exclude" value=""> <input
-						type="hidden" name="getPinCount" value="true"> <input
-						type="hidden" name="getAttendCount" value="true"> <input
-						type="hidden" name="blockAbuse" value="true"> <input
-						type="hidden" name="nowRecruitingEvent" value=""> <input
-						type="hidden" name="IngData" value=""> <input
-						type="hidden" name="order_gubun" value="N"> <input
-						type="hidden" id="endEventPage" value=""> <input
-						type="hidden" id="totalEventPage" value=""> <input
-						type="hidden" name="page_gubun" id="page_gubun" value="">
-					<input type="hidden" name="eof" id="eof" value="0">
-
-					<!-- data reset -->
-					<div class="search_form_top">
-						<h3 class="sub_title">상세검색</h3>
-
-						<input type="reset" class="btn_reset  hidden" id="reset"
-							value="초기화" rel="s=%EC%9E%90%EB%B0%94">
-					</div>
-
-					<input type="hidden" id="hostNumber" name="u" value="">
-
-					<!-- category -->
-					<fieldset class="filter_category_area">
-
-						<select id="area_sel" name="mem_area" style="width: 200px;">
-							<option value="">지역(전체)</option>
-							<option value="서울">서울</option>
-							<option value="부산">부산</option>
-							<option value="대구">대구</option>
-							<option value="인천">인천</option>
-							<option value="광주">광주</option>
-							<option value="대전">대전</option>
-							<option value="울산">울산</option>
-							<option value="세종">세종</option>
-							<option value="경기">경기</option>
-							<option value="강원">강원</option>
-							<option value="충청북도">충북</option>
-							<option value="충청남도">충남</option>
-							<option value="전라북도">전북</option>
-							<option value="전라남도">전남</option>
-							<option value="경상북도">경북</option>
-							<option value="경상남도">경남</option>
-							<option value="제주">제주</option>
-						</select>
-					</fieldset>
-					<!-- Time -->
-					<fieldset class="filter_time_pay_type">
-						<select id="part_sel" name="mem_part" style="width: 200px;">
-							<option value="">교육분야(전체)</option>
-							<option value="빅데이터">빅데이터</option>
-							<option value="인공지능">인공지능</option>
-							<option value="백엔드">백엔드</option>
-							<option value="프론트엔드">프론트엔드</option>
-							<option value="풀스택">풀스택</option>
-							<option value="융합기술">융합기술</option>
-							<option value="보안등">보안.네트워크.클라우드</option>
-							<option value="콘텐츠제작">콘텐츠제작</option>
-							<option value="자격과정">자격과정</option>
-							<option value="블록체인">블록체인</option>
-							<option value="기타">기타</option>
-						</select>
-					</fieldset>
-
-					<!-- search_scope -->
-					<fieldset class="filter_search_scope ">
-						<select id="kind_sel" name="mem_kind" style="width: 200px;">
-							<option value="">교육유형(전체)</option>
-							<option value="내일배움카드">구직자 : 내일배움카드</option>
-							<option value="국가기간전략산업직종">구직자 : 국가기간전략산업직종</option>
-							<option value="근로자카드">근로자 : 일반훈련</option>
-							<option value="사업주">근로자 : 기업훈련</option>
-						</select>
-					</fieldset>
-
-					<div>
-						<!-- search -->
-						<fieldset class="search_area">
-							<input type="text" id="keywordSearch" name="edu_info"
-								class="keyword_search" placeholder="검색어 입력" title="검색어 입력"
-								style="width: 400px;"> <input type="text"
-								style="display: none">
-
-							<button onClick="EduSearch()" type="button" class="btn_keyword_search">검색</button>
-						</fieldset>
-
-						<!-- end event -->
-						<fieldset class="end_event">
-							<input type="checkbox" class="endEvent" id="out_time_data"
-								name="out_time_data" value="Y"> <label
-								for="out_time_data">종료된 교육과정 포함</label>
-						</fieldset>
-					</div>
-
-					<!-- search word area -->
-					<div class="search_word_area"></div>
-				</form>
-
-			</section>
-
-
+			
 			<section class="event_main_area">
 				<div class="title_bar" style="">
 					<ul class="sort_menu">
@@ -1260,7 +1161,7 @@
 	
 	let boardList;
 	
-	function EduSearch() {
+	$(document).ready(function() {
 		
 		$.ajax({
 			url : "EduCon",
@@ -1268,13 +1169,13 @@
 			// async: false,
 			data : {
 				
-				"edu_info" : $('input[name=edu_info]').val(),
+				"edu_info" : "",
 				// edu_name, edu_org
 				
-				"edu_addr" : $('#area_sel').val(),
-				"edu_part" : $('#part_sel').val(),
-				"edu_kind" : $('#kind_sel').val(),
-				"out_time_data" : $('input[name=out_time_data]:checked').val()
+				"edu_addr" : "",
+				"edu_part" : "빅데이터",
+				"edu_kind" : "",
+				"out_time_data" : ""
 					
 				},
 				
@@ -1304,7 +1205,7 @@
 			}
 		});
 		
-	}
+	});
 	
 	function paging(totalData, dataPerPage, pageCount, currentPage) {
 		  console.log("currentPage : " + currentPage);
@@ -1401,7 +1302,7 @@
 				table += '<div class="table-cell"><p>' + result.edu_kind + '</p></div></div>';
 			$('.table').append(table);
 		  }
-		} 
+		}
 	
 	</script>
 	
