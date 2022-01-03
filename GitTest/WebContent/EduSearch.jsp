@@ -1380,7 +1380,7 @@
 		  currentPage = Number(currentPage);
 		  dataPerPage = Number(dataPerPage);
 		  
-		  $('.table-body').html('');
+		  $('.table').html('');
 		  for (
 		    var i = (currentPage - 1) * dataPerPage;
 		    i < (currentPage - 1) * dataPerPage + dataPerPage; 
