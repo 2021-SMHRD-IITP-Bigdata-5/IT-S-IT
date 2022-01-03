@@ -217,6 +217,7 @@ table.type04 {
 }
 table.type04 thead {
   width: 150px;
+  
   padding: 10px;
   font-weight: bold;
   vertical-align: top;
@@ -229,6 +230,24 @@ table.type04 td {
   border-bottom: 1px solid #ccc;
   vertical-align: top;
 }
+
+.button_base {
+    margin: 0;
+    border: 0;
+    font-size: 15px;
+    cursor: default;
+}
+
+.button_base {
+    color: #000000;
+    padding: 10px;
+    background-color: #ffffff;
+}
+.button_base:hover {
+    cursor: pointer;
+    color: #4195F6;
+}
+
 </style>
 </head>
 <body class="onoffmix">
@@ -305,11 +324,10 @@ table.type04 td {
 	<!-- =================================== Header Start =================================== -->
 	<header id="header" class="header_wrap ">
 		<div class="header_top wide_max_width_area">
-			<h1 class="ofm_logo" style="top: 79px; left: 6px;">
-				<a href="/"> <span class="text_logo">온오프믹스 홈</span> <img
-					src="https://static.onoffmix.com/images/pc/ofm_logo.png"
-					alt="ONOFFMIX">
-				</a>
+			<h1 class="ofm_logo" style="top:-135px;left:-130px;">
+				<span class="text_logo">잇츠잇 홈</span>
+                                                        <img src="img/itsit2.png" alt="ONOFFMIX">
+                                                    </a>
 			</h1>
 
 			<div class="user_area">
@@ -344,7 +362,7 @@ table.type04 td {
 			<div class="search_area">
 				<form class="search_form" action="/event/main" method="GET">
 					<label for="searchInput">검색할 모임을 입력해주세요.</label> <input type="text"
-						id="searchInput" class="search_input" name="s" value="자바"
+						id="searchInput" class="search_input" name="s" value=""
 						title="키워드로 모임을 검색하세요" data-event="248922"> <input
 						type="submit" class="btn_search" value="검색" title="검색">
 				</form>
@@ -1009,7 +1027,7 @@ table.type04 td {
 	<main id="content" class="event_search">
 		<div class="content_wrapping wide_max_width_area">
 			<h2 class="main_title">
-				<span class="keyword">'자바'</span> 검색결과 <span class="total">(116)</span>
+				<span class="keyword">자바</span> 검색결과 <span class="total">(116)</span>
 			</h2>
 			<!-- keyword search area -->
 			<section class="keyword_search_area">
@@ -1290,9 +1308,12 @@ table.type04 td {
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
 	function EduSearch() {
+		var total_list;
+		
 		$.ajax({
 			url : "EduCon",
 			type : "post",
+			async: false,
 			data : {
 				
 				"edu_info" : $('input[name=edu_info]').val(),
@@ -1300,8 +1321,11 @@ table.type04 td {
 				
 				"edu_addr" : $('#area_sel').val(),
 				"edu_part" : $('#part_sel').val(),
-				"edu_kind" : $('#kind_sel').val()
-			},
+				"edu_kind" : $('#kind_sel').val(),
+				"out_time_data" : $('input[name=out_time_data]:checked').val()
+					
+				},
+				
 			dataType:"json",
 			success : function(res) {				
 					$('#tbody').html('');
@@ -1313,27 +1337,14 @@ table.type04 td {
 						let table = '';
 						table += '<tr>';
 						table += '<td>' + (i+1) + '</td>';
-						table += '<td>' + result.edu_name + '</td>';
-						table += '<td>' + result.edu_org + '</td>';
+						table += '<td><div class="back"><a href="' + result.edu_hrdlink + '" target=\'_blank\'><div class="button_base">' + result.edu_name + '</div></a></div></td>';
+						table += '<td><div class="back"><a href="' + result.edu_homepage + '" target=\'_blank\'><div class="button_base">' + result.edu_org + '</div></a></div></td>';
 						table += '<td>' + result.edu_start_date + '</td>';
 						table += '<td>' + result.edu_end_date + '</td>';
 						table += '<td>' + result.edu_price + '</td>';
 						table += '<td>' + result.edu_total + '</td>';
 						table += '<td>' + result.edu_kind + '</td></tr>';
-						table += '<tr><td></td><td></td><td></td><td>' + 1 + '</td>';
-						table += '<td><a href="' + result.edu_homepage + '">홈페이지</a></td>';
-						// <a href="/account/login">로그인</a>
-						table += '<td>' + 3 + '</td>';
-						table += '<td>' + 4 + '</td>';
-						table += '<td>' + 5 + '</td>';
-						table += '</tr>';
 						
-						//table += '<tr><td></td><td></td><td></td><td>' + result.edu_org_phone + '</td>';
-						//table += '<td>' + result.edu_homepage + '</td>';
-						//table += '<td>' + result.edu_ministry + '</td>';
-						//table += '<td>' + result.edu_hrdlink + '</td>';
-						//table += '<td>' + result.edu_addr + '</td>';
-						//table += '</tr>';
 						// javascript로 html 태그 제작하는 4가지 방법
 						// .html()
 						// .after()
@@ -1344,12 +1355,13 @@ table.type04 td {
 					//$(page_move active disabled에 하단 번호 추가)
 					//총 데이터 갯수는 res.length
 				}
-
+				total_list = res;
 			},
 			error : function() {
 				alert("교육과정 조회 중 오류가 발생했습니다.");
 			}
 		});
+		
 		
 
 

@@ -58,7 +58,7 @@ public class EduDAO {
 		}
 	}
 	
-	public ArrayList<EduDTO> Search(String s_edu_info, String s_edu_addr, String s_edu_part, String s_edu_kind) {
+	public ArrayList<EduDTO> Search(String s_edu_info, String s_edu_addr, String s_edu_part, String s_edu_kind, String out_time_data) {
 
 		ArrayList<EduDTO> search_list = new ArrayList<EduDTO>();
 
@@ -68,7 +68,6 @@ public class EduDAO {
 
 			// ---------------------------DB연결
 
-			
 			String sql = "select * from tbl_education "
 					+ "where (edu_name like ? "
 					+ "or edu_org like ?)"
@@ -112,9 +111,16 @@ public class EduDAO {
 				sql += "and edu_part like " + "'%" + s_edu_part + "%'";
 			}
 			
+			// sql += "order by edu_start_date"
+			
+			if (out_time_data.equals("Y")) {
+				
+			} else {
+				sql += "and edu_start_date >= sysdate";
+			}
+			
 			System.out.println(sql);
 			
-//			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, '%'+s_edu_info+'%');
 			psmt.setString(2, '%'+s_edu_info+'%');

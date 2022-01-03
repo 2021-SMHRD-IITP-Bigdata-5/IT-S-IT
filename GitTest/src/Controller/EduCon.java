@@ -27,11 +27,18 @@ public class EduCon extends HttpServlet {
 		String s_edu_addr = request.getParameter("edu_addr");
 		String s_edu_part = request.getParameter("edu_part");
 		String s_edu_kind = request.getParameter("edu_kind");
+		String out_time_data = request.getParameter("out_time_data");
+
+		if(out_time_data == null) {
+			out_time_data = "N";
+		}
+		
+		System.out.println(out_time_data);
+		System.out.println(s_edu_part);
 		
 		EduDAO dao = new EduDAO();
-		ArrayList<EduDTO> search_list = dao.Search(s_edu_info, s_edu_addr, s_edu_part, s_edu_kind);
+		ArrayList<EduDTO> search_list = dao.Search(s_edu_info, s_edu_addr, s_edu_part, s_edu_kind, out_time_data);
 		
-		System.out.println("size"+search_list.size());
 		Gson gson = new Gson();
 		JsonArray jarray = new JsonArray();
 		
@@ -40,7 +47,6 @@ public class EduCon extends HttpServlet {
 		}
 		
 		response.setContentType("text/html; charset=utf-8");
-		System.out.println(search_list);
 		PrintWriter out = response.getWriter();
 		out.print(jarray);
 	
