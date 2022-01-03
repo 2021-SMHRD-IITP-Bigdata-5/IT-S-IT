@@ -207,28 +207,29 @@
 	color: #333;
 }
 
-table.type04 {
-  border-collapse: separate;
-  border-spacing: 1px;
-  text-align: left;
-  line-height: 1.5;
-  border-top: 1px solid #ccc;
-  margin : 20px 10px;
-}
-table.type04 thead {
-  width: 150px;
-  
-  padding: 10px;
-  font-weight: bold;
-  vertical-align: top;
-  border-bottom: 1px solid #ccc;
+.table {
+	border-collapse: collapse;
+  	display: table;
+  	width: 100%;
+  	align: center;
+  	vertical-align: middle;
 }
 
-table.type04 td {
-  width: 350px;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-  vertical-align: top;
+
+.table-row {
+	width: 100%;
+	height: 100%;
+	border-top: 1px solid #bcbcbc;
+	border-bottom: 1px solid #bcbcbc;
+  	display: table-row;
+}
+
+.table-cell {
+	
+	display: table-cell;
+ 	padding: 0px 20px;
+  	height: 50px;
+  	vertical-align: middle;
 }
 
 .button_base {
@@ -264,7 +265,7 @@ table.type04 td {
     display: block;
     font-size: 14px;
     padding: 9px 12px;
-    border-right: solid 1px #4195F6;
+    border-right: solid 1px #ccc;
     box-sizing: border-box;
 }
 
@@ -287,6 +288,8 @@ table.type04 td {
     padding: 9px 12px;
     box-sizing: border-box;
     background: #ffffff;
+    position: relative;
+    bottom: 15px;
 }
 
 #myedu_submit:hover {
@@ -298,6 +301,12 @@ table.type04 td {
    font-weight: bold;
 }
 
+#교육분야 {
+	background-image: url("img/빅데이터.png");
+	width: 100%;
+	height: 90%;
+	object-fit: cover;
+}
 
 </style>
 </head>
@@ -375,18 +384,16 @@ table.type04 td {
 	<!-- =================================== Header Start =================================== -->
 	<header id="header" class="header_wrap ">
 		<div class="header_top wide_max_width_area">
-			<h1 class="ofm_logo" style="top:-135px;left:-130px;">
+			<h1 class="ofm_logo" style="top:-20px;left:-100px;">
 				<span class="text_logo">잇츠잇 홈</span>
-                                                        <img src="img/itsit2.png" alt="ONOFFMIX">
+                                                        <img src="img/itsit3.png" alt="ONOFFMIX">
                                                     </a>
 			</h1>
 
 			<div class="user_area">
 				<ul class="service_menu">
-					<li class="list_item login"><a href="/account/login">로그인</a></li>
-					<li class="list_item join"><a href="/account/join">회원가입</a></li>
-					<li class="list_item service"><a href="/service">서비스안내</a></li>
-					<li class="list_item customer"><a href="/cs/main">고객센터</a></li>
+					<li class="list_item login"><a href="Login.html">로그인</a></li>
+					<li class="list_item join"><a href="Join.html">회원가입</a></li>
 				</ul>
 
 				<ul class="member_menu">
@@ -405,19 +412,17 @@ table.type04 td {
 									class="site_link pin">관심내역</a></li>
 							</ul>
 						</div></li>
-					<li class="list_item eventopen"><a href="/event/add">모임개설</a></li>
-					<li class="list_item notice"><a
-						href="/account/login?returnUrl=/event/main">알림</a></li>
+					<li class="list_item eventopen"><a href="#">교육과정검색</a></li>
 				</ul>
 			</div>
-			<div class="search_area">
+			<!--  <div class="search_area">
 				<form class="search_form" action="/event/main" method="GET">
 					<label for="searchInput">검색할 모임을 입력해주세요.</label> <input type="text"
 						id="searchInput" class="search_input" name="s" value=""
 						title="키워드로 모임을 검색하세요" data-event="248922"> <input
 						type="submit" class="btn_search" value="검색" title="검색">
 				</form>
-			</div>
+			</div>-->
 		</div>
 
 		<div class="header_bottom">
@@ -430,21 +435,29 @@ table.type04 td {
 						<section class="category_event">
 							<ul class="list_col">
 
-								<li class="list_item"><a href="/event/main/?c=085">교육</a></li>
-								<li class="list_item"><a href="/event/main/?c=087">세미나/컨퍼런스</a>
+								<li class="list_item"><a href="Edu_빅데이터">빅데이터</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=086">강연</a></li>
-								<li class="list_item"><a href="/event/main/?c=090">취미/소모임</a>
+								<li class="list_item"><a href="/event/main/?c=087">인공지능</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=088">문화/예술/방송</a>
+								<li class="list_item"><a href="/event/main/?c=086">백엔드</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=092">공모전</a>
+								<li class="list_item"><a href="/event/main/?c=090">프론트엔드</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=093">전시/박람회</a>
+								<li class="list_item"><a href="/event/main/?c=088">풀스택</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=095">이벤트/파티</a>
+								<li class="list_item"><a href="/event/main/?c=092">모바일</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=094">패션/뷰티</a>
+								<li class="list_item"><a href="/event/main/?c=093">보안,네트워크,클라우드</a>
+								</li>
+								<li class="list_item"><a href="/event/main/?c=095">융합기술</a>
+								</li>
+								<li class="list_item"><a href="/event/main/?c=094">콘텐츠제작</a>
+								</li>
+								<li class="list_item"><a href="/event/main/?c=096">데이터베이스</a>
+								</li>
+								<li class="list_item"><a href="/event/main/?c=096">블록체인</a>
+								</li>
+								<li class="list_item"><a href="/event/main/?c=096">자격증</a>
 								</li>
 								<li class="list_item"><a href="/event/main/?c=096">기타</a></li>
 
@@ -946,57 +959,6 @@ table.type04 td {
 					</div>
 
 					<!-- partner center -->
-					<div class="partner_center_body">
-						<a href="/service/advert/product/partner" class="partner"
-							target="_blank">파트너센터</a>
-						<div class="partner_center">
-							<div class="place">
-								<a href="https://place.onoffmix.com" class="btn_place"
-									target="_blank"></a> <a href="https://place.onoffmix.com"
-									target="_blank">모임에 딱 맞는 공간</a>
-							</div>
-							<div class="govent">
-								<a href="/service/advert/product/partner?govent"
-									class="btn_govent" target="_blank"></a> <a
-									href="/service/advert/product/partner?govent" data-new
-									target="_blank">가상공간 컨퍼런스</a>
-							</div>
-							<div class="lilay">
-								<a href="/service/advert/product/partner?39degree"
-									class="btn_lilay" target="_blank"></a> <a
-									href="/service/advert/product/partner?39degree" target="_blank">라이브
-									스트리밍</a>
-							</div>
-							<div class="yamyam">
-								<a href="/service/advert/product/partner?yamyam"
-									class="btn_yamyam" target="_blank"></a> <a
-									href="/service/advert/product/partner?yamyam" data-new
-									target="_blank">영상 촬영/제작</a>
-							</div>
-							<div class="xsync">
-								<a href="/service/advert/product/partner?xsync"
-									class="btn_xsync" target="_blank"></a> <a
-									href="/service/advert/product/partner?xsync" target="_blank">웨비나</a>
-							</div>
-							<div class="sendy">
-								<a href="https://sendy.ai/onoffmix" class="btn_sendy"
-									target="_blank"></a> <a href="https://sendy.ai/onoffmix"
-									target="_blank">화물용달 서비스</a>
-							</div>
-							<div class="gifticon">
-								<a href="/service/advert/product/partner?gifticon"
-									class="btn_gifticon" target="_blank"></a> <a
-									href="/service/advert/product/partner?gifticon" target="_blank">모바일
-									쿠폰 발송</a>
-							</div>
-							<div class="circle">
-								<a href="/service/advert/product/partner?circle"
-									class="btn_circle" target="_blank"></a> <a
-									href="/service/advert/product/partner?circle" target="_blank">모임
-									기획/운영</a>
-							</div>
-						</div>
-					</div>
 
 					<!---->
 
@@ -1006,69 +968,7 @@ table.type04 td {
 							<span class="ranking_number"></span> <span class="event_title"></span>
 						</div>
 						<div class="detail_ranking_area">
-							<h2>
-								실시간 <span class="date_time">2021.12.29</span>
-							</h2>
-							<ol class="ranking_list">
-								<li class="visible"><a href="/event/249442"
-									title="ETRI 통신미디어연구소 2021 성과 발표회"> <span
-										class="ranking_number">1</span> <span class="event_title">
-											ETRI 통신미디어연구소 2021 성과 발표회</span> <span class="ranking_status up">새로운
-											순위</span>
-								</a></li>
-								<li class=""><a href="/event/249813"
-									title="디지털서비스 전문계약제도 2차 온라인 설명회"> <span
-										class="ranking_number">2</span> <span class="event_title">
-											디지털서비스 전문계약제도 2차 온라인 설명회</span> <span class="ranking_status up">새로운
-											순위</span>
-								</a></li>
-								<li class=""><a href="/event/249908"
-									title="TRE(Tension&amp;Stress Release Exercises -긴장과 스트레스 해소 운동) 그룹세션">
-										<span class="ranking_number">3</span> <span
-										class="event_title"> TRE(Tension&amp;Stress Release
-											Exercises -긴장과 스트레스 해소 운동) 그룹세션</span> <span
-										class="ranking_status up">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/249458"
-									title="['22년 1월_압구정_지정일] 이지은 코칭"> <span
-										class="ranking_number">4</span> <span class="event_title">
-											['22년 1월_압구정_지정일] 이지은 코칭</span> <span class="ranking_status up">새로운
-											순위</span>
-								</a></li>
-								<li class=""><a href="/event/229676"
-									title="비전공자를 위한 데이터 직무 진로·취업 단기특강 OPEN!"> <span
-										class="ranking_number">5</span> <span class="event_title">
-											비전공자를 위한 데이터 직무 진로·취업 단기특강 OPEN!</span> <span
-										class="ranking_status new">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/245464" title="화장품 창업 정보 공유방">
-										<span class="ranking_number">6</span> <span
-										class="event_title"> 화장품 창업 정보 공유방</span> <span
-										class="ranking_status up">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/249854"
-									title="[줌바시29회] DT시대의 HRD변화와 주요이슈/리더십트렌드"> <span
-										class="ranking_number">7</span> <span class="event_title">
-											[줌바시29회] DT시대의 HRD변화와 주요이슈/리더십트렌드</span> <span
-										class="ranking_status up">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/229992"
-									title="&lt;방송&gt; 모임 개설 가이드"> <span class="ranking_number">8</span>
-										<span class="event_title"> &lt;방송&gt; 모임 개설 가이드</span> <span
-										class="ranking_status stay">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/230234"
-									title="디자인씽킹 놀이교육 온라인 무료 세미나"> <span class="ranking_number">9</span>
-										<span class="event_title"> 디자인씽킹 놀이교육 온라인 무료 세미나</span> <span
-										class="ranking_status up">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/240197"
-									title="(무료)주부창업 장사교육 성공법 재테크 교육"> <span
-										class="ranking_number">10</span> <span class="event_title">
-											(무료)주부창업 장사교육 성공법 재테크 교육</span> <span class="ranking_status down">새로운
-											순위</span>
-								</a></li>
-							</ol>
+							
 						</div>
 					</div>
 				</div>
@@ -1078,121 +978,16 @@ table.type04 td {
 	<main id="content" class="event_search">
 		<div class="content_wrapping wide_max_width_area">
 			<h2 class="main_title">
-				<span class="keyword">자바</span> 검색결과 <span class="total">(116)</span>
+				<span class="keyword"></span> 검색결과 <span class="total"></span>
 			</h2>
+			
+			
+			
+			<div id="교육분야">
+				
+			</div>
 			<!-- keyword search area -->
-			<section class="keyword_search_area">
-				<form name="searchBoxEventForm" action="/event?s="
-					origaction="https://www.onoffmix.com/event?s="
-					class="keyword_search_form" origtarget>
-					<input type="hidden" name="pageRows" value="12" _default="12"
-						_search="12"> <input type="hidden" name="page" value="1"
-						id="page"> <input type="hidden" id="sort-category"
-						value="categoryIdx|ASC"> <input type="hidden" name="order"
-						value="popularity"> <input type="hidden" name="searchAll"
-						value=""> <input type="hidden" name="research" value="">
-					<input type="hidden" name="search_date" id="search_date" value="">
-					<input type="hidden" name="exclude" value=""> <input
-						type="hidden" name="getPinCount" value="true"> <input
-						type="hidden" name="getAttendCount" value="true"> <input
-						type="hidden" name="blockAbuse" value="true"> <input
-						type="hidden" name="nowRecruitingEvent" value=""> <input
-						type="hidden" name="IngData" value=""> <input
-						type="hidden" name="order_gubun" value="N"> <input
-						type="hidden" id="endEventPage" value=""> <input
-						type="hidden" id="totalEventPage" value=""> <input
-						type="hidden" name="page_gubun" id="page_gubun" value="">
-					<input type="hidden" name="eof" id="eof" value="0">
-
-					<!-- data reset -->
-					<div class="search_form_top">
-						<h3 class="sub_title">상세검색</h3>
-
-						<input type="reset" class="btn_reset  hidden" id="reset"
-							value="초기화" rel="s=%EC%9E%90%EB%B0%94">
-					</div>
-
-					<input type="hidden" id="hostNumber" name="u" value="">
-
-					<!-- category -->
-					<fieldset class="filter_category_area">
-
-						<select id="area_sel" name="mem_area" style="width: 200px;">
-							<option value="">지역(전체)</option>
-							<option value="서울">서울</option>
-							<option value="부산">부산</option>
-							<option value="대구">대구</option>
-							<option value="인천">인천</option>
-							<option value="광주">광주</option>
-							<option value="대전">대전</option>
-							<option value="울산">울산</option>
-							<option value="세종">세종</option>
-							<option value="경기">경기</option>
-							<option value="강원">강원</option>
-							<option value="충청북도">충북</option>
-							<option value="충청남도">충남</option>
-							<option value="전라북도">전북</option>
-							<option value="전라남도">전남</option>
-							<option value="경상북도">경북</option>
-							<option value="경상남도">경남</option>
-							<option value="제주">제주</option>
-						</select>
-					</fieldset>
-					<!-- Time -->
-					<fieldset class="filter_time_pay_type">
-						<select id="part_sel" name="mem_part" style="width: 200px;">
-							<option value="">교육분야(전체)</option>
-							<option value="빅데이터">빅데이터</option>
-							<option value="인공지능">인공지능</option>
-							<option value="백엔드">백엔드</option>
-							<option value="프론트엔드">프론트엔드</option>
-							<option value="풀스택">풀스택</option>
-							<option value="융합기술">융합기술</option>
-							<option value="보안등">보안.네트워크.클라우드</option>
-							<option value="콘텐츠제작">콘텐츠제작</option>
-							<option value="자격과정">자격과정</option>
-							<option value="블록체인">블록체인</option>
-							<option value="기타">기타</option>
-						</select>
-					</fieldset>
-
-					<!-- search_scope -->
-					<fieldset class="filter_search_scope ">
-						<select id="kind_sel" name="mem_kind" style="width: 200px;">
-							<option value="">교육유형(전체)</option>
-							<option value="내일배움카드">구직자 : 내일배움카드</option>
-							<option value="국가기간전략산업직종">구직자 : 국가기간전략산업직종</option>
-							<option value="근로자카드">근로자 : 일반훈련</option>
-							<option value="사업주">근로자 : 기업훈련</option>
-						</select>
-					</fieldset>
-
-					<div>
-						<!-- search -->
-						<fieldset class="search_area">
-							<input type="text" id="keywordSearch" name="edu_info"
-								class="keyword_search" placeholder="검색어 입력" title="검색어 입력"
-								style="width: 400px;"> <input type="text"
-								style="display: none">
-
-							<button onClick="EduSearch()" type="button" class="btn_keyword_search">검색</button>
-						</fieldset>
-
-						<!-- end event -->
-						<fieldset class="end_event">
-							<input type="checkbox" class="endEvent" id="out_time_data"
-								name="out_time_data" value="Y"> <label
-								for="out_time_data">종료된 교육과정 포함</label>
-						</fieldset>
-					</div>
-
-					<!-- search word area -->
-					<div class="search_word_area"></div>
-				</form>
-
-			</section>
-
-
+			
 			<section class="event_main_area">
 				<div class="title_bar" style="">
 					<ul class="sort_menu">
@@ -1206,27 +1001,35 @@ table.type04 td {
 					</ul>
 				</div>
 
-				<table class="type04">
-					<thead>
-						<tr>
-							<td>순번</td>
-							<td>교육과정</td>
-							<td >기관명</td>
-
-							<td>시작일</td>
-							<td>종료일</td>
-
-							<td>훈련비</td>
-							<td>정원</td>
-							<td>훈련대상</td>
-						</tr>
-					</thead>
-
-					<tbody id="tbody">
-
-					</tbody>
-				</table>
-
+				<div class="table">
+  					<div class="table-row" style="font-weight: bold">
+    					<div class="table-cell">
+      						<p>순번</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>교육과정</p>
+   						 </div>
+    					<div class="table-cell">
+     						 <p>기관명</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>시작일</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>종료일</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>훈련비</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>정원</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>훈련대상</p>
+    					</div>
+  					</div>
+  					
+				</div>
 				
 
 
@@ -1358,7 +1161,7 @@ table.type04 td {
 	
 	let boardList;
 	
-	function EduSearch() {
+	$(document).ready(function() {
 		
 		$.ajax({
 			url : "EduCon",
@@ -1366,13 +1169,13 @@ table.type04 td {
 			// async: false,
 			data : {
 				
-				"edu_info" : $('input[name=edu_info]').val(),
+				"edu_info" : "",
 				// edu_name, edu_org
 				
-				"edu_addr" : $('#area_sel').val(),
-				"edu_part" : $('#part_sel').val(),
-				"edu_kind" : $('#kind_sel').val(),
-				"out_time_data" : $('input[name=out_time_data]:checked').val()
+				"edu_addr" : "",
+				"edu_part" : "빅데이터",
+				"edu_kind" : "",
+				"out_time_data" : ""
 					
 				},
 				
@@ -1394,13 +1197,15 @@ table.type04 td {
 				displayData(1, dataPerPage);
 				paging(totalData, dataPerPage, pageCount, 1);
 				
+				$('span.total').html("(" + res.length + ")");
+				
 			},
 			error : function() {
 				alert("교육과정 조회 중 오류가 발생했습니다.");
 			}
 		});
 		
-	}
+	});
 	
 	function paging(totalData, dataPerPage, pageCount, currentPage) {
 		  console.log("currentPage : " + currentPage);
@@ -1476,7 +1281,7 @@ table.type04 td {
 		  currentPage = Number(currentPage);
 		  dataPerPage = Number(dataPerPage);
 		  
-		  $('#tbody').html('');
+		  $('.table-body').html('');
 		  for (
 		    var i = (currentPage - 1) * dataPerPage;
 		    i < (currentPage - 1) * dataPerPage + dataPerPage; 
@@ -1484,19 +1289,20 @@ table.type04 td {
 		  ) {
 			  	let result = JSON.parse(boardList[i]);
 				let table = '';
-				table += '<tr>';
-				table += '<td><input type="checkbox" name="myedu" value="' + result.edu_seq + '">&nbsp;&nbsp;';
-				table += (i+1) + '</td>';
-				table += '<td><div class="back"><a href="' + result.edu_hrdlink + '" target=\'_blank\'><div class="button_base">' + result.edu_name + '</div></a></div></td>';
-				table += '<td><div class="back"><a href="' + result.edu_homepage + '" target=\'_blank\'><div class="button_base">' + result.edu_org + '</div></a></div></td>';
-				table += '<td>' + result.edu_start_date + '</td>';
-				table += '<td>' + result.edu_end_date + '</td>';
-				table += '<td>' + result.edu_price + '</td>';
-				table += '<td>' + result.edu_total + '</td>';
-				table += '<td>' + result.edu_kind + '</td></tr>';
-			$('#tbody').append(table);
+				table = '<div class="table-row">';
+				table += '<div class="table-cell"><p>';
+				table += '<input type="checkbox" name="myedu" value="' + result.edu_seq + '">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+				table += (i+1) + '</p></div>';
+				table += '<div class="table-cell"><p><div class="back"><a href="' + result.edu_hrdlink + '" target=\'_blank\'><div class="button_base">' + result.edu_name + '</div></a></div></p></div>';
+				table += '<div class="table-cell"><p><div class="back"><a href="' + result.edu_homepage + '" target=\'_blank\'><div class="button_base">' + result.edu_org + '</div></a></div></p></div>';
+				table += '<div class="table-cell"><p>' + result.edu_start_date + '</p></div>';
+				table += '<div class="table-cell"><p>' + result.edu_end_date + '</p></div>';
+				table += '<div class="table-cell"><p>' + result.edu_price + '</p></div>';
+				table += '<div class="table-cell"><p>' + result.edu_total + '</p></div>';
+				table += '<div class="table-cell"><p>' + result.edu_kind + '</p></div></div>';
+			$('.table').append(table);
 		  }
-		} 
+		}
 	
 	</script>
 	

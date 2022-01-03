@@ -207,28 +207,29 @@
 	color: #333;
 }
 
-table.type04 {
-  border-collapse: separate;
-  border-spacing: 1px;
-  text-align: left;
-  line-height: 1.5;
-  border-top: 1px solid #ccc;
-  margin : 20px 10px;
-}
-table.type04 thead {
-  width: 150px;
-  
-  padding: 10px;
-  font-weight: bold;
-  vertical-align: top;
-  border-bottom: 1px solid #ccc;
+.table {
+	border-collapse: collapse;
+  	display: table;
+  	width: 100%;
+  	align: center;
+  	vertical-align: middle;
 }
 
-table.type04 td {
-  width: 350px;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-  vertical-align: top;
+
+.table-row {
+	width: 100%;
+	height: 100%;
+	border-top: 1px solid #bcbcbc;
+	border-bottom: 1px solid #bcbcbc;
+  	display: table-row;
+}
+
+.table-cell {
+	
+	display: table-cell;
+ 	padding: 0px 20px;
+  	height: 50px;
+  	vertical-align: middle;
 }
 
 .button_base {
@@ -247,6 +248,59 @@ table.type04 td {
     cursor: pointer;
     color: #4195F6;
 }
+
+#pagingul {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-right: 0;
+}
+
+#pagingul li {
+    text-align: center;
+    float: left;
+}
+
+#pagingul li a {
+    display: block;
+    font-size: 14px;
+    padding: 9px 12px;
+    border-right: solid 1px #ccc;
+    box-sizing: border-box;
+}
+
+#pagingul li.on {
+	color: #ffffff;
+    background: #4195F6;
+}
+
+#pagingul li.on a {
+    color: #fff;
+}
+
+#myedu_submit {
+	text-align: center;
+    display: inline-block;
+    border: 1px solid #4195F6;
+    border-right: ;
+    display: block;
+    font-size: 14px;
+    padding: 9px 12px;
+    box-sizing: border-box;
+    background: #ffffff;
+    position: relative;
+    bottom: 15px;
+}
+
+#myedu_submit:hover {
+   	color: #ffffff;
+    background: #4195F6;
+}
+
+#myedu_submit:active {
+   font-weight: bold;
+}
+
 
 </style>
 </head>
@@ -324,18 +378,16 @@ table.type04 td {
 	<!-- =================================== Header Start =================================== -->
 	<header id="header" class="header_wrap ">
 		<div class="header_top wide_max_width_area">
-			<h1 class="ofm_logo" style="top:-135px;left:-130px;">
+			<h1 class="ofm_logo" style="top:-20px;left:-100px;">
 				<span class="text_logo">잇츠잇 홈</span>
-                                                        <img src="img/itsit2.png" alt="ONOFFMIX">
+                                                        <img src="img/itsit3.png" alt="ONOFFMIX">
                                                     </a>
 			</h1>
 
 			<div class="user_area">
 				<ul class="service_menu">
-					<li class="list_item login"><a href="/account/login">로그인</a></li>
-					<li class="list_item join"><a href="/account/join">회원가입</a></li>
-					<li class="list_item service"><a href="/service">서비스안내</a></li>
-					<li class="list_item customer"><a href="/cs/main">고객센터</a></li>
+					<li class="list_item login"><a href="Login.html">로그인</a></li>
+					<li class="list_item join"><a href="Join.html">회원가입</a></li>
 				</ul>
 
 				<ul class="member_menu">
@@ -354,19 +406,17 @@ table.type04 td {
 									class="site_link pin">관심내역</a></li>
 							</ul>
 						</div></li>
-					<li class="list_item eventopen"><a href="/event/add">모임개설</a></li>
-					<li class="list_item notice"><a
-						href="/account/login?returnUrl=/event/main">알림</a></li>
+					<li class="list_item eventopen"><a href="#">교육과정검색</a></li>
 				</ul>
 			</div>
-			<div class="search_area">
+			<!--  <div class="search_area">
 				<form class="search_form" action="/event/main" method="GET">
 					<label for="searchInput">검색할 모임을 입력해주세요.</label> <input type="text"
 						id="searchInput" class="search_input" name="s" value=""
 						title="키워드로 모임을 검색하세요" data-event="248922"> <input
 						type="submit" class="btn_search" value="검색" title="검색">
 				</form>
-			</div>
+			</div>-->
 		</div>
 
 		<div class="header_bottom">
@@ -379,21 +429,29 @@ table.type04 td {
 						<section class="category_event">
 							<ul class="list_col">
 
-								<li class="list_item"><a href="/event/main/?c=085">교육</a></li>
-								<li class="list_item"><a href="/event/main/?c=087">세미나/컨퍼런스</a>
+								<li class="list_item"><a href="Edu_빅데이터">빅데이터</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=086">강연</a></li>
-								<li class="list_item"><a href="/event/main/?c=090">취미/소모임</a>
+								<li class="list_item"><a href="/event/main/?c=087">인공지능</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=088">문화/예술/방송</a>
+								<li class="list_item"><a href="/event/main/?c=086">백엔드</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=092">공모전</a>
+								<li class="list_item"><a href="/event/main/?c=090">프론트엔드</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=093">전시/박람회</a>
+								<li class="list_item"><a href="/event/main/?c=088">풀스택</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=095">이벤트/파티</a>
+								<li class="list_item"><a href="/event/main/?c=092">모바일</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=094">패션/뷰티</a>
+								<li class="list_item"><a href="/event/main/?c=093">보안,네트워크,클라우드</a>
+								</li>
+								<li class="list_item"><a href="/event/main/?c=095">융합기술</a>
+								</li>
+								<li class="list_item"><a href="/event/main/?c=094">콘텐츠제작</a>
+								</li>
+								<li class="list_item"><a href="/event/main/?c=096">데이터베이스</a>
+								</li>
+								<li class="list_item"><a href="/event/main/?c=096">블록체인</a>
+								</li>
+								<li class="list_item"><a href="/event/main/?c=096">자격증</a>
 								</li>
 								<li class="list_item"><a href="/event/main/?c=096">기타</a></li>
 
@@ -895,57 +953,6 @@ table.type04 td {
 					</div>
 
 					<!-- partner center -->
-					<div class="partner_center_body">
-						<a href="/service/advert/product/partner" class="partner"
-							target="_blank">파트너센터</a>
-						<div class="partner_center">
-							<div class="place">
-								<a href="https://place.onoffmix.com" class="btn_place"
-									target="_blank"></a> <a href="https://place.onoffmix.com"
-									target="_blank">모임에 딱 맞는 공간</a>
-							</div>
-							<div class="govent">
-								<a href="/service/advert/product/partner?govent"
-									class="btn_govent" target="_blank"></a> <a
-									href="/service/advert/product/partner?govent" data-new
-									target="_blank">가상공간 컨퍼런스</a>
-							</div>
-							<div class="lilay">
-								<a href="/service/advert/product/partner?39degree"
-									class="btn_lilay" target="_blank"></a> <a
-									href="/service/advert/product/partner?39degree" target="_blank">라이브
-									스트리밍</a>
-							</div>
-							<div class="yamyam">
-								<a href="/service/advert/product/partner?yamyam"
-									class="btn_yamyam" target="_blank"></a> <a
-									href="/service/advert/product/partner?yamyam" data-new
-									target="_blank">영상 촬영/제작</a>
-							</div>
-							<div class="xsync">
-								<a href="/service/advert/product/partner?xsync"
-									class="btn_xsync" target="_blank"></a> <a
-									href="/service/advert/product/partner?xsync" target="_blank">웨비나</a>
-							</div>
-							<div class="sendy">
-								<a href="https://sendy.ai/onoffmix" class="btn_sendy"
-									target="_blank"></a> <a href="https://sendy.ai/onoffmix"
-									target="_blank">화물용달 서비스</a>
-							</div>
-							<div class="gifticon">
-								<a href="/service/advert/product/partner?gifticon"
-									class="btn_gifticon" target="_blank"></a> <a
-									href="/service/advert/product/partner?gifticon" target="_blank">모바일
-									쿠폰 발송</a>
-							</div>
-							<div class="circle">
-								<a href="/service/advert/product/partner?circle"
-									class="btn_circle" target="_blank"></a> <a
-									href="/service/advert/product/partner?circle" target="_blank">모임
-									기획/운영</a>
-							</div>
-						</div>
-					</div>
 
 					<!---->
 
@@ -955,69 +962,7 @@ table.type04 td {
 							<span class="ranking_number"></span> <span class="event_title"></span>
 						</div>
 						<div class="detail_ranking_area">
-							<h2>
-								실시간 <span class="date_time">2021.12.29</span>
-							</h2>
-							<ol class="ranking_list">
-								<li class="visible"><a href="/event/249442"
-									title="ETRI 통신미디어연구소 2021 성과 발표회"> <span
-										class="ranking_number">1</span> <span class="event_title">
-											ETRI 통신미디어연구소 2021 성과 발표회</span> <span class="ranking_status up">새로운
-											순위</span>
-								</a></li>
-								<li class=""><a href="/event/249813"
-									title="디지털서비스 전문계약제도 2차 온라인 설명회"> <span
-										class="ranking_number">2</span> <span class="event_title">
-											디지털서비스 전문계약제도 2차 온라인 설명회</span> <span class="ranking_status up">새로운
-											순위</span>
-								</a></li>
-								<li class=""><a href="/event/249908"
-									title="TRE(Tension&amp;Stress Release Exercises -긴장과 스트레스 해소 운동) 그룹세션">
-										<span class="ranking_number">3</span> <span
-										class="event_title"> TRE(Tension&amp;Stress Release
-											Exercises -긴장과 스트레스 해소 운동) 그룹세션</span> <span
-										class="ranking_status up">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/249458"
-									title="['22년 1월_압구정_지정일] 이지은 코칭"> <span
-										class="ranking_number">4</span> <span class="event_title">
-											['22년 1월_압구정_지정일] 이지은 코칭</span> <span class="ranking_status up">새로운
-											순위</span>
-								</a></li>
-								<li class=""><a href="/event/229676"
-									title="비전공자를 위한 데이터 직무 진로·취업 단기특강 OPEN!"> <span
-										class="ranking_number">5</span> <span class="event_title">
-											비전공자를 위한 데이터 직무 진로·취업 단기특강 OPEN!</span> <span
-										class="ranking_status new">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/245464" title="화장품 창업 정보 공유방">
-										<span class="ranking_number">6</span> <span
-										class="event_title"> 화장품 창업 정보 공유방</span> <span
-										class="ranking_status up">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/249854"
-									title="[줌바시29회] DT시대의 HRD변화와 주요이슈/리더십트렌드"> <span
-										class="ranking_number">7</span> <span class="event_title">
-											[줌바시29회] DT시대의 HRD변화와 주요이슈/리더십트렌드</span> <span
-										class="ranking_status up">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/229992"
-									title="&lt;방송&gt; 모임 개설 가이드"> <span class="ranking_number">8</span>
-										<span class="event_title"> &lt;방송&gt; 모임 개설 가이드</span> <span
-										class="ranking_status stay">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/230234"
-									title="디자인씽킹 놀이교육 온라인 무료 세미나"> <span class="ranking_number">9</span>
-										<span class="event_title"> 디자인씽킹 놀이교육 온라인 무료 세미나</span> <span
-										class="ranking_status up">새로운 순위</span>
-								</a></li>
-								<li class=""><a href="/event/240197"
-									title="(무료)주부창업 장사교육 성공법 재테크 교육"> <span
-										class="ranking_number">10</span> <span class="event_title">
-											(무료)주부창업 장사교육 성공법 재테크 교육</span> <span class="ranking_status down">새로운
-											순위</span>
-								</a></li>
-							</ol>
+							
 						</div>
 					</div>
 				</div>
@@ -1027,7 +972,7 @@ table.type04 td {
 	<main id="content" class="event_search">
 		<div class="content_wrapping wide_max_width_area">
 			<h2 class="main_title">
-				<span class="keyword">자바</span> 검색결과 <span class="total">(116)</span>
+				<span class="keyword"></span> 검색결과 <span class="total"></span>
 			</h2>
 			<!-- keyword search area -->
 			<section class="keyword_search_area">
@@ -1121,7 +1066,7 @@ table.type04 td {
 						<fieldset class="search_area">
 							<input type="text" id="keywordSearch" name="edu_info"
 								class="keyword_search" placeholder="검색어 입력" title="검색어 입력"
-								style="width: 500px;"> <input type="text"
+								style="width: 400px;"> <input type="text"
 								style="display: none">
 
 							<button onClick="EduSearch()" type="button" class="btn_keyword_search">검색</button>
@@ -1149,33 +1094,42 @@ table.type04 td {
 						<li><a class="latest">최신순</a></li>
 						<li><a class="soon">마감임박순</a></li>
 					</ul>
+					
 					<ul class="view_mode">
-						<li class="btn_thumbnail active">thumbnail</li>
-						<li class="btn_list">list</li>
+						<button id="myedu_submit">관심교육 등록</button>
 					</ul>
 				</div>
 
-				<table class="type04">
-					<thead>
-						<tr>
-							<td>순번</td>
-							<td>교육과정</td>
-							<td >기관명</td>
-
-							<td>시작일</td>
-							<td>종료일</td>
-
-							<td>훈련비</td>
-							<td>정원</td>
-							<td>훈련대상</td>
-						</tr>
-					</thead>
-
-					<tbody id="tbody">
-
-					</tbody>
-				</table>
-
+				<div class="table">
+  					<div class="table-row" style="font-weight: bold">
+    					<div class="table-cell">
+      						<p>순번</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>교육과정</p>
+   						 </div>
+    					<div class="table-cell">
+     						 <p>기관명</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>시작일</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>종료일</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>훈련비</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>정원</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>훈련대상</p>
+    					</div>
+  					</div>
+  					
+				</div>
+				
 
 
 				<div class="end_ing"></div>
@@ -1185,12 +1139,8 @@ table.type04 td {
 				</div>
 
 				<div class="pagination_wrap" style="">
-					<div class="pagination">
-						<a href="" class='btn_prev disabled'>이전</a><a href=""
-							class='page_move active disabled' data-page='1'>1</a><a href=""
-							class='page_move' data-page='2'>2</a><a href="" class='page_move'
-							data-page='3'>3</a><a href="" class='btn_next disabled'>다음</a>
-					</div>
+				<ul id="pagingul"></ul>
+
 				</div>
 
 				<div class="floating_btn stop">
@@ -1308,10 +1258,7 @@ table.type04 td {
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
 	
-	let totalData; //총 데이터 수
-	let dataPerPage; //한 페이지에 나타낼 글 수
-	let pageCount = 10; //페이징에 나타낼 페이지 수
-	let globalCurrentPage=1; //현재 페이지
+	let boardList;
 	
 	function EduSearch() {
 		
@@ -1332,28 +1279,129 @@ table.type04 td {
 				},
 				
 			dataType:"json",
-			success : function(res) {				
-					$('#tbody').html('');
-					for(var i = 0; i < res.length; i++){
-						let result = JSON.parse(res[i]);
-						let table = '';
-						table += '<tr>';
-						table += '<td>' + (i+1) + '</td>';
-						table += '<td><div class="back"><a href="' + result.edu_hrdlink + '" target=\'_blank\'><div class="button_base">' + result.edu_name + '</div></a></div></td>';
-						table += '<td><div class="back"><a href="' + result.edu_homepage + '" target=\'_blank\'><div class="button_base">' + result.edu_org + '</div></a></div></td>';
-						table += '<td>' + result.edu_start_date + '</td>';
-						table += '<td>' + result.edu_end_date + '</td>';
-						table += '<td>' + result.edu_price + '</td>';
-						table += '<td>' + result.edu_total + '</td>';
-						table += '<td>' + result.edu_kind + '</td></tr>';
-					$('#tbody').append(table);
-				}
+			success : function(res) {
+				
+				console.log(res);
+				//console.log(res.length);
+				//console.log((res.length%20>0)?parseInt(res.length/20)+1:parseInt(res.length/20));
+				
+				boardList = res;
+				
+				let totalData=res.length; //총 데이터 수
+				let dataPerPage = 20; //한 페이지에 나타낼 글 수
+				//let pageCount = (res.length%20>0)?parseInt(res.length/20)+1:parseInt(res.length/20); //페이징에 나타낼 페이지 수
+				let pageCount = 10;
+				let globalCurrentPage = 1; //현재 페이지
+				 
+				displayData(1, dataPerPage);
+				paging(totalData, dataPerPage, pageCount, 1);
+				
+				$('span.total').html("(" + res.length + ")");
+				
 			},
 			error : function() {
 				alert("교육과정 조회 중 오류가 발생했습니다.");
 			}
 		});
+		
 	}
+	
+	function paging(totalData, dataPerPage, pageCount, currentPage) {
+		  console.log("currentPage : " + currentPage);
+
+		  totalPage = Math.ceil(totalData / dataPerPage); //총 페이지 수
+		  
+		  if(totalPage<pageCount){
+		    pageCount=totalPage;
+		  }
+		  console.log('totalPage:',totalPage);
+		  console.log('pageCount:',pageCount); //총 페이지수
+		  
+		  let pageGroup = Math.ceil(currentPage / pageCount); // 페이지 그룹
+		  let last = pageGroup * pageCount; //화면에 보여질 마지막 페이지 번호
+		  
+		  if (last > totalPage) {
+		    last = totalPage;
+		  }
+
+		  let first = last - (pageCount - 1); //화면에 보여질 첫번째 페이지 번호
+		  let next = last + 1;
+		  let prev = first - 1;
+
+		  let pageHtml = "";
+		  
+		  console.log('first:',first);
+		  console.log('next:',next);
+		  console.log('prev:',prev);
+		  
+
+		  if (prev > 0) {
+		    pageHtml += "<li><a href='#' id='prev'> 이전 </a></li>";
+		  }
+
+		 //페이징 번호 표시 
+		  for (var i = first; i <= last; i++) {
+		    if (currentPage == i) {
+		      pageHtml +=
+		        "<li class='on'><a href='#' id='" + i + "'>" + i + "</a></li>";
+		    } else {
+		      pageHtml += "<li><a href='#' id='" + i + "'>" + i + "</a></li>";
+		    }
+		  }
+
+		  if (last < totalPage) {
+		    pageHtml += "<li><a href='#' id='next'> 다음 </a></li>";
+		  }
+
+		  $("#pagingul").html(pageHtml);
+		  let displayCount = "";
+		  displayCount = "현재 1 - " + totalPage + " 페이지 / " + totalData + "건";
+		  $("#displayCount").text(displayCount);
+
+		  //페이징 번호 클릭 이벤트 
+		  $("#pagingul li a").click(function () {
+		    let $id = $(this).attr("id");
+		    selectedPage = $(this).text();
+
+		    if ($id == "next") selectedPage = next;
+		    if ($id == "prev") selectedPage = prev;
+		    
+		    //전역변수에 선택한 페이지 번호를 담는다...
+		    globalCurrentPage = selectedPage;
+		    //페이징 표시 재호출
+		    paging(totalData, dataPerPage, pageCount, selectedPage);
+		    //글 목록 표시 재호출
+		    displayData(selectedPage, dataPerPage);
+		  });
+		}
+	
+	function displayData(currentPage, dataPerPage) {
+
+		  currentPage = Number(currentPage);
+		  dataPerPage = Number(dataPerPage);
+		  
+		  $('.table-body').html('');
+		  for (
+		    var i = (currentPage - 1) * dataPerPage;
+		    i < (currentPage - 1) * dataPerPage + dataPerPage; 
+		    i++
+		  ) {
+			  	let result = JSON.parse(boardList[i]);
+				let table = '';
+				table = '<div class="table-row">';
+				table += '<div class="table-cell"><p>';
+				table += '<input type="checkbox" name="myedu" value="' + result.edu_seq + '">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+				table += (i+1) + '</p></div>';
+				table += '<div class="table-cell"><p><div class="back"><a href="' + result.edu_hrdlink + '" target=\'_blank\'><div class="button_base">' + result.edu_name + '</div></a></div></p></div>';
+				table += '<div class="table-cell"><p><div class="back"><a href="' + result.edu_homepage + '" target=\'_blank\'><div class="button_base">' + result.edu_org + '</div></a></div></p></div>';
+				table += '<div class="table-cell"><p>' + result.edu_start_date + '</p></div>';
+				table += '<div class="table-cell"><p>' + result.edu_end_date + '</p></div>';
+				table += '<div class="table-cell"><p>' + result.edu_price + '</p></div>';
+				table += '<div class="table-cell"><p>' + result.edu_total + '</p></div>';
+				table += '<div class="table-cell"><p>' + result.edu_kind + '</p></div></div>';
+			$('.table').append(table);
+		  }
+		} 
 	
 	</script>
 	
