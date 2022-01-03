@@ -257,8 +257,7 @@
                                     <%}else{ %>
                                     <li class="list_item login"><a href="LogoutCon">로그아웃</a></li>
                                     <%} %>
-                                                        <li class="list_item service"><a href="/service">서비스안내</a></li>
-                                <li class="list_item customer"><a href="/cs/main">고객센터</a></li>
+                                                     
                             </ul>
         
                             <ul class="member_menu">
@@ -274,8 +273,8 @@
                                         <ul class="sub_list mypage_list">
                                         	                                     
                                             <li><a href="Update.jsp" class="site_link edit">회원정보수정</a></li>                                           
-                                            <li><a href="/account/login?returnUrl=/account/pass" class="site_link pass">비밀번호변경</a></li>
-                                            <li><a href="/account/login?returnUrl=/account/event" class="site_link event">신청내역</a></li>
+                                            <!--<li><a href="/account/login?returnUrl=/account/pass" class="site_link pass">비밀번호변경</a></li>  -->
+                                           <!-- <li><a href="/account/login?returnUrl=/account/event" class="site_link event">신청내역</a></li> --> 
                                             <!-- <li><a href="/account/login?returnUrl=/account/payment" class="site_link payment">결제내역</a></li> -->
                                             <li><a href="/account/login?returnUrl=/account/pin" class="site_link pin">관심내역</a></li>
                                         </ul>
@@ -796,7 +795,7 @@
 						<%if(dto!=null) {%>
 						<a href="/prom/exhibition" class="link_item exhibition"
 							data-c="b09b92031">나의 캘린더</a> <a href="/ch"
-							class="link_item channel" data-c="b09b92041">우리들의 이야기</a>
+							class="link_item channel" data-c="b09b92041">공유게시판</a>
 						<%}else {%>
 						<a href="/ch" class="link_item channel" data-c="b09b92041">우리들의
 							이야기</a>
@@ -839,163 +838,108 @@
 			<div class="content_wrap wide_max_width_area">
 				<div class="banner_branding"></div>
 
-				<div class="banner_top_area">
+				<div class="banner_top_area" style="text-align:center;margin:0 auto;" >
+					<div style="border:1px solid;display:inline-block">
+						
+						<section class="keyword_search_area">
+				<form name="searchBoxEventForm" action="/event?s="
+					origaction="https://www.onoffmix.com/event?s="
+					class="keyword_search_form" origtarget>
+					<input type="hidden" name="pageRows" value="12" _default="12"
+						_search="12"> <input type="hidden" name="page" value="1"
+						id="page"> <input type="hidden" id="sort-category"
+						value="categoryIdx|ASC"> <input type="hidden" name="order"
+						value="popularity"> <input type="hidden" name="searchAll"
+						value=""> <input type="hidden" name="research" value="">
+					<input type="hidden" name="search_date" id="search_date" value="">
+					<input type="hidden" name="exclude" value=""> <input
+						type="hidden" name="getPinCount" value="true"> <input
+						type="hidden" name="getAttendCount" value="true"> <input
+						type="hidden" name="blockAbuse" value="true"> <input
+						type="hidden" name="nowRecruitingEvent" value=""> <input
+						type="hidden" name="IngData" value=""> <input
+						type="hidden" name="order_gubun" value="N"> <input
+						type="hidden" id="endEventPage" value=""> <input
+						type="hidden" id="totalEventPage" value=""> <input
+						type="hidden" name="page_gubun" id="page_gubun" value="">
+					<input type="hidden" name="eof" id="eof" value="0">
 
+					<!-- data reset -->
+					<div class="search_form_top">
+						<h3 class="sub_title">상세검색</h3>
 
-					<ul class="title_list_area"></ul>
-					<ul class="banner_text">
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68588?url=%2Fevent%2F248973" target="_blank"
-							title="[AICON 광주 2021] 컨퍼런스 참가자 사전등록" data-c="aa16fe1a1"
-							data-event_no="248973"
-							data-event_title="[AICON 광주 2021] 컨퍼런스 참가자 사전등록"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="1"> <img
-								src="https://cfile1.onoffmix.com/attach/5V2FOpfPCzxL97lgbmNYT0DI4StKqnwk"
-								alt="[AICON 광주 2021] 컨퍼런스 참가자 사전등록">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68693?url=%2Fevent%2F249157" target="_blank"
-							title="2022 세계시장 진출전략 설명회" data-c="aa16fe1a2"
-							data-event_no="249157" data-event_title="2022 세계시장 진출전략 설명회"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="2"> <img
-								src="https://cfile1.onoffmix.com/attach/nF6IWO3GUp7fJerjt5XVdQxKRc21ETsL"
-								alt="2022 세계시장 진출전략 설명회">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68818?url=%2Fevent%2F249452" target="_blank"
-							title="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나" data-c="aa16fe1a3"
-							data-event_no="249452"
-							data-event_title="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="3"> <img
-								src="https://cfile1.onoffmix.com/attach/6WHCUGrqPSViI4bz2t7sAmD3Q5XJodBL"
-								alt="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68883?url=%2Fevent%2F249195" target="_blank"
-							title="더쿼드포럼 제 2회 청년을 위한 지식캠프" data-c="aa16fe1a4"
-							data-event_no="249195" data-event_title="더쿼드포럼 제 2회 청년을 위한 지식캠프"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="4"> <img
-								src="https://cfile1.onoffmix.com/attach/IzVLHWs8vYEiaNRBdgT5w1rX0QSbotl2"
-								alt="더쿼드포럼 제 2회 청년을 위한 지식캠프">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68894?url=%2Fevent%2F249295" target="_blank"
-							title="검단신도시 스마트서비스 아이디어 공모전" data-c="aa16fe1a5"
-							data-event_no="249295" data-event_title="검단신도시 스마트서비스 아이디어 공모전"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="5"> <img
-								src="https://cfile1.onoffmix.com/attach/w6qfnDIbuBs0PKxolXk97L8zZVhU3eF1"
-								alt="검단신도시 스마트서비스 아이디어 공모전">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68903?url=%2Fevent%2F249379" target="_blank"
-							title="익스트림 성장 플랫폼 EXA 13기 모집" data-c="aa16fe1a6"
-							data-event_no="249379"
-							data-event_title="[EXA] 익스트림 성장 플랫폼 EXA 13기 모집 (~12/27)"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="6"> <img
-								src="https://cfile1.onoffmix.com/attach/80pvxtfYCWoZEsTuPFnHLg9S61rdbX2y"
-								alt="익스트림 성장 플랫폼 EXA 13기 모집">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68872?url=%2Fevent%2F249482" target="_blank"
-							title="한전KDN 사회적경제 기업 경영개선 지원사업" data-c="aa16fe1a7"
-							data-event_no="249482"
-							data-event_title="한전KDN 사회적경제 기업 경영개선 지원사업"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="7"> <img
-								src="https://cfile1.onoffmix.com/attach/ExDTubGtJzHjqihBm3dRS6crpOFwPokZ"
-								alt="한전KDN 사회적경제 기업 경영개선 지원사업">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/59475?url=https%3A%2F%2Fonoffmix.com%2Fservice%2Fadvert%2Fproduct%2Fpartner%3F39degree"
-							target="_blank" title="&quot;릴레이&quot; 라이브 서비스"
-							data-c="aa16fe1a8" data-event_no="out_59475"
-							data-event_title="릴레이 라이브 서비스"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="8"> <img
-								src="https://cfile1.onoffmix.com/attach/V2QUHb796yIcX3khLxRaivmKgB0pMESz"
-								alt="&quot;릴레이&quot; 라이브 서비스">
-						</a></li>
-					</ul>
-					<div class="full_view_area">
-						<ul>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68588?url=%2Fevent%2F248973" target="_blank"
-								title="[AICON 광주 2021] 컨퍼런스 참가자 사전등록" data-c="aa16fe1a1"
-								data-event_no="248973"
-								data-event_title="[AICON 광주 2021] 컨퍼런스 참가자 사전등록"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="1">
-									<img
-									src="https://cfile1.onoffmix.com/attach/5V2FOpfPCzxL97lgbmNYT0DI4StKqnwk"
-									alt="[AICON 광주 2021] 컨퍼런스 참가자 사전등록">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68693?url=%2Fevent%2F249157" target="_blank"
-								title="2022 세계시장 진출전략 설명회" data-c="aa16fe1a2"
-								data-event_no="249157" data-event_title="2022 세계시장 진출전략 설명회"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="2">
-									<img
-									src="https://cfile1.onoffmix.com/attach/nF6IWO3GUp7fJerjt5XVdQxKRc21ETsL"
-									alt="2022 세계시장 진출전략 설명회">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68818?url=%2Fevent%2F249452" target="_blank"
-								title="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나" data-c="aa16fe1a3"
-								data-event_no="249452"
-								data-event_title="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="3">
-									<img
-									src="https://cfile1.onoffmix.com/attach/6WHCUGrqPSViI4bz2t7sAmD3Q5XJodBL"
-									alt="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68883?url=%2Fevent%2F249195" target="_blank"
-								title="더쿼드포럼 제 2회 청년을 위한 지식캠프" data-c="aa16fe1a4"
-								data-event_no="249195" data-event_title="더쿼드포럼 제 2회 청년을 위한 지식캠프"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="4">
-									<img
-									src="https://cfile1.onoffmix.com/attach/IzVLHWs8vYEiaNRBdgT5w1rX0QSbotl2"
-									alt="더쿼드포럼 제 2회 청년을 위한 지식캠프">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68894?url=%2Fevent%2F249295" target="_blank"
-								title="검단신도시 스마트서비스 아이디어 공모전" data-c="aa16fe1a5"
-								data-event_no="249295" data-event_title="검단신도시 스마트서비스 아이디어 공모전"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="5">
-									<img
-									src="https://cfile1.onoffmix.com/attach/w6qfnDIbuBs0PKxolXk97L8zZVhU3eF1"
-									alt="검단신도시 스마트서비스 아이디어 공모전">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68903?url=%2Fevent%2F249379" target="_blank"
-								title="익스트림 성장 플랫폼 EXA 13기 모집" data-c="aa16fe1a6"
-								data-event_no="249379"
-								data-event_title="[EXA] 익스트림 성장 플랫폼 EXA 13기 모집 (~12/27)"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="6">
-									<img
-									src="https://cfile1.onoffmix.com/attach/80pvxtfYCWoZEsTuPFnHLg9S61rdbX2y"
-									alt="익스트림 성장 플랫폼 EXA 13기 모집">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68872?url=%2Fevent%2F249482" target="_blank"
-								title="한전KDN 사회적경제 기업 경영개선 지원사업" data-c="aa16fe1a7"
-								data-event_no="249482"
-								data-event_title="한전KDN 사회적경제 기업 경영개선 지원사업"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="7">
-									<img
-									src="https://cfile1.onoffmix.com/attach/ExDTubGtJzHjqihBm3dRS6crpOFwPokZ"
-									alt="한전KDN 사회적경제 기업 경영개선 지원사업">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/59475?url=https%3A%2F%2Fonoffmix.com%2Fservice%2Fadvert%2Fproduct%2Fpartner%3F39degree"
-								target="_blank" title="&quot;릴레이&quot; 라이브 서비스"
-								data-c="aa16fe1a8" data-event_no="out_59475"
-								data-event_title="릴레이 라이브 서비스"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="8">
-									<img
-									src="https://cfile1.onoffmix.com/attach/V2QUHb796yIcX3khLxRaivmKgB0pMESz"
-									alt="&quot;릴레이&quot; 라이브 서비스">
-							</a></li>
-						</ul>
-						<button type="button" class="full_view_close_btn">리스트 보기
-							닫기</button>
+						<input type="reset" class="btn_reset  hidden" id="reset"
+							value="초기화" rel="s=%EC%9E%90%EB%B0%94">
+					</div>
+
+					<input type="hidden" id="hostNumber" name="u" value="">
+
+					<!-- category -->
+					<fieldset class="filter_category_area">
+
+						<select id="area_sel" name="mem_area" style="width: 200px;">
+							<option value="">지역(전체)</option>
+							<option value="서울">서울</option>
+							<option value="부산">부산</option>
+							<option value="대구">대구</option>
+							<option value="인천">인천</option>
+							<option value="광주">광주</option>
+							<option value="대전">대전</option>
+							<option value="울산">울산</option>
+							<option value="세종">세종</option>
+							<option value="경기">경기</option>
+							<option value="강원">강원</option>
+							<option value="충청북도">충북</option>
+							<option value="충청남도">충남</option>
+							<option value="전라북도">전북</option>
+							<option value="전라남도">전남</option>
+							<option value="경상북도">경북</option>
+							<option value="경상남도">경남</option>
+							<option value="제주">제주</option>
+						</select>
+					</fieldset>
+					<!-- Time -->
+					<fieldset class="filter_time_pay_type">
+						<select id="part_sel" name="mem_part" style="width: 200px;">
+							<option value="">교육분야(전체)</option>
+							<option value="빅데이터">빅데이터</option>
+							<option value="인공지능">인공지능</option>
+							<option value="백엔드">백엔드</option>
+							<option value="프론트엔드">프론트엔드</option>
+							<option value="풀스택">풀스택</option>
+							<option value="융합기술">융합기술</option>
+							<option value="보안등">보안.네트워크.클라우드</option>
+							<option value="콘텐츠제작">콘텐츠제작</option>
+							<option value="자격과정">자격과정</option>
+							<option value="블록체인">블록체인</option>
+							<option value="기타">기타</option>
+						</select>
+					</fieldset>
+				
+					<!-- search_scope -->
+					<fieldset class="filter_search_scope ">
+						<select id="kind_sel" name="mem_kind" style="width: 200px;">
+							<option value="">교육유형(전체)</option>
+							<option value="내일배움카드">구직자 : 내일배움카드</option>
+							<option value="국가기간전략산업직종">구직자 : 국가기간전략산업직종</option>
+							<option value="근로자카드">근로자 : 일반훈련</option>
+							<option value="사업주">근로자 : 기업훈련</option>
+						</select>
+					</fieldset>
+
+					<div>
+						<!-- search -->
+						<fieldset class="search_area">
+							<input type="text" id="keywordSearch" name="edu_info"
+								class="keyword_search" placeholder="검색어 입력" title="검색어 입력"
+								style="width: 500px;"> <input type="text"
+								style="display: none">
+
+							<button onClick="EduSearch()" type="button" class="btn_keyword_search">검색</button>
+						</fieldset>
+						
+						
+						
 					</div>
 				</div>
 			</div>

@@ -1104,7 +1104,7 @@ table.type04 td {
 							<option value="기타">기타</option>
 						</select>
 					</fieldset>
-
+				
 					<!-- search_scope -->
 					<fieldset class="filter_search_scope ">
 						<select id="kind_sel" name="mem_kind" style="width: 200px;">
