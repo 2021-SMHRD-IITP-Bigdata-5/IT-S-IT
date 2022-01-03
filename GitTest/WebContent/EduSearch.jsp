@@ -10,7 +10,7 @@
 <meta name="description" content="세상의 모든 모임 '온오프믹스'">
 <meta name="author" content="ONOFFMIX Inc. (webmaster@onoffmix.com)">
 <meta name="viewport" content="width=1280">
-<title>온오프믹스 :: 모임문화 플랫폼</title>
+<title>잇츠잇(IT'S IT) :: IT교육과정 추천 플랫폼</title>
 <meta property="og:image"
 	content="https://static.onoffmix.com/images/common/onoffmix_logo_og.png" />
 <link rel="shortcut icon" type="image/x-icon"
@@ -1307,13 +1307,18 @@ table.type04 td {
 	<!-- Script -->
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
+	
+	let totalData; //총 데이터 수
+	let dataPerPage; //한 페이지에 나타낼 글 수
+	let pageCount = 10; //페이징에 나타낼 페이지 수
+	let globalCurrentPage=1; //현재 페이지
+	
 	function EduSearch() {
-		var total_list;
 		
 		$.ajax({
 			url : "EduCon",
 			type : "post",
-			async: false,
+			// async: false,
 			data : {
 				
 				"edu_info" : $('input[name=edu_info]').val(),
@@ -1330,9 +1335,6 @@ table.type04 td {
 			success : function(res) {				
 					$('#tbody').html('');
 					for(var i = 0; i < res.length; i++){
-					// 태그 만들기
-					// 1. 빈문자열을 가진 변수를 하나 생성
-					// 2. 그 안에 태그값을 누적
 						let result = JSON.parse(res[i]);
 						let table = '';
 						table += '<tr>';
@@ -1344,29 +1346,15 @@ table.type04 td {
 						table += '<td>' + result.edu_price + '</td>';
 						table += '<td>' + result.edu_total + '</td>';
 						table += '<td>' + result.edu_kind + '</td></tr>';
-						
-						// javascript로 html 태그 제작하는 4가지 방법
-						// .html()
-						// .after()
-						// .before()
-						// .append() --> 선택한 태그 내부에 추가
 					$('#tbody').append(table);
-
-					//$(page_move active disabled에 하단 번호 추가)
-					//총 데이터 갯수는 res.length
 				}
-				total_list = res;
 			},
 			error : function() {
 				alert("교육과정 조회 중 오류가 발생했습니다.");
 			}
 		});
-		
-		
-
-
 	}
-
+	
 	</script>
 	
 </body>

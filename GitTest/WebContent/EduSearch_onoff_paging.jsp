@@ -10,7 +10,7 @@
 <meta name="description" content="세상의 모든 모임 '온오프믹스'">
 <meta name="author" content="ONOFFMIX Inc. (webmaster@onoffmix.com)">
 <meta name="viewport" content="width=1280">
-<title>온오프믹스 :: 모임문화 플랫폼</title>
+<title>잇츠잇(IT'S IT) :: IT교육과정 추천 플랫폼</title>
 <meta property="og:image"
 	content="https://static.onoffmix.com/images/common/onoffmix_logo_og.png" />
 <link rel="shortcut icon" type="image/x-icon"
@@ -247,6 +247,57 @@ table.type04 td {
     cursor: pointer;
     color: #4195F6;
 }
+
+#pagingul {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-right: 0;
+}
+
+#pagingul li {
+    text-align: center;
+    float: left;
+}
+
+#pagingul li a {
+    display: block;
+    font-size: 14px;
+    padding: 9px 12px;
+    border-right: solid 1px #4195F6;
+    box-sizing: border-box;
+}
+
+#pagingul li.on {
+	color: #ffffff;
+    background: #4195F6;
+}
+
+#pagingul li.on a {
+    color: #fff;
+}
+
+#myedu_submit {
+	text-align: center;
+    display: inline-block;
+    border: 1px solid #4195F6;
+    border-right: ;
+    display: block;
+    font-size: 14px;
+    padding: 9px 12px;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+#myedu_submit:hover {
+   	color: #ffffff;
+    background: #4195F6;
+}
+
+#myedu_submit:active {
+   font-weight: bold;
+}
+
 
 </style>
 </head>
@@ -1121,7 +1172,7 @@ table.type04 td {
 						<fieldset class="search_area">
 							<input type="text" id="keywordSearch" name="edu_info"
 								class="keyword_search" placeholder="검색어 입력" title="검색어 입력"
-								style="width: 500px;"> <input type="text"
+								style="width: 400px;"> <input type="text"
 								style="display: none">
 
 							<button onClick="EduSearch()" type="button" class="btn_keyword_search">검색</button>
@@ -1149,9 +1200,9 @@ table.type04 td {
 						<li><a class="latest">최신순</a></li>
 						<li><a class="soon">마감임박순</a></li>
 					</ul>
+					
 					<ul class="view_mode">
-						<li class="btn_thumbnail active">thumbnail</li>
-						<li class="btn_list">list</li>
+						<button id="myedu_submit">관심교육 등록</button>
 					</ul>
 				</div>
 
@@ -1175,9 +1226,8 @@ table.type04 td {
 
 					</tbody>
 				</table>
-				
-				<button onclick="part()">시험용버튼</button>
 
+				
 
 
 				<div class="end_ing"></div>
@@ -1187,12 +1237,8 @@ table.type04 td {
 				</div>
 
 				<div class="pagination_wrap" style="">
-					<div class="pagination">
-						<a href="" class='btn_prev disabled'>이전</a><a href=""
-							class='page_move active disabled' data-page='1'>1</a><a href=""
-							class='page_move' data-page='2'>2</a><a href="" class='page_move'
-							data-page='3'>3</a><a href="" class='btn_next disabled'>다음</a>
-					</div>
+				<ul id="pagingul"></ul>
+
 				</div>
 
 				<div class="floating_btn stop">
@@ -1309,13 +1355,15 @@ table.type04 td {
 	<!-- Script -->
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
+	
+	let boardList;
+	
 	function EduSearch() {
-		var total_list;
 		
 		$.ajax({
 			url : "EduCon",
 			type : "post",
-			async: false,
+			// async: false,
 			data : {
 				
 				"edu_info" : $('input[name=edu_info]').val(),
@@ -1323,51 +1371,133 @@ table.type04 td {
 				
 				"edu_addr" : $('#area_sel').val(),
 				"edu_part" : $('#part_sel').val(),
-				"edu_kind" : $('#kind_sel').val()
-			},
-			dataType:"json",
-			success : function(res) {				
-					$('#tbody').html('');
-					for(var i = 0; i < res.length; i++){
-					// 태그 만들기
-					// 1. 빈문자열을 가진 변수를 하나 생성
-					// 2. 그 안에 태그값을 누적
-						let result = JSON.parse(res[i]);
-						let table = '';
-						table += '<tr>';
-						table += '<td>' + (i+1) + '</td>';
-						table += '<td><div class="back"><a href="' + result.edu_hrdlink + '" target=\'_blank\'><div class="button_base">' + result.edu_name + '</div></a></div></td>';
-						table += '<td><div class="back"><a href="' + result.edu_homepage + '" target=\'_blank\'><div class="button_base">' + result.edu_org + '</div></a></div></td>';
-						table += '<td>' + result.edu_start_date + '</td>';
-						table += '<td>' + result.edu_end_date + '</td>';
-						table += '<td>' + result.edu_price + '</td>';
-						table += '<td>' + result.edu_total + '</td>';
-						table += '<td>' + result.edu_kind + '</td></tr>';
-						
-						// javascript로 html 태그 제작하는 4가지 방법
-						// .html()
-						// .after()
-						// .before()
-						// .append() --> 선택한 태그 내부에 추가
-					$('#tbody').append(table);
-
-					//$(page_move active disabled에 하단 번호 추가)
-					//총 데이터 갯수는 res.length
-				}
-				total_list = res;
+				"edu_kind" : $('#kind_sel').val(),
+				"out_time_data" : $('input[name=out_time_data]:checked').val()
+					
+				},
 				
-				function part(total_list) {
-					for(var i = 0; i < total_list.length; i++)
-				}
+			dataType:"json",
+			success : function(res) {
+				
+				console.log(res);
+				//console.log(res.length);
+				//console.log((res.length%20>0)?parseInt(res.length/20)+1:parseInt(res.length/20));
+				
+				boardList = res;
+				
+				let totalData=res.length; //총 데이터 수
+				let dataPerPage = 20; //한 페이지에 나타낼 글 수
+				//let pageCount = (res.length%20>0)?parseInt(res.length/20)+1:parseInt(res.length/20); //페이징에 나타낼 페이지 수
+				let pageCount = 10;
+				let globalCurrentPage = 1; //현재 페이지
+				 
+				displayData(1, dataPerPage);
+				paging(totalData, dataPerPage, pageCount, 1);
+				
 			},
 			error : function() {
 				alert("교육과정 조회 중 오류가 발생했습니다.");
 			}
 		});
+		
 	}
 	
-	
+	function paging(totalData, dataPerPage, pageCount, currentPage) {
+		  console.log("currentPage : " + currentPage);
 
+		  totalPage = Math.ceil(totalData / dataPerPage); //총 페이지 수
+		  
+		  if(totalPage<pageCount){
+		    pageCount=totalPage;
+		  }
+		  console.log('totalPage:',totalPage);
+		  console.log('pageCount:',pageCount); //총 페이지수
+		  
+		  let pageGroup = Math.ceil(currentPage / pageCount); // 페이지 그룹
+		  let last = pageGroup * pageCount; //화면에 보여질 마지막 페이지 번호
+		  
+		  if (last > totalPage) {
+		    last = totalPage;
+		  }
+
+		  let first = last - (pageCount - 1); //화면에 보여질 첫번째 페이지 번호
+		  let next = last + 1;
+		  let prev = first - 1;
+
+		  let pageHtml = "";
+		  
+		  console.log('first:',first);
+		  console.log('next:',next);
+		  console.log('prev:',prev);
+		  
+
+		  if (prev > 0) {
+		    pageHtml += "<li><a href='#' id='prev'> 이전 </a></li>";
+		  }
+
+		 //페이징 번호 표시 
+		  for (var i = first; i <= last; i++) {
+		    if (currentPage == i) {
+		      pageHtml +=
+		        "<li class='on'><a href='#' id='" + i + "'>" + i + "</a></li>";
+		    } else {
+		      pageHtml += "<li><a href='#' id='" + i + "'>" + i + "</a></li>";
+		    }
+		  }
+
+		  if (last < totalPage) {
+		    pageHtml += "<li><a href='#' id='next'> 다음 </a></li>";
+		  }
+
+		  $("#pagingul").html(pageHtml);
+		  let displayCount = "";
+		  displayCount = "현재 1 - " + totalPage + " 페이지 / " + totalData + "건";
+		  $("#displayCount").text(displayCount);
+
+		  //페이징 번호 클릭 이벤트 
+		  $("#pagingul li a").click(function () {
+		    let $id = $(this).attr("id");
+		    selectedPage = $(this).text();
+
+		    if ($id == "next") selectedPage = next;
+		    if ($id == "prev") selectedPage = prev;
+		    
+		    //전역변수에 선택한 페이지 번호를 담는다...
+		    globalCurrentPage = selectedPage;
+		    //페이징 표시 재호출
+		    paging(totalData, dataPerPage, pageCount, selectedPage);
+		    //글 목록 표시 재호출
+		    displayData(selectedPage, dataPerPage);
+		  });
+		}
+	
+	function displayData(currentPage, dataPerPage) {
+
+		  currentPage = Number(currentPage);
+		  dataPerPage = Number(dataPerPage);
+		  
+		  $('#tbody').html('');
+		  for (
+		    var i = (currentPage - 1) * dataPerPage;
+		    i < (currentPage - 1) * dataPerPage + dataPerPage; 
+		    i++
+		  ) {
+			  	let result = JSON.parse(boardList[i]);
+				let table = '';
+				table += '<tr>';
+				table += '<td><input type="checkbox" name="myedu" value="' + result.edu_seq + '">&nbsp;&nbsp;';
+				table += (i+1) + '</td>';
+				table += '<td><div class="back"><a href="' + result.edu_hrdlink + '" target=\'_blank\'><div class="button_base">' + result.edu_name + '</div></a></div></td>';
+				table += '<td><div class="back"><a href="' + result.edu_homepage + '" target=\'_blank\'><div class="button_base">' + result.edu_org + '</div></a></div></td>';
+				table += '<td>' + result.edu_start_date + '</td>';
+				table += '<td>' + result.edu_end_date + '</td>';
+				table += '<td>' + result.edu_price + '</td>';
+				table += '<td>' + result.edu_total + '</td>';
+				table += '<td>' + result.edu_kind + '</td></tr>';
+			$('#tbody').append(table);
+		  }
+		} 
+	
 	</script>
 	
 </body>

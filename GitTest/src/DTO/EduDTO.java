@@ -20,10 +20,12 @@ public class EduDTO {
 	private String edu_kind;
 	private int edu_cnt;
 
-	public EduDTO(String edu_name, int edu_price, int edu_total, String edu_org, String edu_org_phone,
+	public EduDTO(int edu_seq, String edu_name, int edu_price, int edu_total, String edu_org, String edu_org_phone,
 			String edu_start_date, String edu_end_date, String edu_homepage, String edu_ministry,
 			String edu_hrdlink, String edu_addr, String edu_kind) {
 		super();
+		
+		this.edu_seq = edu_seq;
 		this.edu_name = edu_name;
 		this.edu_price = edu_price;
 		this.edu_total = edu_total;

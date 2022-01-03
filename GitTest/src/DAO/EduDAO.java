@@ -116,9 +116,10 @@ public class EduDAO {
 			if (out_time_data.equals("Y")) {
 				
 			} else {
-				sql += "and edu_start_date >= sysdate";
+				sql += " and edu_start_date >= sysdate";
 			}
 			
+			sql += " order by edu_start_date";
 			System.out.println(sql);
 			
 			psmt = conn.prepareStatement(sql);
@@ -131,6 +132,7 @@ public class EduDAO {
 
 			while (rs.next()) {
 				
+				int edu_seq = Integer.parseInt(rs.getString(1));
 				String edu_name = rs.getString(2);
 				String edu_org = rs.getString(5);
 				String edu_start_date = rs.getString(7);
@@ -143,6 +145,9 @@ public class EduDAO {
 				String edu_ministry = rs.getString(10);
 				String edu_hrdlink = rs.getString(14);
 				String edu_addr = rs.getString(15);
+				
+				edu_start_date = edu_start_date.substring(0,11);
+				edu_end_date = edu_end_date.substring(0,11);
 				
 				if(edu_kind.equals("내일배움카드(구직자)")){
 					edu_kind = "구직자 : 내일배움카드 ";
@@ -159,8 +164,8 @@ public class EduDAO {
 				} else {
 					edu_homepage = "https://" + edu_homepage;
 				}
-
-				dto = new EduDTO(edu_name, edu_price, edu_total, //
+				
+				dto = new EduDTO(edu_seq, edu_name, edu_price, edu_total, //
 						edu_org, edu_org_phone, edu_start_date, //
 						edu_end_date, edu_homepage, edu_ministry, //
 						edu_hrdlink, edu_addr, edu_kind);
