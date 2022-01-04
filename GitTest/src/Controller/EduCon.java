@@ -28,6 +28,8 @@ public class EduCon extends HttpServlet {
 		String s_edu_part = request.getParameter("edu_part");
 		String s_edu_kind = request.getParameter("edu_kind");
 		String out_time_data = request.getParameter("out_time_data");
+		String[] edu_seq = request.getParameterValues("myedu");
+		System.out.println("phm :"+edu_seq);
 
 		if(out_time_data == null) {
 			out_time_data = "N";

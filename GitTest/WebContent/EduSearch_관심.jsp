@@ -814,7 +814,7 @@
 					</ul>
 					
 					<ul class="view_mode">
-						<button type="submit" id="myedu_submit" >관심교육 등록</button>
+						<button type="submit" id="myedu_submit">관심교육 등록</button>
 					</ul>
 				</div>
 		

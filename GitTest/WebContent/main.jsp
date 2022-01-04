@@ -3669,12 +3669,6 @@ function EduSearch() {
 		});
 		
 	}
-			
-
-
-
-
-
 
 </script>
 
