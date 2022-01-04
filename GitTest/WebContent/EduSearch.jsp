@@ -907,9 +907,6 @@
 	<script type="text/javascript">
 	let boardList;
 	
-	
-	
-	
 	function EduSearch() {
 		
 		$.ajax({
