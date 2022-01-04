@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>나의 게시글</title>
+  <title>공유 게시판</title>
   <script src="./js/jquery-3.6.0.min.js"></script>
   <style>
     body { 
@@ -40,15 +40,12 @@
 </head>
 <body>
   <%
-  	session = request.getSession(); 
-  	Member_DTO dto = new Member_DTO();
-  	dto = (Member_DTO)session.getAttribute("dto");
   	Board_DAO myboard_dao = new Board_DAO();
   	ArrayList<Board_DTO> arraydto = new ArrayList<Board_DTO>();
   	try{
-  		arraydto = myboard_dao.select(dto.getMem_id());%>
+  		arraydto = myboard_dao.share_select();%>
   		<%for(int i=0;i<arraydto.size();i++){ %>
-  	  <div class="big-box"><h1><%=arraydto.get(i).getArticle_subject()%></h1><hr><h4>작성자 : <%=arraydto.get(i).getMem_id() %></h4><hr><%=arraydto.get(i).getArticle_content() %></div><footer><%=arraydto.get(i).getReg_date() %></footer><br>
+  	  <div class="big-box"><h1><%=arraydto.get(i).getArticle_subject()%></h1><hr><h4>작성자 : <%=arraydto.get(i).getMem_id() %></h4><hr><%=arraydto.get(i).getArticle_content() %></div><footer><b><%=arraydto.get(i).getReg_date() %></b></footer><br>
   	  <%} %><%
   		
   	} catch(Exception e) {

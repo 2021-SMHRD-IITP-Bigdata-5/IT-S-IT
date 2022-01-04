@@ -1976,12 +1976,15 @@ margin: 0px 0px 0px 0px;
 					<div class="link_section">
 
 						<%if(dto!=null) {%>
-						<a href="./Calendar.jsp" class="link_item exhibition"
-							data-c="b09b92031">나의 캘린더</a> <a href="/ch"
+							<a href="./Calendar.jsp" class="link_item exhibition"
+							data-c="b09b92031">나의 캘린더</a>
+							<a href="./Myboard.jsp" class="link_item exhibition"
+							data-c="b09b92031">나의 게시판</a> 
+							<a href="./Shareboard.jsp"
 							class="link_item channel" data-c="b09b92041">공유게시판</a>
 						<%}else {%>
-						<a href="/ch" class="link_item channel" data-c="b09b92041">우리들의
-							이야기</a>
+						<a href="./Shareboard.jsp" class="link_item channel" data-c="b09b92041">공유게시판
+							</a>
 						<%} %>
 					</div>
 

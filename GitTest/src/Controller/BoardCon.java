@@ -21,6 +21,8 @@ public class BoardCon extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		String title = request.getParameter("title");
 		String contents = request.getParameter("contents");
+		String share = request.getParameter("share");
+		if(share==null)share="N";
 		Member_DTO dto = new Member_DTO();
 		if((Member_DTO)session.getAttribute("dto")!=null)
 		{
@@ -30,7 +32,7 @@ public class BoardCon extends HttpServlet {
 		System.out.println(title);
 		System.out.println(contents);
 		System.out.println(dto.getMem_id());
-		int cnt = dao.insert(dto.getMem_id(), title, contents);
+		int cnt = dao.insert(dto.getMem_id(), title, contents,share);
 		if(cnt>0)
 		{
 			response.sendRedirect("Calendar.jsp");

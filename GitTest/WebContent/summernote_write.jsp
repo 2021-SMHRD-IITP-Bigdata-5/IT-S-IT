@@ -102,8 +102,11 @@
 			});
             
 		</script>
+		
 		 <div class="pt-1 text-right">
+		 			<h5 class="pt-1 text-center">공유여부<input type = "checkbox" name="share" value = "Y"></h5>
                     <button class="btn btn btn-success" type="submit" style="width:10%; padding:5px;">등록</button>
+                    
          </div>
 		</form>
 		</main>
