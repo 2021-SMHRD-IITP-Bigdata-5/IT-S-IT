@@ -1,4 +1,5 @@
 
+<%@page import="DTO.Member_DTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <html lang="ko">
@@ -311,6 +312,7 @@
 </style>
 </head>
 <body class="onoffmix">
+<%Member_DTO dto = (Member_DTO)session.getAttribute("dto");%>
 	<article class="ie_end_support_popup_wrap">
 		<h1>인터넷 익스플로러 (IE) 브라우저 지원 종료 안내</h1>
 		<p>
@@ -392,8 +394,12 @@
 
 			<div class="user_area">
 				<ul class="service_menu">
-					<li class="list_item login"><a href="Login.html">로그인</a></li>
-					<li class="list_item join"><a href="Join.html">회원가입</a></li>
+					<%if(dto==null){ %>
+                                                            <li class="list_item login"><a href="./Login.html">로그인</a></li>
+                                    <li class="list_item join"><a href="./Join.html">회원가입</a></li>
+                                    <%}else{ %>
+                                    <li class="list_item login"><a href="LogoutCon">로그아웃</a></li>
+                                    <%} %>
 				</ul>
 
 				<ul class="member_menu">
@@ -403,10 +409,7 @@
 							<ul class="sub_list mypage_list">
 								<li><a href="/account/login?returnUrl=/account/edit"
 									class="site_link edit">회원정보수정</a></li>
-								<li><a href="/account/login?returnUrl=/account/pass"
-									class="site_link pass">비밀번호변경</a></li>
-								<li><a href="/account/login?returnUrl=/account/event"
-									class="site_link event">신청내역</a></li>
+								
 								<!-- <li><a href="/account/login?returnUrl=/account/payment" class="site_link payment">결제내역</a></li> -->
 								<li><a href="/account/login?returnUrl=/account/pin"
 									class="site_link pin">관심내역</a></li>
@@ -435,31 +438,31 @@
 						<section class="category_event">
 							<ul class="list_col">
 
-								<li class="list_item"><a href="Edu_빅데이터">빅데이터</a>
+								<li class="list_item"><a href="Edu_빅데이터.jsp">빅데이터</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=087">인공지능</a>
+								<li class="list_item"><a href="Edu_인공지능.jsp">인공지능</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=086">백엔드</a>
+								<li class="list_item"><a href="Edu_백엔드.jsp">백엔드</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=090">프론트엔드</a>
+								<li class="list_item"><a href="Edu_프론트엔드.jsp">프론트엔드</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=088">풀스택</a>
+								<li class="list_item"><a href="Edu_풀스택.jsp">풀스택</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=092">모바일</a>
+								<li class="list_item"><a href="Edu_모바일.jsp">모바일</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=093">보안,네트워크,클라우드</a>
+								<li class="list_item"><a href="Edu_보안등.jsp">보안,네트워크,클라</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=095">융합기술</a>
+								<li class="list_item"><a href="Edu_융합기술.jsp">융합기술</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=094">콘텐츠제작</a>
+								<li class="list_item"><a href="Edu_콘텐츠제작.jsp">콘텐츠제작</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=096">데이터베이스</a>
+								<li class="list_item"><a href="Edu_데이터베이스.jsp">데이터베이스</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=096">블록체인</a>
+								<li class="list_item"><a href="Edu_블록체인.jsp">블록체인</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=096">자격증</a>
+								<li class="list_item"><a href="Edu_자격과정.jsp">자격증</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=096">기타</a></li>
+								<li class="list_item"><a href="Edu_기타.jsp">기타</a></li>
 
 							</ul>
 							<h1>
@@ -472,43 +475,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69220?url=%2Fevent%2F249922" target="_blank"
-								title="KOICA CTS Seed 0 프로그램 참가 예비창업가 및 스타트업 모집"
-								data-event_no="249922"
-								data-event_title="KOICA CTS Seed 0 프로그램 참가 예비창업가 및 스타트업 모집"
-								data-creative_name="PC_카테고리_교육_모임" data-creative_slot="1"> <img
-									src="https://cfile1.onoffmix.com/images/event/249922/s"
-									alt="KOICA CTS Seed 0 프로그램 참가 예비창업가 및 스타트업 모집">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69211?url=%2Fevent%2F249917" target="_blank"
-								title="[온라인][재직자과정] 빅데이터 엔지니어링 온라인 패키지" data-event_no="249917"
-								data-event_title="[온라인][재직자과정] 빅데이터 엔지니어링 온라인 패키지"
-								data-creative_name="PC_카테고리_교육_모임" data-creative_slot="2"> <img
-									src="https://cfile1.onoffmix.com/images/event/249917/s"
-									alt="[온라인][재직자과정] 빅데이터 엔지니어링 온라인 패키지">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69210?url=%2Fevent%2F249907" target="_blank"
-								title="(마지막 모!) 국회 보좌진 양성과정 STAFF'S INSIGHT 37기 모집"
-								data-event_no="249907"
-								data-event_title="(마지막 모!) 국회 보좌진 양성과정 STAFFS INSIGHT 37기 모집"
-								data-creative_name="PC_카테고리_교육_모임" data-creative_slot="3"> <img
-									src="https://cfile1.onoffmix.com/images/event/249907/s"
-									alt="(마지막 모!) 국회 보좌진 양성과정 STAFF'S INSIGHT 37기 모집">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69115?url=%2Fevent%2F249695" target="_blank"
-								title="팹랩청주에서 FDM 3D프린터 무료장비교육 참가자 모집 !" data-event_no="249695"
-								data-event_title="팹랩청주에서 FDM 3D프린터 무료장비교육 참가자 모집 !"
-								data-creative_name="PC_카테고리_교육_모임" data-creative_slot="4"> <img
-									src="https://cfile1.onoffmix.com/attach/bWtHp1KBxo3hYMEj60cflGZ8DsywkO2u"
-									alt="팹랩청주에서 FDM 3D프린터 무료장비교육 참가자 모집 !">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=085"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
 
 						</ul>
 						<div class="banner_area">
@@ -530,45 +497,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68843?url=%2Fevent%2F249457" target="_blank"
-								title="[매일경제-멀티캠퍼스] 2022 CES 디브리핑 라이브 세미나"
-								data-event_no="249457"
-								data-event_title="[매일경제-멀티캠퍼스] 2022 CES 디브리핑 라이브 세미나"
-								data-creative_name="PC_카테고리_세미나/컨퍼런스_모임" data-creative_slot="1">
-									<img src="https://cfile1.onoffmix.com/images/event/249457/s"
-									alt="[매일경제-멀티캠퍼스] 2022 CES 디브리핑 라이브 세미나">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68850?url=%2Fevent%2F249227" target="_blank"
-								title="&lt;스타트업 Talk!&gt; 아이언맨 슈트처럼 입을 수 있는 로봇 개발한 스타트업 '에프알티' 창업 스토리"
-								data-event_no="249227"
-								data-event_title="&lt;스타트업 Talk!&gt; 아이언맨 슈트처럼 입을 수 있는 로봇 개발한 스타트업 에프알티 창업 스토리"
-								data-creative_name="PC_카테고리_세미나/컨퍼런스_모임" data-creative_slot="2">
-									<img src="https://cfile1.onoffmix.com/images/event/249227/s"
-									alt="&lt;스타트업 Talk!&gt; 아이언맨 슈트처럼 입을 수 있는 로봇 개발한 스타트업 '에프알티' 창업 스토리">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68946?url=%2Fevent%2F249541" target="_blank"
-								title="[KMA Global Trends Forum] CES 2022 비즈니스 Review 세미나"
-								data-event_no="249541"
-								data-event_title="[KMA Global Trends Forum] CES 2022 비즈니스 Review 세미나"
-								data-creative_name="PC_카테고리_세미나/컨퍼런스_모임" data-creative_slot="3">
-									<img src="https://cfile1.onoffmix.com/images/event/249541/s"
-									alt="[KMA Global Trends Forum] CES 2022 비즈니스 Review 세미나">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69054?url=%2Fevent%2F249690" target="_blank"
-								title="메타버스, 블록체인. 그리고 P2E의 현황과 미래 '대한민국 NFT 포럼'에서 만나보세요"
-								data-event_no="249690"
-								data-event_title="메타버스, 블록체인. 그리고 P2E의 현황과 미래 대한민국 NFT 포럼에서 만나보세요"
-								data-creative_name="PC_카테고리_세미나/컨퍼런스_모임" data-creative_slot="4">
-									<img src="https://cfile1.onoffmix.com/images/event/249690/s"
-									alt="메타버스, 블록체인. 그리고 P2E의 현황과 미래 '대한민국 NFT 포럼'에서 만나보세요">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=087"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
 
 						</ul>
 						<div class="banner_area">
@@ -590,43 +519,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68965?url=%2Fevent%2F249524" target="_blank"
-								title="제487회 취업의신 박장호대표의 무료취업특강! (1월 5일 수요일 오후 7시30분)"
-								data-event_no="249524"
-								data-event_title="제487회 취업의신 박장호대표의 무료취업특강! (1월 5일 수요일 오후 7시30분)"
-								data-creative_name="PC_카테고리_강연_모임" data-creative_slot="1"> <img
-									src="https://cfile1.onoffmix.com/images/event/249524/s"
-									alt="제487회 취업의신 박장호대표의 무료취업특강! (1월 5일 수요일 오후 7시30분)">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68893?url=%2Fevent%2F249195" target="_blank"
-								title="더쿼드포럼 제 2회 청년을 위한 지식캠프" data-event_no="249195"
-								data-event_title="더쿼드포럼 제 2회 청년을 위한 지식캠프"
-								data-creative_name="PC_카테고리_강연_모임" data-creative_slot="2"> <img
-									src="https://cfile1.onoffmix.com/images/event/249195/s"
-									alt="더쿼드포럼 제 2회 청년을 위한 지식캠프">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69055?url=%2Fevent%2F249587" target="_blank"
-								title="콘텐츠에 관한 세상의 모든 이야기" data-event_no="249587"
-								data-event_title="콘텐츠에 관한 세상의 모든 이야기"
-								data-creative_name="PC_카테고리_강연_모임" data-creative_slot="3"> <img
-									src="https://cfile1.onoffmix.com/images/event/249587/s"
-									alt="콘텐츠에 관한 세상의 모든 이야기">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69212?url=%2Fevent%2F249854" target="_blank"
-								title="[줌바시29회] DT시대의 HRD변화와 주요이슈/리더십트렌드" data-event_no="249854"
-								data-event_title="[줌바시29회] DT시대의 HRD변화와 주요이슈/리더십트렌드"
-								data-creative_name="PC_카테고리_강연_모임" data-creative_slot="4"> <img
-									src="https://cfile1.onoffmix.com/images/event/249854/s"
-									alt="[줌바시29회] DT시대의 HRD변화와 주요이슈/리더십트렌드">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=086"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
-
+							
 						</ul>
 						<div class="banner_area">
 
@@ -647,43 +540,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69199?url=%2Fevent%2F249794" target="_blank"
-								title="[강남] 철학 독서수업" data-event_no="249794"
-								data-event_title="[강남] 철학 독서수업"
-								data-creative_name="PC_카테고리_취미/소모임_모임" data-creative_slot="1">
-									<img src="https://cfile1.onoffmix.com/images/event/249794/s"
-									alt="[강남] 철학 독서수업">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68646?url=%2Fevent%2F249185" target="_blank"
-								title="[분당 글초보 취미반] 작심하고 30일(4주)만 써보자! &lt;작심삼글 워크숍&gt; 평일반"
-								data-event_no="249185"
-								data-event_title="[분당 글초보 취미반] 작심하고 30일(4주)만 써보자! &lt;작심삼글 워크숍&gt; 평일반"
-								data-creative_name="PC_카테고리_취미/소모임_모임" data-creative_slot="2">
-									<img src="https://cfile1.onoffmix.com/images/event/249185/s"
-									alt="[분당 글초보 취미반] 작심하고 30일(4주)만 써보자! &lt;작심삼글 워크숍&gt; 평일반">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69120?url=%2Fevent%2F249743" target="_blank"
-								title="[경향신문 X 섀도우캐비닛 스페셜 멤버십] 무가당 프로젝트 &quot;우리가 당이 없지 표가 없냐&quot;"
-								data-event_no="249743"
-								data-event_title="[경향신문 X 섀도우캐비닛 스페셜 멤버십] 무가당 프로젝트 우리가 당이 없지 표가 없냐"
-								data-creative_name="PC_카테고리_취미/소모임_모임" data-creative_slot="3">
-									<img src="https://cfile1.onoffmix.com/images/event/249743/s"
-									alt="[경향신문 X 섀도우캐비닛 스페셜 멤버십] 무가당 프로젝트 &quot;우리가 당이 없지 표가 없냐&quot;">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69200?url=%2Fevent%2F249803" target="_blank"
-								title="[서울] 전시회 관람 '아트워크'" data-event_no="249803"
-								data-event_title="[서울] 전시회 관람 아트워크"
-								data-creative_name="PC_카테고리_취미/소모임_모임" data-creative_slot="4">
-									<img src="https://cfile1.onoffmix.com/images/event/249803/s"
-									alt="[서울] 전시회 관람 '아트워크'">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=090"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
 
 						</ul>
 						<div class="banner_area">
@@ -705,41 +562,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69056?url=%2Fevent%2F249723" target="_blank"
-								title="Flower way" data-event_no="249723"
-								data-event_title="Flower way"
-								data-creative_name="PC_카테고리_문화/예술/방송_모임" data-creative_slot="1">
-									<img src="https://cfile1.onoffmix.com/images/event/249723/s"
-									alt="Flower way">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69231?url=%2Fevent%2F249909" target="_blank"
-								title="하우스" data-event_no="249909" data-event_title="하우스"
-								data-creative_name="PC_카테고리_문화/예술/방송_모임" data-creative_slot="2">
-									<img src="https://cfile1.onoffmix.com/images/event/249909/s"
-									alt="하우스">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68967?url=%2Fevent%2F248151" target="_blank"
-								title="[대관 공모] KOCCA 콘텐츠문화광장 2022년 1분기 대관 안내"
-								data-event_no="248151"
-								data-event_title="[대관 공모] KOCCA 콘텐츠문화광장 2022년 1분기 대관 안내"
-								data-creative_name="PC_카테고리_문화/예술/방송_모임" data-creative_slot="3">
-									<img src="https://cfile1.onoffmix.com/images/event/248151/s"
-									alt="[대관 공모] KOCCA 콘텐츠문화광장 2022년 1분기 대관 안내">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69013?url=%2Fevent%2F249643" target="_blank"
-								title="아이맥스 영화 Dolphins 상영회" data-event_no="249643"
-								data-event_title="아이맥스 영화 Dolphins 상영회"
-								data-creative_name="PC_카테고리_문화/예술/방송_모임" data-creative_slot="4">
-									<img src="https://cfile1.onoffmix.com/images/event/249643/s"
-									alt="아이맥스 영화 Dolphins 상영회">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=088"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
 
 						</ul>
 						<div class="banner_area">
@@ -761,43 +584,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69027?url=%2Fevent%2F249556" target="_blank"
-								title="슈퍼센트 총상금 5억 규모 하이퍼 캐주얼 게임 챌린지 개최" data-event_no="249556"
-								data-event_title="슈퍼센트 총상금 5억 규모 하이퍼 캐주얼 게임 챌린지 개최"
-								data-creative_name="PC_카테고리_공모전_모임" data-creative_slot="1">
-									<img src="https://cfile1.onoffmix.com/images/event/249556/s"
-									alt="슈퍼센트 총상금 5억 규모 하이퍼 캐주얼 게임 챌린지 개최">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69084?url=%2Fevent%2F249591" target="_blank"
-								title="[통계청] 2021년 4분기 통계데이터센터 이용 · 활용수기 공모전"
-								data-event_no="249591"
-								data-event_title="[통계청] 2021년 4분기 통계데이터센터 이용 · 활용수기 공모전"
-								data-creative_name="PC_카테고리_공모전_모임" data-creative_slot="2">
-									<img
-									src="https://cfile1.onoffmix.com/attach/6c9MSrYeWtVwiQ4AuLlkjG8OUNdFTaZB"
-									alt="[통계청] 2021년 4분기 통계데이터센터 이용 · 활용수기 공모전">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69232?url=%2Fevent%2F249876" target="_blank"
-								title="원자력 글로벌 아이디어 제안전" data-event_no="249876"
-								data-event_title="원자력 글로벌 아이디어 제안전"
-								data-creative_name="PC_카테고리_공모전_모임" data-creative_slot="3">
-									<img src="https://cfile1.onoffmix.com/images/event/249876/s"
-									alt="원자력 글로벌 아이디어 제안전">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69058?url=%2Fevent%2F249717" target="_blank"
-								title="데이콘 서포터즈 &lt;데이크루 1기&gt; 모집" data-event_no="249717"
-								data-event_title="데이콘 서포터즈 &lt;데이크루 1기&gt; 모집"
-								data-creative_name="PC_카테고리_공모전_모임" data-creative_slot="4">
-									<img src="https://cfile1.onoffmix.com/images/event/249717/s"
-									alt="데이콘 서포터즈 &lt;데이크루 1기&gt; 모집">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=092"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
 
 						</ul>
 						<div class="banner_area">
@@ -819,42 +606,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69014?url=%2Fevent%2F249605" target="_blank"
-								title="2022 국제인공지능대전 (AI EXPO KOREA)" data-event_no="249605"
-								data-event_title="2022 국제인공지능대전 (AI EXPO KOREA)"
-								data-creative_name="PC_카테고리_전시/박람회_모임" data-creative_slot="1">
-									<img src="https://cfile1.onoffmix.com/images/event/249605/s"
-									alt="2022 국제인공지능대전 (AI EXPO KOREA)">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68793?url=%2Fevent%2F249310" target="_blank"
-								title="ALTER EGO 12월 전시 25인 작가 다다프로젝트" data-event_no="249310"
-								data-event_title="ALTER EGO 12월 전시 25인 작가 다다프로젝트"
-								data-creative_name="PC_카테고리_전시/박람회_모임" data-creative_slot="2">
-									<img src="https://cfile1.onoffmix.com/images/event/249310/s"
-									alt="ALTER EGO 12월 전시 25인 작가 다다프로젝트">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69213?url=%2Fevent%2F249878" target="_blank"
-								title="마음터치 우주작가의 타로카드 이야기 다다프로젝트" data-event_no="249878"
-								data-event_title="마음터치 우주작가의 타로카드 이야기 다다프로젝트"
-								data-creative_name="PC_카테고리_전시/박람회_모임" data-creative_slot="3">
-									<img src="https://cfile1.onoffmix.com/images/event/249878/s"
-									alt="마음터치 우주작가의 타로카드 이야기 다다프로젝트">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69122?url=%2Fevent%2F249812" target="_blank"
-								title="[우리동네 갤러리] 2022년 정시대관 모집 안내" data-event_no="249812"
-								data-event_title="[우리동네 갤러리] 2022년 정시대관 모집 안내"
-								data-creative_name="PC_카테고리_전시/박람회_모임" data-creative_slot="4">
-									<img src="https://cfile1.onoffmix.com/images/event/249812/s"
-									alt="[우리동네 갤러리] 2022년 정시대관 모집 안내">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=093"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
-
+							
 						</ul>
 						<div class="banner_area">
 
@@ -891,42 +643,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68881?url=%2Fevent%2F249482" target="_blank"
-								title="한전KDN 사회적경제 기업 경영개선 지원사업" data-event_no="249482"
-								data-event_title="한전KDN 사회적경제 기업 경영개선 지원사업"
-								data-creative_name="PC_카테고리_기타_모임" data-creative_slot="1"> <img
-									src="https://cfile1.onoffmix.com/attach/MDPIEa93bzBi4ysSukAHvxhdlgCnq8Gw"
-									alt="한전KDN 사회적경제 기업 경영개선 지원사업">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69235?url=%2Fevent%2F249947" target="_blank"
-								title="2021 흑룡강 한중 글로벌 스타트업 경진대회 참가기업 모집" data-event_no="249947"
-								data-event_title="2021 흑룡강 한중 글로벌 스타트업 경진대회 참가기업 모집"
-								data-creative_name="PC_카테고리_기타_모임" data-creative_slot="2"> <img
-									src="https://cfile1.onoffmix.com/images/event/249947/s"
-									alt="2021 흑룡강 한중 글로벌 스타트업 경진대회 참가기업 모집">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69214?url=%2Fevent%2F249914" target="_blank"
-								title="AI 양재 허브 교육운영팀(매니저) 채용 모집" data-event_no="249914"
-								data-event_title="AI 양재 허브 교육운영팀(매니저) 채용 모집"
-								data-creative_name="PC_카테고리_기타_모임" data-creative_slot="3"> <img
-									src="https://cfile1.onoffmix.com/images/event/249914/s"
-									alt="AI 양재 허브 교육운영팀(매니저) 채용 모집">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/69234?url=%2Fevent%2F249926" target="_blank"
-								title="Stop Covid-19 SW Challenge 아이디어 해커톤"
-								data-event_no="249926"
-								data-event_title="Stop Covid-19 SW Challenge 아이디어 해커톤"
-								data-creative_name="PC_카테고리_기타_모임" data-creative_slot="4"> <img
-									src="https://cfile1.onoffmix.com/images/event/249926/s"
-									alt="Stop Covid-19 SW Challenge 아이디어 해커톤">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=096"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
 
 						</ul>
 						<div class="banner_area">
@@ -952,10 +669,14 @@
 					<!-- link section -->
 					<div class="link_section">
 
-
-						<a href="/prom/exhibition" class="link_item exhibition"
-							data-c="b09b92031">기획전</a> <a href="/ch"
-							class="link_item channel" data-c="b09b92041">채널</a>
+	<%if(dto!=null) {%>
+						<a href="./Calendar.jsp" class="link_item exhibition"
+							data-c="b09b92031">나의 캘린더</a> <a href="/ch"
+							class="link_item channel" data-c="b09b92041">우리들의 이야기</a>
+						<%}else {%>
+						<a href="/ch" class="link_item channel" data-c="b09b92041">우리들의
+							이야기</a>
+						<%} %>
 					</div>
 
 					<!-- partner center -->

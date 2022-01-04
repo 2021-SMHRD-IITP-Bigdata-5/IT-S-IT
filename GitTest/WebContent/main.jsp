@@ -1696,7 +1696,7 @@ margin: 0px 0px 0px 0px;
                                 <%if(dto==null){%>
                                   <li class="list_item eventopen"><a href="EduSearch.jsp">교육과정검색</a></li>
                                                         <li class="list_item notice">
-                                                                <a href="/account/login?returnUrl=/">알림</a>
+                                                                
                                                             </li>
                                                             <%}else {%>
                                     <a href="/account/main">마이페이지</a>
@@ -1713,7 +1713,7 @@ margin: 0px 0px 0px 0px;
                                 </li>
                                                             <li class="list_item eventopen"><a href="EduSearch.jsp">교육과정검색</a></li>
                                                         <li class="list_item notice">
-                                                                <a href="/account/login?returnUrl=/">알림</a>
+                                                              
                                                             </li>
                                                             <%} %>
                             </ul>
@@ -1978,7 +1978,7 @@ margin: 0px 0px 0px 0px;
 						<%if(dto!=null) {%>
 						<a href="./Calendar.jsp" class="link_item exhibition"
 							data-c="b09b92031">나의 캘린더</a> <a href="/ch"
-							class="link_item channel" data-c="b09b92041">공유게시판</a>
+							class="link_item channel" data-c="b09b92041">우리들의 이야기</a>
 						<%}else {%>
 						<a href="/ch" class="link_item channel" data-c="b09b92041">우리들의
 							이야기</a>
