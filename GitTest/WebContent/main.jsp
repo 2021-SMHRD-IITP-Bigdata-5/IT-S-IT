@@ -1683,7 +1683,7 @@ margin: 0px 0px 0px 0px;
                         <div class="user_area">
                             <ul class="service_menu">
                             								<%if(dto==null){ %>
-                                                            <li class="list_item login"><a href="./Login.html">로그인</a></li>
+                                    <li class="list_item login"><a href="./Login.html">로그인</a></li>
                                     <li class="list_item join"><a href="./Join.html">회원가입</a></li>
                                     <%}else{ %>
                                     <li class="list_item login"><a href="LogoutCon">로그아웃</a></li>
