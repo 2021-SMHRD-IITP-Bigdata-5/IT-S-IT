@@ -659,13 +659,16 @@
 					<div class="link_section">
 
 
-						<%if(dto!=null) {%>
-						<a href="/prom/exhibition" class="link_item exhibition"
-							data-c="b09b92031">나의 캘린더</a> <a href="/ch"
+					<%if(dto!=null) {%>
+							<a href="./Calendar.jsp" class="link_item exhibition"
+							data-c="b09b92031">나의 캘린더</a>
+							<a href="./Myboard.jsp" class="link_item exhibition"
+							data-c="b09b92031">나의 이야기</a> 
+							<a href="./Shareboard.jsp"
 							class="link_item channel" data-c="b09b92041">우리들의 이야기</a>
 						<%}else {%>
-						<a href="/ch" class="link_item channel" data-c="b09b92041">우리들의
-							이야기</a>
+						<a href="./Shareboard.jsp" class="link_item channel" data-c="b09b92041">우리들의 이야기
+							</a>
 						<%} %>
 					<!-- partner center -->
 
@@ -685,7 +688,8 @@
 	</header>
 
 	<main id="content" class="event_search">
-		<div class="content_wrapping wide_max_width_area">
+		
+			<div class="content_wrapping wide_max_width_area">
 			<h2 class="main_title">
 				<span class="keyword"></span> 검색결과 <span class="total"></span>
 			</h2>
@@ -803,7 +807,7 @@
 
 			</section>
 
-
+	<form action="EduCon">
 			<section class="event_main_area">
 				<div class="title_bar" style="">
 					<ul class="sort_menu">
@@ -813,10 +817,10 @@
 					</ul>
 					
 					<ul class="view_mode">
-						<button id="myedu_submit">관심교육 등록</button>
+						<button type="submit" id="myedu_submit" >관심교육 등록</button>
 					</ul>
 				</div>
-
+		
 				<div class="table" id="table">
   					<div class="table-row thead" style="font-weight: bold">
     					<div class="table-cell" >
@@ -845,7 +849,7 @@
     					</div>
   					</div>
 				</div>
-				
+		</form>
 				<div class="end_ing"></div>
 				<div class="more_area" style="display: none;">
 					<!-- <img class="loading" src="/static_html/images/pc/icon/loading.gif"> -->
@@ -902,6 +906,9 @@
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
 	let boardList;
+	
+	
+	
 	
 	function EduSearch() {
 		
@@ -1073,6 +1080,8 @@
 		  }
 		  $('#table').append(table);
 		} 
+	
+	
 	
 	</script>
 	

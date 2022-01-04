@@ -3,6 +3,7 @@ package Controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,13 +29,22 @@ public class EduCon extends HttpServlet {
 		String s_edu_part = request.getParameter("edu_part");
 		String s_edu_kind = request.getParameter("edu_kind");
 		String out_time_data = request.getParameter("out_time_data");
+		String[] edu_seq = request.getParameterValues("myedu");
+		System.out.println(Arrays.toString(edu_seq));
+		
+//		for(int i = 0; i < edu_seq.length; i++) {
+//			System.out.println("phm :"+edu_seq[i]);
+//		}
+		
+//		if(edu_seq.length > 0){
+//			for(int i=0; i<edu_seq.length;i++){
+//				System.out.println(edu_seq[i]);
+//			}
+//		}
 
 		if(out_time_data == null) {
 			out_time_data = "N";
 		}
-		
-		System.out.println(out_time_data);
-		System.out.println(s_edu_part);
 		
 		EduDAO dao = new EduDAO();
 		ArrayList<EduDTO> search_list = dao.Search(s_edu_info, s_edu_addr, s_edu_part, s_edu_kind, out_time_data);
