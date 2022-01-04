@@ -226,7 +226,7 @@
 }
 
 .table-cell {
-	
+
 	display: table-cell;
  	padding: 0px 10px;
   	height: 50px;
@@ -1111,9 +1111,9 @@
 					</ul>
 				</div>
 
-				<div class="table">
-  					<div class="table-row" style="font-weight: bold">
-    					<div class="table-cell">
+				<div class="table" id="table">
+  					<div class="table-row thead" style="font-weight: bold">
+    					<div class="table-cell" >
       						<p>순번</p>
     					</div>
     					<div class="table-cell">
@@ -1138,11 +1138,8 @@
      						 <p>훈련대상</p>
     					</div>
   					</div>
-
 				</div>
 				
-
-
 				<div class="end_ing"></div>
 				<div class="more_area" style="display: none;">
 					<!-- <img class="loading" src="/static_html/images/pc/icon/loading.gif"> -->
@@ -1268,7 +1265,6 @@
 	<!-- Script -->
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
-	
 	let boardList;
 	
 	function EduSearch() {
@@ -1387,19 +1383,47 @@
 		}
 	
 	function displayData(currentPage, dataPerPage) {
-
 		  currentPage = Number(currentPage);
 		  dataPerPage = Number(dataPerPage);
 		  
-		  $('.table').html('');
+		  $('#table').html('');
+		  let table = '';
+		  table += `
+			  <div class="table-row thead" style="font-weight: bold">
+				<div class="table-cell" >
+					<p>순번</p>
+				</div>
+				<div class="table-cell">
+					 <p>교육과정</p>
+					 </div>
+				<div class="table-cell">
+					 <p>기관명</p>
+				</div>
+				<div class="table-cell">
+					 <p>시작일</p>
+				</div>
+				<div class="table-cell">
+					 <p>종료일</p>
+				</div>
+				<div class="table-cell">
+					 <p>훈련비</p>
+				</div>
+				<div class="table-cell">
+					 <p>정원</p>
+				</div>
+				<div class="table-cell">
+					 <p>훈련대상</p>
+				</div>
+			</div>
+		  `;
+		  
 		  for (
 		    var i = (currentPage - 1) * dataPerPage;
 		    i < (currentPage - 1) * dataPerPage + dataPerPage; 
 		    i++
 		  ) {
 			  	let result = JSON.parse(boardList[i]);
-				let table = '';
-				table = '<div class="table-row">';
+				table += '<div class="table-row">';
 				table += '<div class="table-cell"><p>';
 				table += '<input type="checkbox" name="myedu" value="' + result.edu_seq + '">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 				table += (i+1) + '</p></div>';
@@ -1410,8 +1434,8 @@
 				table += '<div class="table-cell"><p>' + result.edu_price + '</p></div>';
 				table += '<div class="table-cell"><p>' + result.edu_total + '</p></div>';
 				table += '<div class="table-cell"><p>' + result.edu_kind + '</p></div></div>';
-			$('.table').append(table);
 		  }
+		  $('#table').append(table);
 		} 
 	
 	</script>

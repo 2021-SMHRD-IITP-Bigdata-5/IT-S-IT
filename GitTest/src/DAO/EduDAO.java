@@ -70,7 +70,7 @@ public class EduDAO {
 
 			String sql = "select * from tbl_education "
 					+ "where (edu_name like ? "
-					+ "or edu_org like ?)"
+					+ "or edu_org like ?) "
 					+ "and edu_addr like ? "
 					+ "and edu_kind like ? ";
 			
