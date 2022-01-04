@@ -50,27 +50,13 @@ html, body {
       
    </div>
   		
-   
+  <%String title = request.getParameter("title"); %> 
    
    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
    <script type="text/javascript">
    		var calendar = null;
- 		/*let loadCal = function(calendar){
  		 	
- 		 	$.ajax({
- 		 		url : "Calendar",
- 				type : "get", // JSON 데이터를 가져오기만
- 				dataType : 'json', // JSON 데이터를 가져올 때, json으로 꼭 지정해야함
- 				success : function(res){ // 서버에 요청한 결과가 매개변수 안에 담김
- 					console.log(res);
- 					for(let i=0;i<res.length;i++)
- 						calendar.addEvent(res[i]);
- 				},
- 				error : function(){
- 					alert("요청 실패");
- 				}	  
- 		 	  })
- 		}*/
+ 		
  		
  		
  	  </script>
@@ -114,10 +100,8 @@ html, body {
                     	 console.log(arg);
                      	 console.log(arg.startStr);
             			 
-                     	
-                    	 
-                    	
-                        var title = prompt('Event Title:');
+                      	//getdata()
+                      	var title = '<%=title%>';
                         if (title) {
                            calendar.addEvent({
                               title : title,
@@ -177,7 +161,7 @@ html, body {
     		  .fail(function(request, status, error){
     			  alert("에러 발생" + error);
     		  })
-      }
+      }     
    </script>
   
   

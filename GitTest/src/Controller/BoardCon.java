@@ -1,6 +1,7 @@
 package Controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,9 +30,6 @@ public class BoardCon extends HttpServlet {
 			dto = (Member_DTO)session.getAttribute("dto");
 		}
 		Board_DAO dao = new Board_DAO();
-		System.out.println(title);
-		System.out.println(contents);
-		System.out.println(dto.getMem_id());
 		int cnt = dao.insert(dto.getMem_id(), title, contents,share);
 		if(cnt>0)
 		{
