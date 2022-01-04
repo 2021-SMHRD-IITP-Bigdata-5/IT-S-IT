@@ -34,6 +34,7 @@
 	 	        success : function(data) { // 처리가 성공할 경우
                     // 에디터에 이미지 출력
 	 	        	$(editor).summernote('editor.insertImage', data.url);
+	 	        	alert("이미지가 서버에 업로드 되었습니다.");
 	 	        	console.log(data.url);
 	 	        },
 	 	        error: function(error) {alert(error);}
@@ -43,7 +44,7 @@
 </head>
 <body style="padding-top: 5rem;">
 	<main role="main" class="container">
-	<form name="writeForm" action="./summernote_insert.jsp" method="post" enctype="multipart/form-data">
+	<form name="writeForm" action="BoardCon" method="post">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <a class="navbar-brand" href="#">오늘의 일기</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,6 +94,7 @@
 					    onImageUpload: function(files, editor, welEditable) {
 					    	for (var i = files.length - 1; i>= 0; i--){
 						    sendFile(files[i], this);
+						    
 					    	}
 						}
 					}

@@ -8,15 +8,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/LogoutCon")
-public class LogoutCon extends HttpServlet {
+import DTO.Member_DTO;
+
+@WebServlet("/MyBoardCon")
+public class MyBoardCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		session.removeAttribute("dto");
-		session.removeAttribute("myboard_dto");
-		response.sendRedirect("main.jsp");
+		request.setCharacterEncoding("utf-8");
+		Member_DTO dto = new Member_DTO();
+		if((Member_DTO)session.getAttribute("dto")!=null)
+		{
+			dto = (Member_DTO)session.getAttribute("dto");
+		}
+		
 	}
 
 }
