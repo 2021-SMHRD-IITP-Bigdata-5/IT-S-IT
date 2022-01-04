@@ -102,7 +102,53 @@ public class Education_DAO {
 		}
 		return Popular_dto;
 	} 
-	
+		
+		public ArrayList<Education_DTO> licence(){
+			Member_DAO dao = new Member_DAO();
+			ArrayList<Education_DTO> licence_dto = new ArrayList<Education_DTO>();
+			
+			
+			try {
+				dao.getConn();
+				String sql = "select distinct edu_name, edu_homepage, edu_start_date, edu_end_date, edu_price, edu_part from tbl_education where edu_start_date>=sysdate and edu_part like '%자격과정%'  order by edu_start_date";
+				dao.psmt = dao.conn.prepareStatement(sql);
+				dao.rs = dao.psmt.executeQuery();
+				
+				for(int i=0;i<12;i++)
+				{
+					dao.rs.next();
+					String start_date = dao.rs.getString(3);
+					start_date = start_date.substring(0, 10);
+					String end_date = dao.rs.getString(4);
+					end_date = end_date.substring(0,10);
+					Education_DTO edu_dto = new Education_DTO(dao.rs.getString(1),dao.rs.getString(2),start_date,end_date);
+					licence_dto.add(edu_dto);
+					
+				}	
+				
+				
+			} catch(Exception e) {
+				e.printStackTrace();
+					
+			} finally {
+				System.out.println("무조건실행");
+				try {
+					if (dao.rs != null) {
+						dao.rs.close();
+					}
+					if (dao.psmt != null) {
+						dao.psmt.close();
+					}
+					if (dao.conn != null) {
+						dao.conn.close();
+					}
+
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			return licence_dto;
+		}
 	
 }
 
