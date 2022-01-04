@@ -66,10 +66,15 @@
 
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <style>
+            .section_main_top{
+            
+            
+            }
 .section_main_top .title_list_area .items a {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden
+	
 }
 
 .section_main_top, .section_main_top .content_wrap, .section_main_top .full_view_area ul,
@@ -670,10 +675,10 @@ div[class^="banner_"] a img {
 	width: 980px;
 	height: 380px;
 	margin-top: 41px;
-	padding : 50px 50px 50px 50px;
+	padding-top:50px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	border: 1px solid #d8d8d8;
+	
 	align-items: 
 }
 
@@ -1571,9 +1576,43 @@ background-position
 	vertical-align: middle;
 	color: #333;
 }
+#area_sel{
+margin: 0px 0px 0px 0px;
+}
+
+.table {
+	border-collapse: collapse;
+  	display: table;
+  	width: 100%;
+  	align: center;
+  	vertical-align: middle;
+}
+
+
+.table-row {
+	width: 100%;
+	height: 100%;
+	border-top: 1px solid #bcbcbc;
+	border-bottom: 1px solid #bcbcbc;
+  	display: table-row;
+}
+
+.table-cell {
+	
+	display: table-cell;
+ 	padding: 0px 20px;
+  	height: 50px;
+  	vertical-align: middle;
+}
+
+.table > p {
+	color: #ffffff;
+}
+
 </style>
         </head>
         <body class="onoffmix">
+        <%! String url = "" ; %>
         <%Member_DTO dto = (Member_DTO)session.getAttribute("dto");%>
         <article class="ie_end_support_popup_wrap">
             <h1>인터넷 익스플로러 (IE) 브라우저 지원 종료 안내</h1>
@@ -1636,17 +1675,15 @@ background-position
             <!-- =================================== Header Start =================================== -->
             <header id="header" class="header_wrap ">
                             <div class="header_top wide_max_width_area">
-                                        <h1 class="ofm_logo" style="top:-135px;left:-130px;">
-                                            <a href="/">
-                                <span class="text_logo">잇츠잇 홈</span>
-                                                        <img src="img/itsit2.png" alt="ONOFFMIX">
-                                                    </a>
+                                        <h1 class="ofm_logo" style="top:-20px;left:-100px;">
+            <span class="text_logo">잇츠잇 홈</span>
+                                                        <img src="img/itsit3.png" alt="ONOFFMIX">
                         </h1>
         
                         <div class="user_area">
                             <ul class="service_menu">
                             								<%if(dto==null){ %>
-                                                            <li class="list_item login"><a href="./Login.html">로그인</a></li>
+                                    <li class="list_item login"><a href="./Login.html">로그인</a></li>
                                     <li class="list_item join"><a href="./Join.html">회원가입</a></li>
                                     <%}else{ %>
                                     <li class="list_item login"><a href="LogoutCon">로그아웃</a></li>
@@ -1978,16 +2015,17 @@ background-position
 			<!-- 최소/최대 5구좌 -->
 
 		</section>
-
+		<br>
+		
 		<!-- marketing / text silder-->
-		<section class="section_main_top">
+		<section class="section_main_top" style="background: url(img/it_main.png) center no-repeat; background-size: 1250px 720px;">
 			<div class="content_wrap wide_max_width_area">
-				<div class="banner_branding"></div>
 
 				<div class="banner_top_area" style="text-align:center;margin:0 auto;" >
-					<div style="border:0px solid;display:inline-block; padding:50 50 50 50"; height:100; width:>
+					<div style="display:inline-block;">
 						
 						<section class="keyword_search_area">
+						
 				<form name="searchBoxEventForm" action="/event?s="
 					origaction="https://www.onoffmix.com/event?s="
 					class="keyword_search_form" origtarget>
@@ -2011,8 +2049,9 @@ background-position
 					<input type="hidden" name="eof" id="eof" value="0">
 
 					<!-- data reset -->
+					
 					<div class="search_form_top" style="m">
-						<h3 class="sub_title">상세검색</h3>
+						<h2 class="sub_title" style="font-size:25px; color:white;">맞춤검색</h2>
 
 						<input type="reset" class="btn_reset  hidden" id="reset"
 							value="초기화" rel="s=%EC%9E%90%EB%B0%94">
@@ -2022,8 +2061,8 @@ background-position
 
 					<!-- category -->
 					<fieldset class="filter_category_area">
-
-						<select id="area_sel" name="mem_area" style="width: 200px;">
+						
+						<select id="area_sel" name="mem_area" style="text-align:center; width: 200px; font-size:17px; margin-top:10px; margin-bottom:0px;">
 							<option value="">지역(전체)</option>
 							<option value="서울">서울</option>
 							<option value="부산">부산</option>
@@ -2043,10 +2082,11 @@ background-position
 							<option value="경상남도">경남</option>
 							<option value="제주">제주</option>
 						</select>
+						
 					</fieldset>
 					<!-- Time -->
 					<fieldset class="filter_time_pay_type">
-						<select id="part_sel" name="mem_part" style="width: 200px; margin: 10px;">
+						<select id="part_sel" name="mem_part" style="text-align:center; width: 200px; font-size:17px; margin-top: 10px; margin-botton:0px;">
 							<option value="">교육분야(전체)</option>
 							<option value="빅데이터">빅데이터</option>
 							<option value="인공지능">인공지능</option>
@@ -2066,7 +2106,7 @@ background-position
 				
 					<!-- search_scope -->
 					<fieldset class="filter_search_scope ">
-						<select id="kind_sel" name="mem_kind" style="width: 200px;">
+						<select id="kind_sel" name="mem_kind" style="text-align:center; width: 200px; font-size:17px; margin-top : 10px; margin-bottom:0px;">
 							<option value="">교육유형(전체)</option>
 							<option value="내일배움카드">구직자 : 내일배움카드</option>
 							<option value="국가기간전략산업직종">구직자 : 국가기간전략산업직종</option>
@@ -2080,13 +2120,41 @@ background-position
 						<fieldset class="search_area">
 							<input type="text" id="keywordSearch" name="edu_info"
 								class="keyword_search" placeholder="검색어 입력" title="검색어 입력"
-								style="width: 500px;"> <input type="text"
+								style="width: 500px; height: 30px; font-size:17px;"> <input type="text"
 								style="display: none">
 
-							<button onClick="EduSearch()" type="button" class="btn_keyword_search">검색</button>
+							<button onClick="EduSearch()" type="button" class="btn_keyword_search" style="width:80px; height:30px; margin-top:10px;">검색</button>
 						</fieldset>
-						
-						
+					
+						<div class="table">
+  					<div class="table-row" style="font-weight: bold; color:white;">
+    					<div class="table-cell">
+      						<p>순번</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>교육과정</p>
+   						 </div>
+    					<div class="table-cell">
+     						 <p>기관명</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>시작일</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>종료일</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>훈련비</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>정원</p>
+    					</div>
+    					<div class="table-cell">
+     						 <p>훈련대상</p>
+    					</div>
+  					</div>
+  					
+				</div>
 						
 					</div>
 				</div>
@@ -2094,6 +2162,8 @@ background-position
 		</section>
 
 		<!-- Right Now Event -->
+		<br>
+		<br>
 		<section class="section_now_event">
 			<div class="title_area">
 				<h1 class="title">
@@ -2111,7 +2181,16 @@ background-position
 						<li>
 							<article class="event_area event_card">
 								<a class="gtag_bn_item_type1"
-									href="https://<%=latest_dto.get(0).getEdu_homepage() %>/"
+								
+									<%
+										url = latest_dto.get(0).getEdu_homepage();
+										System.out.println(url);
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=latest_dto.get(0).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=latest_dto.get(0).getEdu_homepage() %>"
+									<%} %>
 									target="_blank" title="[비전공자 환영] 프로젝트형 SW인재양성 교육생 모집"
 									data-c="hotissue1" data-event_no="248598"
 									data-event_title="[비전공자 환영] 프로젝트형 SW인재양성 교육생 모집"
@@ -2144,7 +2223,16 @@ background-position
 						<li>
 							<article class="event_area event_card">
 								<a class="gtag_bn_item_type1"
-									href="https://<%=latest_dto.get(1).getEdu_homepage() %>/"
+								
+									<%
+										url = latest_dto.get(1).getEdu_homepage();
+										System.out.println(url);
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=latest_dto.get(1).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=latest_dto.get(1).getEdu_homepage() %>"
+									<%} %>
 									target="_blank"
 									title="[국비지원] 빅데이터 비즈니스를 위한 데이터 애널리스트 양성과정 2기 모집"
 									data-c="hotissue2" data-event_no="248052"
@@ -2178,7 +2266,17 @@ background-position
 						<li>
 							<article class="event_area event_card">
 								<a class="gtag_bn_item_type1"
-									href="https://<%=latest_dto.get(2).getEdu_homepage() %>/"
+								
+								
+									<%
+										url = latest_dto.get(2).getEdu_homepage();
+										System.out.println(url);
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=latest_dto.get(2).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=latest_dto.get(2).getEdu_homepage() %>"
+									<%} %>
 									target="_blank" title="작가와의 대화-노세환 개인전 MELTDOWN 다다프로젝트"
 									data-c="hotissue3" data-event_no="249483"
 									data-event_title="작가와의 대화-노세환 개인전 MELTDOWN 다다프로젝트"
@@ -2211,7 +2309,25 @@ background-position
 						<li>
 							<article class="event_area event_card">
 								<a class="gtag_bn_item_type1"
-									href="https://<%=latest_dto.get(3).getEdu_homepage() %>/"
+									<%-- http:// , http:// 
+										http:// 있는 지 없는지
+										
+										문자열.split(":")[0] --> 4글자
+										없다면 --> url의 길이만큼
+										
+										문자열.split(":")[0].length > 5
+									
+									
+									--%>
+									<%
+										url = latest_dto.get(3).getEdu_homepage();
+										System.out.println(url);
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=latest_dto.get(3).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=latest_dto.get(3).getEdu_homepage() %>"
+									<%} %>
 									target="_blank" title="2021 KAMA 미술품 감정 및 유통기반 구축 컨퍼런스"
 									data-c="hotissue4" data-event_no="248730"
 									data-event_title="2021 KAMA 미술품 감정 및 유통기반 구축 컨퍼런스"
@@ -2244,7 +2360,16 @@ background-position
 						<li>
 							<article class="event_area event_card">
 								<a class="gtag_bn_item_type1"
-									href="https://<%=latest_dto.get(4).getEdu_homepage() %>/"
+									<%
+										url = latest_dto.get(4).getEdu_homepage();
+										System.out.println(url);
+										System.out.println(url.split(":")[0].length());
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=latest_dto.get(4).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=latest_dto.get(4).getEdu_homepage() %>"
+									<%} %>
 									target="_blank" title="[매일경제-멀티캠퍼스] 2022 CES 디브리핑 라이브 세미나"
 									data-c="hotissue5" data-event_no="249457"
 									data-event_title="[매일경제-멀티캠퍼스] 2022 CES 디브리핑 라이브 세미나"
@@ -2277,7 +2402,16 @@ background-position
 						<li>
 							<article class="event_area event_card">
 								<a class="gtag_bn_item_type1"
+									<%
+										url = latest_dto.get(5).getEdu_homepage();
+										System.out.println(url);
+										System.out.println(url.split(":")[0].length());
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
 									href="http://<%=latest_dto.get(5).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=latest_dto.get(5).getEdu_homepage() %>"
+									<%} %>
 									target="_blank" title="ALTER EGO 12월 전시 25인 작가 다다프로젝트"
 									data-c="hotissue6" data-event_no="249310"
 									data-event_title="ALTER EGO 12월 전시 25인 작가 다다프로젝트"
@@ -2382,7 +2516,17 @@ background-position
 				<div class="event_card_area">
 					<ul>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(0).getEdu_homepage() %>/"
+						
+						
+							<%
+										url = Popular_dto.get(0).getEdu_homepage();
+										System.out.println(url);
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(0).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(0).getEdu_homepage() %>"
+									<%} %>
 							
 							target="_blank"
 							title="[K-Digital 특화 교육] 빅테크/유니콘(디지털 혁신 선도 기업) 취업 집중 대비반"
@@ -2395,12 +2539,24 @@ background-position
 								</div>
 								<h5 class="ellipsis"><%=Popular_dto.get(0).getEdu_name() %></h5>
 								<br>
+								<br>
 								<h5 class="ellipsis"><%=Popular_dto.get(0).getEdu_start_date()%>
 									~
 									<%=Popular_dto.get(0).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(1).getEdu_homepage() %>/"
+						
+						
+							<%
+										url = Popular_dto.get(1).getEdu_homepage();
+										System.out.println(url);
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(1).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(1).getEdu_homepage() %>"
+									<%} %>
+									
 							target="_blank"
 							title="(전자책) 상위1% 만드는 초등학생 엄마의 국제중학교 입학 준비 방법"
 							data-event_no="248930"
@@ -2417,7 +2573,16 @@ background-position
 									<%=Popular_dto.get(1).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(2).getEdu_homepage() %>/"
+						
+							<%
+										url = Popular_dto.get(2).getEdu_homepage();
+										System.out.println(url);
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(2).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(2).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="[부의 나침반] 재테크 투자 심층상담(1:1 개인맞춤 재무컨설팅)"
 							data-event_no="248969"
@@ -2434,7 +2599,16 @@ background-position
 									<%=Popular_dto.get(2).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(3).getEdu_homepage() %>/"
+						
+							<%
+										url = Popular_dto.get(3).getEdu_homepage();
+										System.out.println(url);
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(3).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(3).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="[온라인 무료 영상편집특강]  12월_곰앤컴퍼니 공식인증강좌 곰믹스프로, 곰캠, 곰믹스맥스"
 							data-event_no="248363"
@@ -2453,7 +2627,16 @@ background-position
 					</ul>
 					<ul>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(4).getEdu_homepage() %>/"
+						
+							<%
+										url = Popular_dto.get(4).getEdu_homepage();
+										System.out.println(url);
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(4).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(4).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="[한국인공지능법학회 월례 웨비나] AI정책포럼 &quot;인공지능 거버넌스의 통합적 고찰&quot;"
 							data-event_no="249277"
@@ -2470,7 +2653,16 @@ background-position
 									<%=Popular_dto.get(4).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(5).getEdu_homepage() %>/"
+						
+							<%
+										url = Popular_dto.get(5).getEdu_homepage();
+										System.out.println(url);
+									%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(5).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(5).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="2021 알면 돈이되는 부동산 정보 특강 [원금손실Zero,세금No,고수익]"
 							data-event_no="249198"
@@ -2487,7 +2679,16 @@ background-position
 									<%=Popular_dto.get(5).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(6).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(6).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(6).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(6).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="[무료 세미나] CCCR TaB 2021 : 차세대 DB기술 동향과 전망"
 							data-event_no="249217"
@@ -2504,7 +2705,16 @@ background-position
 									<%=Popular_dto.get(6).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(7).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(7).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(7).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(7).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="&lt;GE의 혁신 DNA&gt;저자와 함께하는 다섯 번째 줌 커뮤니티에 초대합니다."
 							data-event_no="249191"
@@ -2523,7 +2733,16 @@ background-position
 					</ul>
 					<ul>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(8).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(8).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(8).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(8).getEdu_homepage() %>"
+									<%} %>
 							target="_blank" title="일상 철학 - 체험 수업"
 							data-event_no="248572" data-event_title="일상 철학 - 체험 수업"
 							data-creative_name="PC_메인_베스트_전시/박람회/문화" data-creative_slot="1">
@@ -2538,7 +2757,16 @@ background-position
 									<%=Popular_dto.get(8).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(9).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(9).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(9).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(9).getEdu_homepage() %>"
+									<%} %>
 							target="_blank" title="&lt;방송&gt; 모임 개설 가이드"
 							data-event_no="229992" data-event_title="&lt;방송&gt; 모임 개설 가이드"
 							data-creative_name="PC_메인_베스트_전시/박람회/문화" data-creative_slot="2">
@@ -2553,7 +2781,16 @@ background-position
 									<%=Popular_dto.get(9).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(10).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(10).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(10).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(10).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="The Third COVID Winter : 세 번째 겨울" data-event_no="248738"
 							data-event_title="The Third COVID Winter : 세 번째 겨울"
@@ -2569,7 +2806,16 @@ background-position
 									<%=Popular_dto.get(10).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(11).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(11).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(11).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(11).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="[19차앵콜]쇼핑호스트에 모든 것 하루 1분에게만 알려드립니다. (라이브커머스&amp;홈쇼핑)"
 							data-event_no="244942"
@@ -2588,7 +2834,16 @@ background-position
 					</ul>
 					<ul>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(12).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(12).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(12).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(12).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="[요즘것들 오리지널] 콘테스트위너 2기 선착순 9명 모집!" data-event_no="249308"
 							data-event_title="[요즘것들 오리지널] 콘테스트위너 2기 선착순 9명 모집!"
@@ -2604,7 +2859,16 @@ background-position
 									<%=Popular_dto.get(12).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(13).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(13).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(13).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(13).getEdu_homepage() %>"
+									<%} %>
 							target="_blank" title="2021 메타버스 장르소설 공모전"
 							data-event_no="247022" data-event_title="2021 메타버스 장르소설 공모전"
 							data-creative_name="PC_메인_베스트_공모전" data-creative_slot="2">
@@ -2619,7 +2883,16 @@ background-position
 									<%=Popular_dto.get(13).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(14).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(14).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(14).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(14).getEdu_homepage() %>"
+									<%} %>
 							target="_blank" title="2021 강원 애니메이션 데이터톤"
 							data-event_no="249215" data-event_title="2021 강원 애니메이션 데이터톤"
 							data-creative_name="PC_메인_베스트_공모전" data-creative_slot="3">
@@ -2634,7 +2907,16 @@ background-position
 									<%=Popular_dto.get(14).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(15).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(15).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(15).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(15).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="2021 산림수종 데이터 온라인 해커톤" data-event_no="249082"
 							data-event_title="2021 산림수종 데이터 온라인 해커톤"
@@ -2652,7 +2934,16 @@ background-position
 					</ul>
 					<ul>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(16).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(16).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(16).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(16).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="단 하루만에 누구나 배울 수 있는 모바일 영상편집!!" data-event_no="244940"
 							data-event_title="단 하루만에 누구나 배울 수 있는 모바일 영상편집!!"
@@ -2668,7 +2959,16 @@ background-position
 									<%=Popular_dto.get(16).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(17).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(17).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(17).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(17).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="[12/19] 오픈마인드를 지닌 프리랜서 상글남녀들이 함께 사는 홈오피스형 아파트 공유주택 탐방하기"
 							data-event_no="249381"
@@ -2680,12 +2980,22 @@ background-position
 								</div>
 								<h5 class="ellipsis"><%=Popular_dto.get(17).getEdu_name() %></h5>
 								<br>
+								<br>
 								<h5 class="ellipsis"><%=Popular_dto.get(17).getEdu_start_date()%>
 									~
 									<%=Popular_dto.get(17).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(18).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(18).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(18).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(18).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="대구 최대 직장인/대학생 시간관리, 자기계발 모임! 청바지 20기 멤버모집"
 							data-event_no="249143"
@@ -2702,7 +3012,16 @@ background-position
 									<%=Popular_dto.get(18).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(19).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(19).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(19).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(19).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="작고 소중한 월급! 월급관리를 통해 반짝반짝 빛나기 프로젝트" data-event_no="248806"
 							data-event_title="작고 소중한 월급! 월급관리를 통해 반짝반짝 빛나기 프로젝트"
@@ -2713,6 +3032,7 @@ background-position
 								</div>
 								<h5 class="ellipsis"><%=Popular_dto.get(19).getEdu_name() %></h5>
 								<br>
+								<br>
 								<h5 class="ellipsis"><%=Popular_dto.get(19).getEdu_start_date()%>
 									~
 									<%=Popular_dto.get(19).getEdu_end_date()%></h5>
@@ -2720,7 +3040,16 @@ background-position
 					</ul>
 					<ul>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(20).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(20).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(20).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(20).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="2021 스마트시티 융합 얼라이언스 신규 회원기업 모집 (상시모집)"
 							data-event_no="248622"
@@ -2737,7 +3066,16 @@ background-position
 									<%=Popular_dto.get(20).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(21).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(21).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(21).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(21).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="2022년 상반기 KDB NextONE 제4기 모집" data-event_no="248002"
 							data-event_title="2022년 상반기 KDB NextONE 제4기 모집"
@@ -2753,7 +3091,16 @@ background-position
 									<%=Popular_dto.get(21).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(22).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(22).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(22).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(22).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="[무료교육] 대학생 멘토와 함께하는 온라인 릴레이 AI수업 수강생 모집 안내"
 							data-event_no="249479"
@@ -2770,7 +3117,16 @@ background-position
 									<%=Popular_dto.get(22).getEdu_end_date()%></h5>
 						</a></li>
 						<li class="event_card_list"><a class="gtag_bn_item_type1"
-							href="https://<%=Popular_dto.get(23).getEdu_homepage() %>/"
+						
+							<%
+									url = Popular_dto.get(23).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=Popular_dto.get(23).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=Popular_dto.get(23).getEdu_homepage() %>"
+									<%} %>
 							target="_blank"
 							title="[경기VRAR제작거점센터] XR 시설/장비 대여 및 프로그램 안내"
 							data-event_no="242610"
@@ -2802,7 +3158,16 @@ background-position
 				<div class="banner_more_check owl-carousel"><!-- 제일 큰 부모 -->
 				<div><!-- 각이미지와 내용을 가지고 있는 부분 -->
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(0).getEdu_homepage() %>/"
+					
+						<%
+									url = licence_dto.get(0).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(0).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(0).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="카카오브레인 {오픈미니컨}에 초대합니다." data-c="bottom1"
 						
@@ -2821,7 +3186,16 @@ background-position
                   
                   <div>
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(1).getEdu_homepage() %>/"
+					
+						<%
+									url = licence_dto.get(1).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(1).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(1).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="외국어 음성데이터를 활용한 비즈니스 창출 교육 및 데이터 활용 경진대회" data-c="bottom2"
 						data-event_no="249118"
@@ -2840,7 +3214,16 @@ background-position
 					</div>
 					<div>
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(2).getEdu_homepage() %>/"
+					
+						<%
+									url = licence_dto.get(2).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(2).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(2).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="[무료 세미나] CCCR TaB 2021 : 차세대 DB기술 동향과 전망" data-c="bottom3"
 						data-event_no="249217"
@@ -2860,7 +3243,16 @@ background-position
 					
 					<div>
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(3).getEdu_homepage() %>/"
+					
+						<%
+									url = licence_dto.get(3).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(3).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(3).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="[매일경제-멀티캠퍼스] 2022 CES 디브리핑 라이브 세미나" data-c="bottom4"
 						data-event_no="249457"
@@ -2879,7 +3271,16 @@ background-position
 						</div>
 					<div>
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(4).getEdu_homepage() %>/"
+					
+						<%
+									url = licence_dto.get(4).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(4).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(4).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="[Microsoft Power Platform] 기업용 RPA &amp; APP 개발 무료 교육에 초대합니다!"
 						data-c="bottom5" data-event_no="249397"
@@ -2898,7 +3299,16 @@ background-position
 						</div>
 					<div>
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(5).getEdu_homepage() %>/"
+					
+						<%
+									url = licence_dto.get(5).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(5).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(5).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="ALTER EGO 12월 전시 25인 작가 다다프로젝트" data-c="bottom6"
 						data-event_no="249310"
@@ -2917,7 +3327,16 @@ background-position
 					</div>
 					<div>
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(6).getEdu_homepage() %>/"
+					
+						<%
+									url = licence_dto.get(6).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(6).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(6).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="&lt;스타트업 Talk!&gt; 아이언맨 슈트처럼 입을 수 있는 로봇 개발한 스타트업 '에프알티' 창업 스토리"
 						data-c="bottom7" data-event_no="249227"
@@ -2936,7 +3355,16 @@ background-position
 					</div>
 					<div>
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(7).getEdu_homepage() %>/"
+					
+						<%
+									url = licence_dto.get(7).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(7).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(7).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="순환 : 틈" data-c="bottom8" data-event_no="249286"
 						data-event_title="순환 : 틈" data-creative_name="PC_메인_체크배너"
@@ -2954,7 +3382,16 @@ background-position
 					</div>
 					<div>
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(8).getEdu_homepage() %>/"
+					
+						<%
+									url = licence_dto.get(8).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(8).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(8).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="[AICON 광주 2021] 컨퍼런스 참가자 사전등록" data-c="bottom9"
 						data-event_no="248973"
@@ -2973,7 +3410,16 @@ background-position
 					</div>
 					<div>
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(9).getEdu_homepage() %>/"
+					
+						<%
+									url = licence_dto.get(9).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(9).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(9).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="RE:BREATHE 환경분야 소셜벤처 재도전 프로그램 데모데이" data-c="bottom10"
 						data-event_no="249064"
@@ -2992,7 +3438,16 @@ background-position
 					</div>
 					<div>
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(10).getEdu_homepage() %>/" 
+					
+						<%
+									url = licence_dto.get(10).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(10).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(10).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="작가와의 대화-노세환 개인전 MELTDOWN 다다프로젝트" data-c="bottom11"
 						data-event_no="249483"
@@ -3011,7 +3466,16 @@ background-position
 					</div>
 					<div>
 					<a class="gtag_bn_item_type1"
-						href="https://<%=licence_dto.get(11).getEdu_homepage() %>/"
+					
+						<%
+									url = licence_dto.get(11).getEdu_homepage();
+									System.out.println(url);
+							%>
+									<%if(url.split(":")[0].length() > 5){ %>
+									href="http://<%=licence_dto.get(11).getEdu_homepage() %>/"
+									<%}else{ %>
+									href="<%=licence_dto.get(11).getEdu_homepage() %>"
+									<%} %>
 						target="_blank"
 						title="[비대면 무료교육] 매출증대 및 그리고 사전 품질개선 방안 수립!" data-c="bottom12"
 						data-event_no="249478"
@@ -3120,5 +3584,98 @@ background-position
                 })(window, document, "//ba.beusable.net/script/ba/e933327ecf");
             </script>
 	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"4d73c0dfa7","applicationID":"119983018","transactionName":"Z1MAZEVWDREHWkEMWl4ZI1NDXgwMSXZzKGpzWQxERVgPDgNLGjpHVVsDQA==","queueTime":0,"applicationTime":2626,"atts":"SxQDEg1MHh8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+
+let boardList;
+
+function EduSearch() {
+	
+	$.ajax({
+		url : "EduCon",
+		type : "post",
+		// async: false,
+		data : {
+			
+			"edu_info" : $('input[name=edu_info]').val(),
+			// edu_name, edu_org
+			
+			"edu_addr" : $('#area_sel').val(),
+			"edu_part" : $('#part_sel').val(),
+			"edu_kind" : $('#kind_sel').val(),
+			"out_time_data" : $('input[name=out_time_data]:checked').val()
+				
+			},
+			
+		dataType:"json",
+		success : function(res) {
+			$('.table').html('');
+	        let table = '';
+	        table += `
+	           <div class="table-row thead" style="font-weight: bold">
+	            <div class="table-cell" >
+	               <p>순번</p>
+	            </div>
+	            <div class="table-cell">
+	                <p>교육과정</p>
+	                </div>
+	            <div class="table-cell">
+	                <p>기관명</p>
+	            </div>
+	            <div class="table-cell">
+	                <p>시작일</p>
+	            </div>
+	            <div class="table-cell">
+	                <p>종료일</p>
+	            </div>
+	            <div class="table-cell">
+	                <p>훈련비</p>
+	            </div>
+	            <div class="table-cell">
+	                <p>정원</p>
+	            </div>
+	            <div class="table-cell">
+	                <p>훈련대상</p>
+	            </div>
+	         </div>
+	        `;
+	        let end = res.length;
+	        if(end > 3){
+	        	end = 3;
+	        }
+	        for ( var i = 0; i < end; i++) {
+	        	console.log(JSON.parse(res[i]))
+	            let result = JSON.parse(res[i]);
+	            table += '<div class="table-row">';
+	            table += '<div class="table-cell"><p>';
+	            table += '<input type="checkbox" name="myedu" value="' + result.edu_seq + '">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+	            table += (i+1) + '</p></div>';
+	            table += '<div class="table-cell"><p><div class="back"><a href="' + result.edu_hrdlink + '" target=\'_blank\'><div class="button_base">' + result.edu_name + '</div></a></div></p></div>';
+	            table += '<div class="table-cell"><p><div class="back"><a href="' + result.edu_homepage + '" target=\'_blank\'><div class="button_base">' + result.edu_org + '</div></a></div></p></div>';
+	            table += '<div class="table-cell"><p>' + result.edu_start_date + '</p></div>';
+	            table += '<div class="table-cell"><p>' + result.edu_end_date + '</p></div>';
+	            table += '<div class="table-cell"><p>' + result.edu_price + '</p></div>';
+	            table += '<div class="table-cell"><p>' + result.edu_total + '</p></div>';
+	            table += '<div class="table-cell"><p>' + result.edu_kind + '</p></div></div>';
+	        }
+	        $('.table').append(table);
+	      },
+	      
+	      error : function() {
+				alert("교육과정 조회 중 오류가 발생했습니다.");
+			}
+		});
+		
+	}
+			
+
+
+
+
+
+
+</script>
+
+
 </body>
 </html>
