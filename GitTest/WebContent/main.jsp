@@ -1696,7 +1696,7 @@ margin: 0px 0px 0px 0px;
                                 <%if(dto==null){%>
                                   <li class="list_item eventopen"><a href="EduSearch.jsp">교육과정검색</a></li>
                                                         <li class="list_item notice">
-                                                                <a href="/account/login?returnUrl=/">알림</a>
+                                                                
                                                             </li>
                                                             <%}else {%>
                                     <a href="/account/main">마이페이지</a>
@@ -1713,7 +1713,7 @@ margin: 0px 0px 0px 0px;
                                 </li>
                                                             <li class="list_item eventopen"><a href="EduSearch.jsp">교육과정검색</a></li>
                                                         <li class="list_item notice">
-                                                                <a href="/account/login?returnUrl=/">알림</a>
+                                                              
                                                             </li>
                                                             <%} %>
                             </ul>
@@ -1723,7 +1723,7 @@ margin: 0px 0px 0px 0px;
                                 <label for="searchInput">검색할 모임을 입력해주세요.</label>
                                 <input type="text" id="searchInput" class="search_input" name="s" value="" title="키워드로 모임을 검색하세요" data-event="249118">
                                                         <span class="ofm_keyword_value"
-                                      data-event_no="249118" data-event_title="외국어 음성데이터를 활용한 비즈니스 창출 교육 및 데이터 활용 경진대회" data-creative_name="PC_메인_검색창광고" data-creative_slot="1">외국어 음성데이터를 활용한 창업 경진대회 →</span>
+                                      data-event_no="249118" data-event_title="외국어 음성데이터를 활용한 비즈니스 창출 교육 및 데이터 활용 경진대회" data-creative_name="PC_메인_검색창광고" data-creative_slot="1">백엔드개발 교육과정</span>
                                 <script>
 //>>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-5/ITS_IT.git
                                     gtag('event', 'view_promotion', {
@@ -1979,11 +1979,11 @@ margin: 0px 0px 0px 0px;
 							<a href="./Calendar.jsp" class="link_item exhibition"
 							data-c="b09b92031">나의 캘린더</a>
 							<a href="./Myboard.jsp" class="link_item exhibition"
-							data-c="b09b92031">나의 게시판</a> 
+							data-c="b09b92031">나의 이야기</a> 
 							<a href="./Shareboard.jsp"
-							class="link_item channel" data-c="b09b92041">공유게시판</a>
+							class="link_item channel" data-c="b09b92041">우리들의 이야기</a>
 						<%}else {%>
-						<a href="./Shareboard.jsp" class="link_item channel" data-c="b09b92041">공유게시판
+						<a href="./Shareboard.jsp" class="link_item channel" data-c="b09b92041">우리들의 이야기
 							</a>
 						<%} %>
 					</div>
@@ -2132,7 +2132,7 @@ margin: 0px 0px 0px 0px;
 						<div class="table">
   					<div class="table-row" style="font-weight: bold; color:white;">
     					<div class="table-cell">
-      						<p>순번</p>
+      						<p style="font-color: white;">순번</p>
     					</div>
     					<div class="table-cell">
      						 <p>교육과정</p>
@@ -3541,7 +3541,6 @@ margin: 0px 0px 0px 0px;
 				<ul>
 					<li>팀장 <span>정재훈</span></li>
 					<li>팀원 <span>천진희</span></li>
-					<li>팀원 <span>황인환</span></li>
 					<li>팀원 <span>전원준</span></li>
 					<li>광주광역시 남구 송암로<i>60</i>&nbsp;<i></i>&nbsp;스마트인재개발원&nbsp;<i>2</i>층
 					</li>
