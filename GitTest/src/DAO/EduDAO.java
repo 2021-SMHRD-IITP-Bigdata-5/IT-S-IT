@@ -90,7 +90,7 @@ public class EduDAO {
 				s_edu_part += "or edu_part like '%css,%')";
 				
 				sql += s_edu_part;
-			} else if (s_edu_part.equals("보안.네트워크.클라우드")) {
+			} else if (s_edu_part.equals("보안등")) {
 				s_edu_part = "and (edu_part like '%정보보안,%'";
 				s_edu_part += "or edu_part like '%클라우드,%'";
 				s_edu_part += "or edu_part like '%네트워크,%')";

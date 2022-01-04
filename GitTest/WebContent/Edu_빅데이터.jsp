@@ -227,7 +227,7 @@
 .table-cell {
 	
 	display: table-cell;
- 	padding: 0px 20px;
+ 	padding: 0px 10px;
   	height: 50px;
   	vertical-align: middle;
 }
@@ -1031,8 +1031,6 @@
   					
 				</div>
 				
-
-
 				<div class="end_ing"></div>
 				<div class="more_area" style="display: none;">
 					<!-- <img class="loading" src="/static_html/images/pc/icon/loading.gif"> -->
