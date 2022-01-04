@@ -1,4 +1,5 @@
 
+<%@page import="DTO.Member_DTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <html lang="ko">
@@ -225,9 +226,9 @@
 }
 
 .table-cell {
-	
+
 	display: table-cell;
- 	padding: 0px 20px;
+ 	padding: 0px 10px;
   	height: 50px;
   	vertical-align: middle;
 }
@@ -305,6 +306,7 @@
 </style>
 </head>
 <body class="onoffmix">
+<%Member_DTO dto = (Member_DTO)session.getAttribute("dto");%>
 	<article class="ie_end_support_popup_wrap">
 		<h1>인터넷 익스플로러 (IE) 브라우저 지원 종료 안내</h1>
 		<p>
@@ -386,8 +388,12 @@
 
 			<div class="user_area">
 				<ul class="service_menu">
-					<li class="list_item login"><a href="Login.html">로그인</a></li>
-					<li class="list_item join"><a href="Join.html">회원가입</a></li>
+					<%if(dto==null){ %>
+                                                            <li class="list_item login"><a href="./Login.html">로그인</a></li>
+                                    <li class="list_item join"><a href="./Join.html">회원가입</a></li>
+                                    <%}else{ %>
+                                    <li class="list_item login"><a href="LogoutCon">로그아웃</a></li>
+                                    <%} %>
 				</ul>
 
 				<ul class="member_menu">
@@ -429,7 +435,7 @@
 						<section class="category_event">
 							<ul class="list_col">
 
-								<li class="list_item"><a href="Edu_빅데이터">빅데이터</a>
+								<li class="list_item"><a href="Edu_빅데이터.jsp">빅데이터</a>
 								</li>
 								<li class="list_item"><a href="/event/main/?c=087">인공지능</a>
 								</li>
@@ -947,11 +953,14 @@
 					<div class="link_section">
 
 
+						<%if(dto!=null) {%>
 						<a href="/prom/exhibition" class="link_item exhibition"
-							data-c="b09b92031">기획전</a> <a href="/ch"
-							class="link_item channel" data-c="b09b92041">채널</a>
-					</div>
-
+							data-c="b09b92031">나의 캘린더</a> <a href="/ch"
+							class="link_item channel" data-c="b09b92041">우리들의 이야기</a>
+						<%}else {%>
+						<a href="/ch" class="link_item channel" data-c="b09b92041">우리들의
+							이야기</a>
+						<%} %>
 					<!-- partner center -->
 
 					<!---->
@@ -1041,11 +1050,13 @@
 							<option value="백엔드">백엔드</option>
 							<option value="프론트엔드">프론트엔드</option>
 							<option value="풀스택">풀스택</option>
-							<option value="융합기술">융합기술</option>
+							<option value="모바일">모바일</option>
 							<option value="보안등">보안.네트워크.클라우드</option>
+							<option value="융합기술">융합기술</option>
 							<option value="콘텐츠제작">콘텐츠제작</option>
-							<option value="자격과정">자격과정</option>
+							<option value="데이터베이서">데이터베이스</option>
 							<option value="블록체인">블록체인</option>
+							<option value="자격과정">자격과정</option>
 							<option value="기타">기타</option>
 						</select>
 					</fieldset>
@@ -1100,9 +1111,9 @@
 					</ul>
 				</div>
 
-				<div class="table">
-  					<div class="table-row" style="font-weight: bold">
-    					<div class="table-cell">
+				<div class="table" id="table">
+  					<div class="table-row thead" style="font-weight: bold">
+    					<div class="table-cell" >
       						<p>순번</p>
     					</div>
     					<div class="table-cell">
@@ -1127,11 +1138,8 @@
      						 <p>훈련대상</p>
     					</div>
   					</div>
-  					
 				</div>
 				
-
-
 				<div class="end_ing"></div>
 				<div class="more_area" style="display: none;">
 					<!-- <img class="loading" src="/static_html/images/pc/icon/loading.gif"> -->
@@ -1257,7 +1265,6 @@
 	<!-- Script -->
 	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
-	
 	let boardList;
 	
 	function EduSearch() {
@@ -1376,19 +1383,47 @@
 		}
 	
 	function displayData(currentPage, dataPerPage) {
-
 		  currentPage = Number(currentPage);
 		  dataPerPage = Number(dataPerPage);
 		  
-		  $('.table').html('');
+		  $('#table').html('');
+		  let table = '';
+		  table += `
+			  <div class="table-row thead" style="font-weight: bold">
+				<div class="table-cell" >
+					<p>순번</p>
+				</div>
+				<div class="table-cell">
+					 <p>교육과정</p>
+					 </div>
+				<div class="table-cell">
+					 <p>기관명</p>
+				</div>
+				<div class="table-cell">
+					 <p>시작일</p>
+				</div>
+				<div class="table-cell">
+					 <p>종료일</p>
+				</div>
+				<div class="table-cell">
+					 <p>훈련비</p>
+				</div>
+				<div class="table-cell">
+					 <p>정원</p>
+				</div>
+				<div class="table-cell">
+					 <p>훈련대상</p>
+				</div>
+			</div>
+		  `;
+		  
 		  for (
 		    var i = (currentPage - 1) * dataPerPage;
 		    i < (currentPage - 1) * dataPerPage + dataPerPage; 
 		    i++
 		  ) {
 			  	let result = JSON.parse(boardList[i]);
-				let table = '';
-				table = '<div class="table-row">';
+				table += '<div class="table-row">';
 				table += '<div class="table-cell"><p>';
 				table += '<input type="checkbox" name="myedu" value="' + result.edu_seq + '">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 				table += (i+1) + '</p></div>';
@@ -1399,8 +1434,8 @@
 				table += '<div class="table-cell"><p>' + result.edu_price + '</p></div>';
 				table += '<div class="table-cell"><p>' + result.edu_total + '</p></div>';
 				table += '<div class="table-cell"><p>' + result.edu_kind + '</p></div></div>';
-			$('.table').append(table);
 		  }
+		  $('#table').append(table);
 		} 
 	
 	</script>
