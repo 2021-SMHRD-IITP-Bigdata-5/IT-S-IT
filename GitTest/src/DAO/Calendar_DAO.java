@@ -5,6 +5,7 @@ import DTO.Education_DTO;
 
 public class Calendar_DAO {
 	
+/*	
 	public int select() {
 		Calendar_DTO dto = new Calendar_DTO();
 		Member_DAO dao = new Member_DAO();
@@ -48,25 +49,17 @@ public class Calendar_DAO {
 		return latest_dto;
 		
 	}
-	
-	public Calendar_DTO insert() {
+*/
+	public void insert(String mem_id, String alldata) {
 		Calendar_DTO dto = new Calendar_DTO();
 		Member_DAO dao = new Member_DAO();
 	
 	try {
 		dao.getConn();
-		String sql = "insert into tbl_edu_calendar values()";
+		String sql = "insert into tbl_edu_calendar() values()";
 		dao.psmt = dao.conn.prepareStatement(sql);
-		dao.rs = dao.psmt.executeQuery();
+		int cnt = dao.psmt.executeUpdate();
 		
-		
-			if(dao.rs.next()) {
-				String start_date = dao.rs.getString(3);
-				start_date = start_date.substring(0, 10);
-				String end_date = dao.rs.getString(4);
-				end_date = end_date.substring(0,10);
-				Education_DTO edu_dto = new Education_DTO(dao.rs.getString(1),dao.rs.getString(2),start_date,end_date);
-			}else break;	
 		
 		
 	} catch(Exception e) {
@@ -89,6 +82,5 @@ public class Calendar_DAO {
 			e.printStackTrace();
 		}
 	}
-	return latest_dto;
-	}
+}
 }
