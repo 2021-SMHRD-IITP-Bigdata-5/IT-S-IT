@@ -302,9 +302,9 @@
 }
 
 #교육분야 {
-	background-image: url("img/빅데이터3.png");
+	background-image: url("img/풀스택2.png");
 	width: 100%;
-	height: 60%;
+	height: 65%;
 	object-fit: cover;
 }
 
@@ -1103,7 +1103,7 @@
 				// edu_name, edu_org
 				
 				"edu_addr" : "",
-				"edu_part" : "빅데이터",
+				"edu_part" : "풀스택",
 				"edu_kind" : "",
 				"out_time_data" : ""
 					

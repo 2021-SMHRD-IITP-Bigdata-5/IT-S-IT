@@ -302,9 +302,9 @@
 }
 
 #교육분야 {
-	background-image: url("img/빅데이터3.png");
-	width: 100%;
-	height: 60%;
+	
+	width: 0%;
+	height: 0%;
 	object-fit: cover;
 }
 
@@ -1063,7 +1063,7 @@
 	<script src="/static_html/js/pc/dist/event/event-search.js"></script> -->
 
 	<!-- =================================== Footer Start =================================== -->
-	
+
 	<!-- =================================== Footer End =================================== -->
 
 	<!-- Plugin  -->
@@ -1103,7 +1103,7 @@
 				// edu_name, edu_org
 				
 				"edu_addr" : "",
-				"edu_part" : "빅데이터",
+				"edu_part" : "기타",
 				"edu_kind" : "",
 				"out_time_data" : ""
 					

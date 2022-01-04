@@ -302,10 +302,10 @@
 }
 
 #교육분야 {
-	background-image: url("img/빅데이터3.png");
+	background-image: url("img/인공지능2.png");
 	width: 100%;
 	height: 60%;
-	object-fit: cover;
+	
 }
 
 </style>
@@ -1103,7 +1103,7 @@
 				// edu_name, edu_org
 				
 				"edu_addr" : "",
-				"edu_part" : "빅데이터",
+				"edu_part" : "인공지능",
 				"edu_kind" : "",
 				"out_time_data" : ""
 					
