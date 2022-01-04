@@ -302,9 +302,9 @@
 }
 
 #교육분야 {
-	background-image: url("img/빅데이터.png");
+	background-image: url("img/빅데이터3.png");
 	width: 100%;
-	height: 90%;
+	height: 60%;
 	object-fit: cover;
 }
 
@@ -1061,77 +1061,7 @@
 	<script src="/static_html/js/pc/dist/event/event-search.js"></script> -->
 
 	<!-- =================================== Footer Start =================================== -->
-	<footer id="footer" class="footer_wrap ">
-		<div class="information_area wide_max_width_area">
-			<div class="contact_list">
-				<strong>(주)온오프믹스</strong>
-				<ul>
-					<li>대표이사 <span>양준철</span></li>
-					<li>개인정보관리책임자 <span>이승희</span></li>
-					<li>사업자등록번호 <span><i>221-81-34988</i></span></li>
-					<li>통신판매업 신고번호 <span>제<i>2015</i>&nbsp;-&nbsp;서울서초&nbsp;-&nbsp;<i>0928</i>호
-					</span></li>
-					<li>서울특별시 서초구 강남대로<i>79</i>길&nbsp;<i>59</i>&nbsp;새로나빌딩&nbsp;<i>3</i>층
-					</li>
-					<li><span>Tel : 02-6080-5579</span> <span>Fax :
-							02-6080-8089</span> <span>Email : <a
-							href="mailto:webmaster@onoffmix.com"> webmaster@onoffmix.com</a></span>
-					</li>
-				</ul>
-			</div>
-			<div class="link_list">
-				<ul class="company_link">
-					<li><a href="http://corp.onoffmix.com/" target="_blank">회사소개</a></li>
-					<li><a href="https://www.onoffmix.com/legal/agreement"
-						target="_blank">서비스약관 및 정책</a></li>
-					<li><a href="https://www.onoffmix.com/legal/privacy"
-						target="_blank"><strong>개인정보처리방침</strong></a></li>
-				</ul>
-				<ul class="cs_link">
-					<li><a href="https://www.onoffmix.com/cs" target="_blank"><strong>고객센터</strong></a></li>
-					<li><a href="https://www.onoffmix.com/cs/inquire"
-						target="_blank">문의하기</a></li>
-					<li><a href="/service#join" target="_blank">서비스안내</a></li>
-					<li><a href="/cs/faq" target="_blank">FAQ</a></li>
-					<li><a href="http://apps.onoffmix.com" target="_blank">앱다운로드</a></li>
-				</ul>
-				<ul class="channel_link">
-					<li><a href="/ch" target="_blank">채널</a>
-					<li>
-					<li><a href="https://place.onoffmix.com/" target="_blank">플레이스</a>
-					<li>
-					<li><a href="/service/advert/product/partner" target="_blank">파트너센터</a>
-					<li>
-					<li><a href="/ir/main" target="_blank">투자정보</a>
-					<li>
-				</ul>
-				<div class="link_button">
-					<a href="/newsletter" target="_blank">뉴스레터 구독하기</a> <a
-						href="/service/advert/product/guide" target="_blank">광고상품안내</a>
-				</div>
-			</div>
-			<div class="footer_bottom">
-				<p>
-					<span>온오프믹스는 통신판매중개자이며 모임에 대한 당사자 및 주최자가 아닙니다. 따라서 온오프믹스는
-						등록된 모임에 대하여 책임을 지지 않습니다.</span> <span>copyright © ONOFFMIX.COM,
-						All Rights Reserved.</span>
-				</p>
-				<ul>
-					<li><a href="https://blog.naver.com/onoffmix" target="_blank"
-						title="온오프믹스 네이버블로그">온오프믹스 네이버블로그</a></li>
-					<li><a href="https://brunch.co.kr/@onoffmix" target="_blank"
-						title="온오프믹스 브런치">온오프믹스 브런치</a></li>
-					<li><a href="https://www.facebook.com/onoffmix"
-						target="_blank" title="온오프믹스 페이스북">온오프믹스 페이스북</a></li>
-					<li><a href="https://www.instagram.com/onoffmix"
-						target="_blank" title="온오프믹스 인스타그램">온오프믹스 인스타그램</a></li>
-					<li><a
-						href="https://www.youtube.com/channel/UC2W4gjEfJBaEheQ1vwACVTg"
-						target="_blank" title="온오프믹스 유튜브">온오프믹스 유튜브</a></li>
-				</ul>
-			</div>
-		</div>
-	</footer>
+	
 	<!-- =================================== Footer End =================================== -->
 
 	<!-- Plugin  -->

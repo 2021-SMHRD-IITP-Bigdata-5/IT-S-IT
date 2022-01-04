@@ -43,8 +43,7 @@
 
 <!-- =================================== 화면 고유 시작 ===================================  -->
 <!-- OFM Style -->
-<link rel="stylesheet"
-	href="https://static.onoffmix.com/css/pc/main/new-main.css">
+
 <!-- =================================== 화면 고유 끝 ===================================  -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -67,117 +66,1512 @@
 
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <style>
-        .ie_end_support_popup_wrap{
-            display: none;
-            width: 900px;
-            height: 608px;
-            padding: 62px 100px 0;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 1px solid #c8c8c8;
-            box-sizing: border-box;
-            text-align: center;
-            letter-spacing: -1px;
-            line-height: 28px;
-            color: #333;
-            z-index: 1000;
-            background-color: #fff;
-        }
-        .ie_end_support_popup_wrap h1{
-            margin-bottom: 37px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #4195f5;
-            letter-spacing: -1.2px
-        }
-        .ie_end_support_popup_wrap p{
-            font-size: 16px;
-        }
-        .ie_end_support_popup_wrap p + p{margin-top: 10px;}
-        .ie_end_support_popup_wrap p span{ font-weight: bold; }
-        .ie_end_support_popup_wrap p span:last-child{ color: #4195f5;  }
-        .browser_link{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 0 15px; 
-            margin-top: 39px;
-            border-top: 1px solid #d8d8d8;
-        }
-        .browser_link > span{
-            display: block;
-            width: 100%;
-            margin-top: 36px;
-            margin-bottom: 24px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .browser_link a{
-            display: block;
-            width: 140px;
-            height: 160px;
-            font-size: 14px;
-            font-weight: bold;
-            line-height: 20px;
-            letter-spacing: 0;
-            background-color: #f7f8fa;
-            border-radius: 10px;
-        }
-        .browser_link a span{
-            display: block;
-            font-weight: normal;
-            letter-spacing: -1px;
-            color: #666;
-        }
-        .browser_link a::before{
-            content: "";
-            display: block;
-            width: 72px;
-            height: 72px;
-            margin: 21px auto 9px;
-            background-repeat: no-repeat;
-            background-size: 100%;
-        }
-        .browser_link a:nth-child(2)::before{background-image: url("https://static.onoffmix.com/images/pc/ie_end_support_popup/chrome.png");}
-        .browser_link a:nth-child(3)::before{background-image: url("https://static.onoffmix.com/images/pc/ie_end_support_popup/edge.png");}
-        .browser_link a:nth-child(4)::before{background-image: url("https://static.onoffmix.com/images/pc/ie_end_support_popup/whale.png");}
-        .browser_link a:nth-child(5)::before{background-image: url("https://static.onoffmix.com/images/pc/ie_end_support_popup/firefox.png");}
-        .ie_end_support_popup_wrap button{
-            display: block;
-            width: 24px;
-            height: 24px;
-            position: absolute;
-            top: 19px;
-            right: 19px;
-            cursor: pointer;
-            border: 0 none;
-            overflow: hidden;
-            text-indent: -9999rem;
-            background-color: transparent;
-            background-image: url("https://static.onoffmix.com/images/pc/svg/menu-close-gray.svg");
-        }
-        .close_check{
-            position: absolute;
-            right: 21px;
-            bottom: 15px;
-        }
-        .close_check input{
-            width: 13px;
-            height: 13px;
-            vertical-align: middle;
-            border-color: rgba(0, 0, 0, 0.2);
-        }
-        .close_check label{
-            margin-left: 7px;
-            font-size: 12px;
-            letter-spacing: -1px;
-            line-height: 14px;
-            vertical-align: middle;
-            color: #333;
-        }
-        </style>
+.section_main_top .title_list_area .items a {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden
+}
+
+.section_main_top, .section_main_top .content_wrap, .section_main_top .full_view_area ul,
+	.section_now_event div[class^="area_"], .section_event_pick .pick_list
+	{
+	*zoom: 1
+}
+
+.section_main_top:before, .section_main_top .content_wrap:before,
+	.section_main_top .full_view_area ul:before, .section_now_event div[class^="area_"]:before,
+	.section_event_pick .pick_list:before, .section_main_top:after,
+	.section_main_top .content_wrap:after, .section_main_top .full_view_area ul:after,
+	.section_now_event div[class^="area_"]:after, .section_event_pick .pick_list:after
+	{
+	content: "";
+	display: table
+}
+
+.section_main_top:after, .section_main_top .content_wrap:after,
+	.section_main_top .full_view_area ul:after, .section_now_event div[class^="area_"]:after,
+	.section_event_pick .pick_list:after {
+	clear: both
+}
+
+.section_event_pick .pick_list .pick_list_item span {
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	clip: rect(0, 0, 0, 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0
+}
+
+.slider-rotate__arrow, .section_main_top .full_view_area .full_view_close_btn,
+	.section_event_pick .btn_more {
+	display: block;
+	text-indent: -9999em;
+	white-space: nowrap;
+	overflow: hidden
+}
+
+.owl-carousel, .owl-carousel .owl-item {
+	-webkit-tap-highlight-color: transparent;
+	position: relative
+}
+
+.owl-carousel {
+	display: none;
+	width: 100%;
+	z-index: 1
+}
+
+.owl-carousel .owl-stage {
+	position: relative;
+	-ms-touch-action: pan-Y;
+	touch-action: manipulation;
+	-moz-backface-visibility: hidden
+}
+
+.owl-carousel .owl-stage:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0
+}
+
+.owl-carousel .owl-stage-outer {
+	position: relative;
+	overflow: hidden;
+	-webkit-transform: translate3d(0, 0, 0)
+}
+
+.owl-carousel .owl-item, .owl-carousel .owl-wrapper {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0)
+}
+
+.owl-carousel .owl-item {
+	min-height: 1px;
+	float: left;
+	-webkit-backface-visibility: hidden;
+	-webkit-touch-callout: none
+}
+
+.owl-carousel .owl-item img {
+	display: block;
+	width: 100%
+}
+
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+	display: none
+}
+
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+	display: block
+}
+
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev
+	{
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev,
+	.owl-carousel button.owl-dot {
+	background: 0 0;
+	color: inherit;
+	border: none;
+	padding: 0 !important;
+	font: inherit
+}
+
+.owl-carousel.owl-loading {
+	opacity: 0;
+	display: block
+}
+
+.owl-carousel.owl-hidden {
+	opacity: 0
+}
+
+.owl-carousel.owl-refresh .owl-item {
+	visibility: hidden
+}
+
+.owl-carousel.owl-drag .owl-item {
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.owl-carousel.owl-grab {
+	cursor: move;
+	cursor: -webkit-grab;
+	cursor: grab
+}
+
+.owl-carousel.owl-rtl {
+	direction: rtl
+}
+
+.owl-carousel.owl-rtl .owl-item {
+	float: right
+}
+
+.owl-carousel .animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+
+.owl-carousel .owl-animated-in {
+	z-index: 0
+}
+
+.owl-carousel .owl-animated-out {
+	z-index: 1
+}
+
+.owl-carousel .fadeOut {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut
+}
+
+@
+-webkit-keyframes fadeOut { 0%{
+	opacity: 1
+}
+
+100
+%
+{
+opacity
+:
+0
+}
+}
+@
+keyframes fadeOut { 0%{
+	opacity: 1
+}
+
+100
+%
+{
+opacity
+:
+0
+}
+}
+.owl-height {
+	-webkit-transition: height .5s ease-in-out;
+	transition: height .5s ease-in-out
+}
+
+.owl-carousel .owl-item .owl-lazy {
+	opacity: 0;
+	-webkit-transition: opacity .4s ease;
+	transition: opacity .4s ease
+}
+
+.owl-carousel .owl-item .owl-lazy:not([src]), .owl-carousel .owl-item .owl-lazy[src^=""]
+	{
+	max-height: 0
+}
+
+.owl-carousel .owl-item img.owl-lazy {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d
+}
+
+.owl-carousel .owl-video-wrapper {
+	position: relative;
+	height: 100%;
+	background: #000
+}
+
+.owl-carousel .owl-video-play-icon {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	left: 50%;
+	top: 50%;
+	margin-left: -40px;
+	margin-top: -40px;
+	background: url(owl.video.play.png) no-repeat;
+	cursor: pointer;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: -webkit-transform .1s ease;
+	transition: -webkit-transform .1s ease;
+	transition: transform .1s ease;
+	transition: transform .1s ease, -webkit-transform .1s ease
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+	-webkit-transform: scale(1.3, 1.3);
+	transform: scale(1.3, 1.3)
+}
+
+.owl-carousel .owl-video-playing .owl-video-play-icon, .owl-carousel .owl-video-playing .owl-video-tn
+	{
+	display: none
+}
+
+.owl-carousel .owl-video-tn {
+	opacity: 0;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	-webkit-transition: opacity .4s ease;
+	transition: opacity .4s ease
+}
+
+.owl-carousel .owl-video-frame {
+	position: relative;
+	z-index: 1;
+	height: 100%;
+	width: 100%
+}
+
+.slider-rotate {
+	position: relative;
+	margin: 0 auto
+}
+
+.slider-rotate__container {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	visibility: hidden
+}
+
+.slider-rotate__item {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+}
+
+.slider-rotate__item.slider-rotate__item--next, .slider-rotate__item.slider-rotate__item--prev
+	{
+	z-index: 2;
+	-webkit-transform: translateY(-50%) translateX(-50%) scale(0.9);
+	transform: translateY(-50%) translateX(-50%) scale(0.9)
+}
+
+.slider-rotate__item.slider-rotate__item--next {
+	left: 67%
+}
+
+.slider-rotate__item.slider-rotate__item--prev {
+	left: 33%
+}
+
+.slider-rotate__item.slider-rotate__item--next-2, .slider-rotate__item.slider-rotate__item--prev-2
+	{
+	filter: alpha(opacity = 60);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+	opacity: .6;
+	-webkit-transform: translateY(-50%) translateX(-50%) scale(0.8);
+	transform: translateY(-50%) translateX(-50%) scale(0.8)
+}
+
+.slider-rotate__item.slider-rotate__item--next-2 {
+	left: 80%
+}
+
+.slider-rotate__item.slider-rotate__item--prev-2 {
+	left: 20%
+}
+
+.slider-rotate__item.slider-rotate__item--active {
+	z-index: 5;
+	-webkit-transform: translateY(-50%) translateX(-50%) scale(1);
+	transform: translateY(-50%) translateX(-50%) scale(1)
+}
+
+.slider-rotate__nav {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 100%;
+	width: 1280px;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 22
+}
+
+.slider-rotate__arrow {
+	position: absolute;
+	top: 50%;
+	width: 70px;
+	height: 130px;
+	display: block;
+	background: hsla(0, 0%, 0%, .5);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transition: background 0.3s;
+	transition: background 0.3s;
+	cursor: pointer
+}
+
+.slider-rotate__arrow::after {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 54px;
+	content: "12";
+	display: block;
+	border: solid #ffffff;
+	border-width: 0 2px 2px 0
+}
+
+.slider-rotate__arrow:hover {
+	background: hsla(0, 0%, 0%, .8)
+}
+
+.slider-rotate__arrow.slider-rotate__arrow--left {
+	left: 0
+}
+
+.slider-rotate__arrow.slider-rotate__arrow--left::after {
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+	left: 26px
+}
+
+.slider-rotate__arrow.slider-rotate__arrow--right {
+	right: 0
+}
+
+.slider-rotate__arrow.slider-rotate__arrow--right::after {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	right: 26px
+}
+
+html {
+	min-width: 1400px
+}
+
+@media screen and (max-width: 1536px) {
+	.wide_max_width_area, .wing_position {
+		margin-left: calc(100% - 1400px)
+	}
+}
+
+@media screen and (max-width: 1416px) {
+	.wing_position {
+		margin-left: 0
+	}
+}
+
+#content.main {
+	padding: 0
+}
+
+.main {
+	background-color: #ffffff
+}
+
+.main section[class^="section_"] {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.main section[class^="section_"]>.title_area {
+	position: relative;
+	width: 100%;
+	text-align: center
+}
+
+.main section[class^="section_"]>.title_area .title {
+	display: inline-block;
+	font-size: 34px
+}
+
+.main section[class^="section_"]>.title_area .title span {
+	letter-spacing: normal;
+	font-weight: normal
+}
+
+div[class^="banner_"] {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+div[class^="banner_"] a {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	overflow: hidden
+}
+
+div[class^="banner_"] a img {
+	width: 100%;
+	height: 100%
+}
+
+.section_main_banner {
+	overflow: hidden;
+	border-bottom: 1px solid #d8d8d8;
+	background-color: #ffffff
+}
+
+.section_main_banner .banner_main {
+	padding: 20px 0 21px;
+	max-width: 1920px;
+	height: 480px
+}
+
+.section_main_banner .banner_main .item {
+	width: 890px;
+	height: 440px;
+	border-radius: 10px;
+	overflow: hidden
+}
+
+.section_main_banner .banner_main .item::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	border: 1px solid hsla(0, 0%, 0%, .1);
+	border-radius: 10px
+}
+
+.section_main_banner .banner_main .item.slider-rotate__item--active {
+	-webkit-box-shadow: 0 0 16px 0 hsla(0, 0%, 0%, .45);
+	box-shadow: 0 0 16px 0 hsla(0, 0%, 0%, .45)
+}
+
+.section_main_banner .banner_main .item.slider-rotate__item--next,
+	.section_main_banner .banner_main .item.slider-rotate__item--prev {
+	-webkit-box-shadow: 0 0 8px 0 hsla(0, 0%, 0%, .35);
+	box-shadow: 0 0 8px 0 hsla(0, 0%, 0%, .35)
+}
+
+.section_main_banner .banner_main .item.slider-rotate__item--next-2,
+	.section_main_banner .banner_main .item.slider-rotate__item--prev-2 {
+	-webkit-box-shadow: none;
+	box-shadow: none
+}
+
+.section_main_banner .banner_main img::-moz-selection {
+	background: transparent
+}
+
+.section_main_banner .banner_main img::selection {
+	background: transparent
+}
+
+.section_main_top {
+	padding: 34px 0 97px
+}
+
+.section_main_top .banner_branding {
+	float: left;
+	width: 280px
+}
+
+.section_main_top .banner_branding .head {
+	margin-bottom: 10px
+}
+
+.section_main_top .banner_branding .head h3 {
+	font-size: 18px;
+	font-weight: bold
+}
+
+.section_main_top .banner_branding .head h3:before {
+	content: "";
+	display: block;
+	height: 8px;
+	margin-bottom: 3px;
+	position: relative;
+	left: 1px;
+	background-image: url("/images/pc/svg/new.svg");
+	background-repeat: no-repeat
+}
+
+.section_main_top .banner_branding .head .paging {
+	top: 9px
+}
+
+.section_main_top .banner_branding .content {
+	width: 100%;
+	height: 380px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #d8d8d8;
+	overflow: hidden
+}
+
+.section_main_top .banner_branding a {
+	width: 280px;
+	height: 380px
+}
+
+.section_main_top .banner_branding .owl-nav {
+	filter: alpha(opacity = 0);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	position: absolute;
+	top: 50%
+}
+
+.section_main_top .banner_branding .owl-nav.on {
+	filter: alpha(opacity = 100);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1
+}
+
+.section_main_top .banner_branding .owl-nav.disabled {
+	filter: alpha(opacity = 0);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0
+}
+
+.section_main_top .banner_branding .owl-dots {
+	position: absolute;
+	left: 50%;
+	bottom: 12px;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%)
+}
+
+.section_main_top .banner_top_area {
+	position: relative;
+	width: 980px;
+	height: 380px;
+	margin-top: 41px;
+	padding : 50px 50px 50px 50px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #d8d8d8;
+	align-items: 
+}
+
+.section_main_top .banner_top_area.full_view .full_view_btn::after {
+	background-image: url("/images/pc/svg/path2.svg")
+}
+
+.section_main_top .banner_top_area.full_view .full_view_area {
+	display: block
+}
+
+.section_main_top .banner_top_area .full_view_btn {
+	position: absolute;
+	top: -29px;
+	right: 8px;
+	padding: 0;
+	border: 0 none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	cursor: pointer;
+	background: none
+}
+
+.section_main_top .banner_top_area .full_view_btn::after {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 2px;
+	left: 5px;
+	background-image: url("/images/pc/svg/path.svg");
+	background-repeat: no-repeat;
+	background-position: center
+}
+
+.section_main_top .banner_text {
+	position: relative;
+	width: 688px;
+	height: 380px
+}
+
+.section_main_top .banner_text li {
+	position: absolute;
+	top: 0;
+	left: 0
+}
+
+.section_main_top .banner_text a {
+	position: relative;
+	filter: alpha(opacity = 0);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	display: block;
+	-webkit-transition: opacity 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: opacity 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+}
+
+.section_main_top .banner_text a.active {
+	filter: alpha(opacity = 100);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1;
+	z-index: 100
+}
+
+.section_main_top .title_list_area {
+	position: absolute;
+	top: 0;
+	left: 688px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 290px;
+	margin-top: 13px;
+	z-index: 101
+}
+
+.section_main_top .title_list_area .items {
+	position: relative;
+	width: 282px;
+	height: 44px;
+	padding-left: 4px;
+	line-height: 44px
+}
+
+.section_main_top .title_list_area .items a {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding-left: 36px;
+	padding-right: 15px;
+	font-size: 14px;
+	color: #333
+}
+
+.section_main_top .title_list_area .items.active a {
+	color: #fff;
+	font-weight: bold;
+	background: -webkit-gradient(linear, right top, left top, from(#6952f9),
+		to(#4195f5));
+	background: linear-gradient(-90deg, #6952f9, #4195f5);
+	background-size: 200% 200%;
+	-webkit-animation: MoveGrad 2.5s ease infinite;
+	animation: MoveGrad 2.5s ease infinite
+}
+
+.section_main_top .title_list_area .items.active a::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url("/images/pc/default/combined-shape.png")
+}
+
+@
+-webkit-keyframes MoveGrad { 0%{
+	background-position: 0% 100%
+}
+
+50
+%
+{
+background-position
+:
+100%
+100%
+}
+100
+%
+{
+background-position
+:
+0%
+100%
+}
+}
+@
+keyframes MoveGrad { 0%{
+	background-position: 0% 100%
+}
+
+50
+%
+{
+background-position
+:
+100%
+100%
+}
+100
+%
+{
+background-position
+:
+0%
+100%
+}
+}
+.section_main_top .full_view_area {
+	width: 980px;
+	height: 380px;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.8);
+	overflow: hidden;
+	z-index: 102
+}
+
+.section_main_top .full_view_area ul {
+	position: absolute;
+	top: 61px;
+	left: 20px
+}
+
+.section_main_top .full_view_area li {
+	width: 235px;
+	height: 129px;
+	float: left;
+	overflow: hidden
+}
+
+.section_main_top .full_view_area .full_view_close_btn {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	border: 0 none;
+	cursor: pointer;
+	background-image: url("/images/pc/svg/category-close.svg");
+	background-color: transparent
+}
+
+.section_now_event {
+	border-top: 1px solid #d8d8d8
+}
+
+.section_now_event>.title_area {
+	top: -22px
+}
+
+.section_now_event>.title_area .title {
+	padding-left: 19px;
+	padding-right: 16px;
+	background-color: #ffffff
+}
+
+.section_now_event div[class^="banner_now_"] {
+	width: 452px;
+	height: 684px;
+	border: 1px solid #d8d8d8;
+	margin-bottom: 40px
+}
+
+.section_now_event div[class^="banner_now_"] a {
+	width: 450px;
+	height: 682px
+}
+
+.section_now_event div[class^="banner_now_"] img {
+	height: 100%
+}
+
+.section_now_event div[class^="banner_now_"] .owl-dots {
+	position: absolute;
+	top: 22px;
+	right: 18px
+}
+
+.section_now_event div[class^="banner_now_"] .owl-nav {
+	filter: alpha(opacity = 0);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	position: absolute;
+	top: 50%
+}
+
+.section_now_event div[class^="banner_now_"] .owl-nav.on {
+	filter: alpha(opacity = 100);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1
+}
+
+.section_now_event div[class^="banner_now_"] .owl-nav.disabled {
+	filter: alpha(opacity = 0);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0
+}
+
+.section_now_event div[class^="area_"] .event_list {
+	width: 828px
+}
+
+.section_now_event div[class^="area_"] .event_list li {
+	float: left;
+	margin-bottom: 40px
+}
+
+.section_now_event .area_top {
+	padding: 17px 0 0;
+	border-bottom: 1px solid #d8d8d8
+}
+
+.section_now_event .area_top .event_list {
+	float: right
+}
+
+.section_now_event .area_top .event_list li {
+	margin-left: 40px
+}
+
+.section_now_event .area_top .banner_now_top {
+	float: left
+}
+
+.section_now_event .area_top .banner_now_top .head .paging {
+	top: 20px;
+	right: 22px
+}
+
+.section_now_event .area_bottom {
+	margin-bottom: 0;
+	padding: 40px 0 0
+}
+
+.section_now_event .area_bottom .event_list {
+	float: left
+}
+
+.section_now_event .area_bottom .event_list li {
+	margin-right: 40px
+}
+
+.section_now_event .area_bottom .banner_now_bottom {
+	float: right
+}
+
+.section_now_event .area_bottom .banner_now_bottom .head .paging {
+	top: 20px;
+	right: 22px
+}
+
+.section_hot_issue {
+	padding: 20px 0
+}
+
+.section_hot_issue .banner_hot_issue.owl-carousel {
+	width: 1280px !important;
+	margin: 0 auto
+}
+
+.section_hot_issue .banner_hot_issue a {
+	width: 240px;
+	height: 330px;
+	border: 1px solid #d8d8d8
+}
+
+.section_hot_issue .owl-item img::-moz-selection {
+	background: transparent
+}
+
+.section_hot_issue .owl-item img::selection {
+	background: transparent
+}
+
+.section_hot_issue .owl-item::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 240px;
+	height: 100%;
+	z-index: 1;
+	content: "";
+	display: block;
+	background-color: hsla(0, 0%, 100%, .8)
+}
+
+.section_hot_issue .owl-item.active.center::before {
+	display: none
+}
+
+.section_hot_issue .owl-nav.disabled {
+	display: block !important
+}
+
+.section_hot_issue .owl-prev {
+	left: 0 !important
+}
+
+.section_hot_issue .owl-next {
+	right: 0 !important
+}
+
+.section_event_best {
+	margin-top: 102px;
+	border-top: 1px solid #d8d8d8
+}
+
+.section_event_best .title_area {
+	top: -20px
+}
+
+.section_event_best .title {
+	padding-left: 18px;
+	padding-right: 22px;
+	background-color: #ffffff
+}
+
+.section_event_best .content_wrap {
+	padding-top: 64px;
+	padding-bottom: 126px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between
+}
+
+.section_event_best .content_wrap ul {
+	position: relative
+}
+
+.section_event_best .category_area {
+	padding-left: 25px
+}
+
+.section_event_best .category_area ul:before {
+	width: 2px;
+	height: 269px;
+	position: absolute;
+	top: 6px;
+	left: 0;
+	content: "";
+	background-color: #d8d8d8
+}
+
+.section_event_best .category_list {
+	margin-bottom: 34px;
+	padding-left: 55px;
+	width: 193px;
+	height: 20px;
+	position: relative
+}
+
+.section_event_best .category_list a {
+	font-size: 16px
+}
+
+.section_event_best .category_list:last-of-type {
+	margin-bottom: 0
+}
+
+.section_event_best .category_list:before {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: calc(50% - 1px);
+	left: -4px;
+	content: "";
+	display: block;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	background: url("/images/pc/svg/circle_wh_10x10.svg") no-repeat center
+		center/contain
+}
+
+.section_event_best .category_list.active a {
+	position: relative;
+	top: -5px;
+	color: #4195f5;
+	font-size: 22px;
+	font-weight: bold
+}
+
+.section_event_best .category_list.active:before {
+	width: 53px;
+	height: 44px;
+	left: -20px;
+	background-image: url("/images/pc/svg/pointer_53x44.svg")
+}
+
+.section_event_best .event_card_area {
+	padding-top: 6px;
+	width: 978px;
+	height: auto;
+	position: relative
+}
+
+.section_event_best .event_card_area ul {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	z-index: 0;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background-color: #fff;
+	opacity: 0;
+	-webkit-transition: opacity 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: opacity 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+}
+
+.section_event_best .event_card_area ul.active {
+	z-index: 10;
+	opacity: 1;
+	-webkit-transition: opacity 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: opacity 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+}
+
+.section_event_best .event_card_list {
+	margin-right: 30px;
+	width: 220px;
+	height: 274px;
+	border: 1px solid #d8d8d8
+}
+
+.section_event_best .event_card_list a {
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	word-break: break-all
+}
+
+.section_event_best .event_card_list .img_wrapper {
+	width: 180px;
+	height: 180px
+}
+
+.section_event_best .event_card_list .img_wrapper img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover
+}
+
+.section_event_best .event_card_list h5 {
+	margin-top: 16px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px
+}
+
+.section_event_best .event_card_list:last-of-type {
+	margin-right: 0
+}
+
+.section_event_best .event_card_list:hover {
+	border: 1px solid #4195f5
+}
+
+.section_event_best .event_card_list:hover h5 {
+	text-decoration: underline
+}
+
+.section_event_pick {
+	border-top: 1px solid #d8d8d8
+}
+
+.section_event_pick .title_area {
+	top: -22px
+}
+
+.section_event_pick .title {
+	padding-left: 18px;
+	padding-right: 22px;
+	background-color: #ffffff
+}
+
+.section_event_pick .btn_more {
+	position: relative;
+	top: 5px;
+	right: -2px;
+	width: 34px;
+	height: 34px;
+	display: inline-block;
+	background: #fff url("/images/pc/svg/plus.svg") no-repeat 0 0
+}
+
+.section_event_pick .btn_more:hover, .section_event_pick .btn_more:focus
+	{
+	background-image: url("/images/pc/svg/plus_blue.svg")
+}
+
+.section_event_pick .content_wrap {
+	margin: 108px auto 92px;
+	text-align: center
+}
+
+.section_event_pick .content_wrap::after {
+	width: 100%;
+	height: 10px;
+	content: "";
+	display: block;
+	margin-top: -3px;
+	-webkit-box-shadow: 0 2px 3px 0 hsla(0, 0%, 0%, .27);
+	box-shadow: 0 2px 3px 0 hsla(0, 0%, 0%, .27);
+	background-color: hsla(0, 0%, 91%, .89)
+}
+
+.section_event_pick .pick_list {
+	display: inline-block
+}
+
+.section_event_pick .pick_list .pick_list_item {
+	float: left;
+	width: 240px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block
+}
+
+.section_event_pick .pick_list .pick_list_item a {
+	width: 240px;
+	height: 360px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	overflow: hidden;
+	border: 1px solid #d8d8d8;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 146% 100%;
+	-webkit-transform: scale(0.8334);
+	transform: scale(0.8334);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	transition: transform 0.3s, -webkit-transform 0.3s
+}
+
+.section_event_pick .pick_list .pick_list_item.active a,
+	.section_event_pick .pick_list .pick_list_item:hover a,
+	.section_event_pick .pick_list .pick_list_item:focus a {
+	-webkit-transform: scale(1);
+	transform: scale(1)
+}
+
+.section_more_check {
+	border-top: 1px solid #d8d8d8
+}
+
+.section_more_check .title_area {
+	top: -22px
+}
+
+.section_more_check .title {
+	padding-left: 18px;
+	padding-right: 20px;
+	background-color: #ffffff
+}
+
+.section_more_check .content_wrap {
+	padding-top: 41px;
+	padding-bottom: 104px
+}
+
+.section_more_check .banner_more_check a {
+	position: relative;
+	min-width: 213px;
+	min-height: 213px;
+	width: 213px;
+	height: 213px;
+	-webkit-transform: scale(0.8451);
+	transform: scale(0.8451);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	transition: transform 0.3s, -webkit-transform 0.3s
+}
+
+.section_more_check .banner_more_check a::before, .section_more_check .banner_more_check a:before
+	{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: "";
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	border: 1px solid #d8d8d8
+}
+
+.section_more_check .banner_more_check .owl-item.active a:hover {
+	-webkit-transform: scale(1);
+	transform: scale(1)
+}
+
+.section_more_check .banner_more_check .owl-dots {
+	display: none
+}
+
+.bottom_section {
+	padding: 29px 0;
+	border-top: 1px solid #f0f0f0;
+	background-color: #fafafa
+}
+
+.bottom_section .section_notice_news {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 20px;
+	letter-spacing: -1px
+}
+
+.bottom_section .section_notice_news h1 {
+	font-size: 20px;
+	font-weight: bold
+}
+
+.bottom_section .section_notice_news ul {
+	margin-left: 23px
+}
+
+.bottom_section a:hover {
+	text-decoration: underline
+}
+
+.banner_branding .head, .banner_now_top .head, .banner_now_bottom .head
+	{
+	position: relative;
+	z-index: 2
+}
+
+.banner_branding .owl-dots, .banner_now_top .owl-dots,
+	.banner_now_bottom .owl-dots {
+	display: none
+}
+
+.banner_branding .paging, .banner_now_top .paging, .banner_now_bottom .paging
+	{
+	display: inline-block;
+	width: auto;
+	height: 24px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #ededed;
+	border-radius: 12px
+}
+
+.banner_branding .paging span, .banner_now_top .paging span,
+	.banner_now_bottom .paging span {
+	display: inline-block;
+	line-height: 20px;
+	font-size: 12px;
+	padding: 0 6px
+}
+
+.banner_branding .paging span.current, .banner_now_top .paging span.current,
+	.banner_now_bottom .paging span.current {
+	padding-left: 9px;
+	padding-right: 0;
+	color: #4195f5;
+	font-weight: bold
+}
+
+.banner_branding .paging span.total, .banner_now_top .paging span.total,
+	.banner_now_bottom .paging span.total {
+	padding-right: 9px;
+	padding-left: 0;
+	color: #333
+}
+
+.section_now_event .area_top {
+	border-bottom: 0 none
+}
+
+.ie_end_support_popup_wrap {
+	display: none;
+	width: 900px;
+	height: 608px;
+	padding: 62px 100px 0;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid #c8c8c8;
+	box-sizing: border-box;
+	text-align: center;
+	letter-spacing: -1px;
+	line-height: 28px;
+	color: #333;
+	z-index: 1000;
+	background-color: #fff;
+}
+
+.ie_end_support_popup_wrap h1 {
+	margin-bottom: 37px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #4195f5;
+	letter-spacing: -1.2px
+}
+
+.ie_end_support_popup_wrap p {
+	font-size: 16px;
+}
+
+.ie_end_support_popup_wrap p+p {
+	margin-top: 10px;
+}
+
+.ie_end_support_popup_wrap p span {
+	font-weight: bold;
+}
+
+.ie_end_support_popup_wrap p span:last-child {
+	color: #4195f5;
+}
+
+.browser_link {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 15px;
+	margin-top: 39px;
+	border-top: 1px solid #d8d8d8;
+}
+
+.browser_link>span {
+	display: block;
+	width: 100%;
+	margin-top: 36px;
+	margin-bottom: 24px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.browser_link a {
+	display: block;
+	width: 140px;
+	height: 160px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+	letter-spacing: 0;
+	background-color: #f7f8fa;
+	border-radius: 10px;
+}
+
+.browser_link a span {
+	display: block;
+	font-weight: normal;
+	letter-spacing: -1px;
+	color: #666;
+}
+
+.browser_link a::before {
+	content: "";
+	display: block;
+	width: 72px;
+	height: 72px;
+	margin: 21px auto 9px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.browser_link a:nth-child(2)::before {
+	background-image:
+		url("https://static.onoffmix.com/images/pc/ie_end_support_popup/chrome.png");
+}
+
+.browser_link a:nth-child(3)::before {
+	background-image:
+		url("https://static.onoffmix.com/images/pc/ie_end_support_popup/edge.png");
+}
+
+.browser_link a:nth-child(4)::before {
+	background-image:
+		url("https://static.onoffmix.com/images/pc/ie_end_support_popup/whale.png");
+}
+
+.browser_link a:nth-child(5)::before {
+	background-image:
+		url("https://static.onoffmix.com/images/pc/ie_end_support_popup/firefox.png");
+}
+
+.ie_end_support_popup_wrap button {
+	display: block;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 19px;
+	right: 19px;
+	cursor: pointer;
+	border: 0 none;
+	overflow: hidden;
+	text-indent: -9999rem;
+	background-color: transparent;
+	background-image:
+		url("https://static.onoffmix.com/images/pc/svg/menu-close-gray.svg");
+}
+
+.close_check {
+	position: absolute;
+	right: 21px;
+	bottom: 15px;
+}
+
+.close_check input {
+	width: 13px;
+	height: 13px;
+	vertical-align: middle;
+	border-color: rgba(0, 0, 0, 0.2);
+}
+
+.close_check label {
+	margin-left: 7px;
+	font-size: 12px;
+	letter-spacing: -1px;
+	line-height: 14px;
+	vertical-align: middle;
+	color: #333;
+}
+</style>
         </head>
         <body class="onoffmix">
         <%Member_DTO dto = (Member_DTO)session.getAttribute("dto");%>
@@ -257,8 +1651,7 @@
                                     <%}else{ %>
                                     <li class="list_item login"><a href="LogoutCon">로그아웃</a></li>
                                     <%} %>
-                                                        <li class="list_item service"><a href="/service">서비스안내</a></li>
-                                <li class="list_item customer"><a href="/cs/main">고객센터</a></li>
+                                                     
                             </ul>
         
                             <ul class="member_menu">
@@ -274,8 +1667,8 @@
                                         <ul class="sub_list mypage_list">
                                         	                                     
                                             <li><a href="Update.jsp" class="site_link edit">회원정보수정</a></li>                                           
-                                            <li><a href="/account/login?returnUrl=/account/pass" class="site_link pass">비밀번호변경</a></li>
-                                            <li><a href="/account/login?returnUrl=/account/event" class="site_link event">신청내역</a></li>
+                                            <!--<li><a href="/account/login?returnUrl=/account/pass" class="site_link pass">비밀번호변경</a></li>  -->
+                                           <!-- <li><a href="/account/login?returnUrl=/account/event" class="site_link event">신청내역</a></li> --> 
                                             <!-- <li><a href="/account/login?returnUrl=/account/payment" class="site_link payment">결제내역</a></li> -->
                                             <li><a href="/account/login?returnUrl=/account/pin" class="site_link pin">관심내역</a></li>
                                         </ul>
@@ -323,31 +1716,31 @@
 						<section class="category_event">
 							<ul class="list_col">
 
-								<li class="list_item"><a href="/event/main/?c=085">빅데이터</a>
+								<li class="list_item"><a href="Edu_빅데이터.jsp">빅데이터</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=087">인공지능</a>
+								<li class="list_item"><a href="Edu_인공지능.jsp">인공지능</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=086">백엔드</a>
+								<li class="list_item"><a href="Edu_백엔드.jsp">백엔드</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=090">프론트엔드</a>
+								<li class="list_item"><a href="Edu_프론트엔드.jsp">프론트엔드</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=088">풀스택</a>
+								<li class="list_item"><a href="Edu_풀스택.jsp">풀스택</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=092">모바일</a>
+								<li class="list_item"><a href="Edu_모바일.jsp">모바일</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=093">보안,네트워크,클라우드</a>
+								<li class="list_item"><a href="Edu_보안등.jsp">보안,네트워크,클라</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=095">융합기술</a>
+								<li class="list_item"><a href="Edu_융합기술.jsp">융합기술</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=094">콘텐츠제작</a>
+								<li class="list_item"><a href="Edu_콘텐츠제작.jsp">콘텐츠제작</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=096">데이터베이스</a>
+								<li class="list_item"><a href="Edu_데이터베이스.jsp">데이터베이스</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=096">블록체인</a>
+								<li class="list_item"><a href="Edu_블록체인.jsp">블록체인</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=096">자격증</a>
+								<li class="list_item"><a href="Edu_자격과정.jsp">자격증</a>
 								</li>
-								<li class="list_item"><a href="/event/main/?c=096">기타</a></li>
+								<li class="list_item"><a href="Edu_기타.jsp">기타</a></li>
 
 							</ul>
 							<h1>
@@ -360,45 +1753,13 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68916?url=%2Fevent%2F249535" target="_blank"
-								title="IR컨설턴트 6기 자격증 취득 교육과정 설명회" data-event_no="249535"
-								data-event_title="IR컨설턴트 6기 자격증 취득 교육과정 설명회"
-								data-creative_name="PC_카테고리_교육_모임" data-creative_slot="1"> <img
-									src="https://cfile1.onoffmix.com/images/event/249535/s"
-									alt="IR컨설턴트 6기 자격증 취득 교육과정 설명회">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68781?url=%2Fevent%2F249347" target="_blank"
-								title="[부천 메이커스페이스 (창작터)] 심화교육 - 자동 미세먼지 감지 공기청정기 만들기"
-								data-event_no="249347"
-								data-event_title="[부천 메이커스페이스 (창작터)] 심화교육 - 자동 미세먼지 감지 공기청정기 만들기"
-								data-creative_name="PC_카테고리_교육_모임" data-creative_slot="2"> <img
-									src="https://cfile1.onoffmix.com/images/event/249347/s"
-									alt="[부천 메이커스페이스 (창작터)] 심화교육 - 자동 미세먼지 감지 공기청정기 만들기">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68918?url=%2Fevent%2F249404" target="_blank"
-								title="[무료 교육] 2022년 1월 마이크로소프트 클라우드 서비스 오프라인 무료 체험 교육"
-								data-event_no="249404"
-								data-event_title="[무료 교육] 2022년 1월 마이크로소프트 클라우드 서비스 오프라인 무료 체험 교육"
-								data-creative_name="PC_카테고리_교육_모임" data-creative_slot="3"> <img
-									src="https://cfile1.onoffmix.com/images/event/249404/s"
-									alt="[무료 교육] 2022년 1월 마이크로소프트 클라우드 서비스 오프라인 무료 체험 교육">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68779?url=%2Fevent%2F249386" target="_blank"
-								title="논리적 글쓰기(비즈니스 라이팅)" data-event_no="249386"
-								data-event_title="논리적 글쓰기(비즈니스 라이팅)"
-								data-creative_name="PC_카테고리_교육_모임" data-creative_slot="4"> <img
-									src="https://cfile1.onoffmix.com/images/event/249386/s"
-									alt="논리적 글쓰기(비즈니스 라이팅)">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=085"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
+							
+							
+							
+							
 
-						</ul>
+						
 						<div class="banner_area">
 
 							<div class="banner_wrapper">
@@ -411,50 +1772,14 @@
 									alt="">
 								</a>
 							</div>
-
 						</div>
+						
 					</div>
 					<div class="category_area">
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68813?url=%2Fevent%2F249217" target="_blank"
-								title="[무료 세미나] CCCR TaB 2021 : 차세대 DB기술 동향과 전망"
-								data-event_no="249217"
-								data-event_title="[무료 세미나] CCCR TaB 2021 : 차세대 DB기술 동향과 전망"
-								data-creative_name="PC_카테고리_세미나/컨퍼런스_모임" data-creative_slot="1">
-									<img src="https://cfile1.onoffmix.com/images/event/249217/s"
-									alt="[무료 세미나] CCCR TaB 2021 : 차세대 DB기술 동향과 전망">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68283?url=%2Fevent%2F248537" target="_blank"
-								title="2021년 국민공감포럼 및 환경기술(R&amp;D 신기술) 합동성과발표회"
-								data-event_no="248537"
-								data-event_title="2021년 국민공감포럼 및 환경기술(R&amp;D 신기술) 합동성과발표회"
-								data-creative_name="PC_카테고리_세미나/컨퍼런스_모임" data-creative_slot="2">
-									<img src="https://cfile1.onoffmix.com/images/event/248537/s"
-									alt="2021년 국민공감포럼 및 환경기술(R&amp;D 신기술) 합동성과발표회">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68605?url=%2Fevent%2F248973" target="_blank"
-								title="[AICON 광주 2021] 컨퍼런스 참가자 사전등록" data-event_no="248973"
-								data-event_title="[AICON 광주 2021] 컨퍼런스 참가자 사전등록"
-								data-creative_name="PC_카테고리_세미나/컨퍼런스_모임" data-creative_slot="3">
-									<img src="https://cfile1.onoffmix.com/images/event/248973/s"
-									alt="[AICON 광주 2021] 컨퍼런스 참가자 사전등록">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68318?url=%2Fevent%2F248489" target="_blank"
-								title="카카오브레인 {오픈미니컨}에 초대합니다." data-event_no="248489"
-								data-event_title="카카오브레인 {오픈미니컨}에 초대합니다."
-								data-creative_name="PC_카테고리_세미나/컨퍼런스_모임" data-creative_slot="4">
-									<img src="https://cfile1.onoffmix.com/images/event/248489/s"
-									alt="카카오브레인 {오픈미니컨}에 초대합니다.">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=087"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
 
 						</ul>
 						<div class="banner_area">
@@ -476,43 +1801,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68965?url=%2Fevent%2F249524" target="_blank"
-								title="제487회 취업의신 박장호대표의 무료취업특강! (1월 5일 수요일 오후 7시30분)"
-								data-event_no="249524"
-								data-event_title="제487회 취업의신 박장호대표의 무료취업특강! (1월 5일 수요일 오후 7시30분)"
-								data-creative_name="PC_카테고리_강연_모임" data-creative_slot="1"> <img
-									src="https://cfile1.onoffmix.com/images/event/249524/s"
-									alt="제487회 취업의신 박장호대표의 무료취업특강! (1월 5일 수요일 오후 7시30분)">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68785?url=%2Fevent%2F249209" target="_blank"
-								title="2021 서대문구 청년창업포럼" data-event_no="249209"
-								data-event_title="2021 서대문구 청년창업포럼"
-								data-creative_name="PC_카테고리_강연_모임" data-creative_slot="2"> <img
-									src="https://cfile1.onoffmix.com/images/event/249209/s"
-									alt="2021 서대문구 청년창업포럼">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68919?url=%2Fevent%2F249440" target="_blank"
-								title="2021년도 제8회 미핑캠퍼스 스타트업 창업 스터디" data-event_no="249440"
-								data-event_title="2021년도 제8회 미핑캠퍼스 스타트업 창업 스터디"
-								data-creative_name="PC_카테고리_강연_모임" data-creative_slot="3"> <img
-									src="https://cfile1.onoffmix.com/images/event/249440/s"
-									alt="2021년도 제8회 미핑캠퍼스 스타트업 창업 스터디">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68784?url=%2Fevent%2F249379" target="_blank"
-								title="[EXA] 익스트림 성장 플랫폼 EXA 13기 모집 (~12/27)"
-								data-event_no="249379"
-								data-event_title="[EXA] 익스트림 성장 플랫폼 EXA 13기 모집 (~12/27)"
-								data-creative_name="PC_카테고리_강연_모임" data-creative_slot="4"> <img
-									src="https://cfile1.onoffmix.com/attach/5GrSVgUed6jwOhvHCMX9cxFKfo327t4Q"
-									alt="[EXA] 익스트림 성장 플랫폼 EXA 13기 모집 (~12/27)">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=086"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
 
 						</ul>
 						<div class="banner_area">
@@ -534,43 +1823,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68612?url=%2Fevent%2F248866" target="_blank"
-								title="[서울] 인문학 북클럽 (토일 2시)" data-event_no="248866"
-								data-event_title="[서울] 인문학 북클럽 (토일 2시)"
-								data-creative_name="PC_카테고리_취미/소모임_모임" data-creative_slot="1">
-									<img src="https://cfile1.onoffmix.com/images/event/248866/s"
-									alt="[서울] 인문학 북클럽 (토일 2시)">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68646?url=%2Fevent%2F249185" target="_blank"
-								title="[글초보 취미반] 사적이지만 소중한 나의 이야기 &lt;사소한 글쓰기 워크숍&gt; 평일반"
-								data-event_no="249185"
-								data-event_title="[글초보 취미반] 사적이지만 소중한 나의 이야기 &lt;사소한 글쓰기 워크숍&gt; 평일반"
-								data-creative_name="PC_카테고리_취미/소모임_모임" data-creative_slot="2">
-									<img src="https://cfile1.onoffmix.com/images/event/249185/s"
-									alt="[글초보 취미반] 사적이지만 소중한 나의 이야기 &lt;사소한 글쓰기 워크숍&gt; 평일반">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68710?url=%2Fevent%2F249143" target="_blank"
-								title="대구 최대 직장인/대학생 시간관리, 자기계발 모임! 청바지 20기 멤버모집"
-								data-event_no="249143"
-								data-event_title="대구 최대 직장인/대학생 시간관리, 자기계발 모임! 청바지 20기 멤버모집"
-								data-creative_name="PC_카테고리_취미/소모임_모임" data-creative_slot="3">
-									<img src="https://cfile1.onoffmix.com/images/event/249143/s"
-									alt="대구 최대 직장인/대학생 시간관리, 자기계발 모임! 청바지 20기 멤버모집">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68786?url=%2Fevent%2F249380" target="_blank"
-								title="에스페란토 소개와 맛보기 수업" data-event_no="249380"
-								data-event_title="에스페란토 소개와 맛보기 수업"
-								data-creative_name="PC_카테고리_취미/소모임_모임" data-creative_slot="4">
-									<img src="https://cfile1.onoffmix.com/images/event/249380/s"
-									alt="에스페란토 소개와 맛보기 수업">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=090"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
 
 						</ul>
 						<div class="banner_area">
@@ -592,44 +1845,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68481?url=%2Fevent%2F248738" target="_blank"
-								title="The Third COVID Winter : 세 번째 겨울" data-event_no="248738"
-								data-event_title="The Third COVID Winter : 세 번째 겨울"
-								data-creative_name="PC_카테고리_문화/예술/방송_모임" data-creative_slot="1">
-									<img src="https://cfile1.onoffmix.com/images/event/248738/s"
-									alt="The Third COVID Winter : 세 번째 겨울">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68207?url=%2Fevent%2F248472" target="_blank"
-								title="소복소복, 겨울 溫(온) 책보고" data-event_no="248472"
-								data-event_title="소복소복, 겨울 溫(온) 책보고"
-								data-creative_name="PC_카테고리_문화/예술/방송_모임" data-creative_slot="2">
-									<img src="https://cfile1.onoffmix.com/images/event/248472/s"
-									alt="소복소복, 겨울 溫(온) 책보고">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68967?url=%2Fevent%2F248151" target="_blank"
-								title="[대관 공모] KOCCA 콘텐츠문화광장 2022년 1분기 대관 안내"
-								data-event_no="248151"
-								data-event_title="[대관 공모] KOCCA 콘텐츠문화광장 2022년 1분기 대관 안내"
-								data-creative_name="PC_카테고리_문화/예술/방송_모임" data-creative_slot="3">
-									<img src="https://cfile1.onoffmix.com/images/event/248151/s"
-									alt="[대관 공모] KOCCA 콘텐츠문화광장 2022년 1분기 대관 안내">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68966?url=%2Fevent%2F249522" target="_blank"
-								title="스텔라장과 함께하는 과학 팟캐스트 &lt;과장창&gt; 공개방송"
-								data-event_no="249522"
-								data-event_title="스텔라장과 함께하는 과학 팟캐스트 &lt;과장창&gt; 공개방송"
-								data-creative_name="PC_카테고리_문화/예술/방송_모임" data-creative_slot="4">
-									<img src="https://cfile1.onoffmix.com/images/event/249522/s"
-									alt="스텔라장과 함께하는 과학 팟캐스트 &lt;과장창&gt; 공개방송">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=088"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
-
+							
 						</ul>
 						<div class="banner_area">
 
@@ -650,42 +1866,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68718?url=%2Fevent%2F248744" target="_blank"
-								title="제주 주요작물 자동탐지 데이터  온라인 해커톤" data-event_no="248744"
-								data-event_title="제주 주요작물 자동탐지 데이터  온라인 해커톤"
-								data-creative_name="PC_카테고리_공모전_모임" data-creative_slot="1">
-									<img src="https://cfile1.onoffmix.com/images/event/248744/s"
-									alt="제주 주요작물 자동탐지 데이터  온라인 해커톤">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68969?url=%2Fevent%2F249308" target="_blank"
-								title="[요즘것들 오리지널] 콘테스트위너 2기 선착순 9명 모집!" data-event_no="249308"
-								data-event_title="[요즘것들 오리지널] 콘테스트위너 2기 선착순 9명 모집!"
-								data-creative_name="PC_카테고리_공모전_모임" data-creative_slot="2">
-									<img src="https://cfile1.onoffmix.com/images/event/249308/s"
-									alt="[요즘것들 오리지널] 콘테스트위너 2기 선착순 9명 모집!">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68717?url=%2Fevent%2F248913" target="_blank"
-								title="[서울콜라주] 서울, 감성입히기" data-event_no="248913"
-								data-event_title="[서울콜라주] 서울, 감성입히기"
-								data-creative_name="PC_카테고리_공모전_모임" data-creative_slot="3">
-									<img src="https://cfile1.onoffmix.com/images/event/248913/s"
-									alt="[서울콜라주] 서울, 감성입히기">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68791?url=%2Fevent%2F249374" target="_blank"
-								title="[서울시/채용] 다들 방학동안 뭐할거에요?! 실무역량 인증받고, 서비스기획자로 취업해요! (~12/21)"
-								data-event_no="249374"
-								data-event_title="[서울시/채용] 다들 방학동안 뭐할거에요?! 실무역량 인증받고, 서비스기획자로 취업해요! (~12/21)"
-								data-creative_name="PC_카테고리_공모전_모임" data-creative_slot="4">
-									<img src="https://cfile1.onoffmix.com/images/event/249374/s"
-									alt="[서울시/채용] 다들 방학동안 뭐할거에요?! 실무역량 인증받고, 서비스기획자로 취업해요! (~12/21)">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=092"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
 
 						</ul>
 						<div class="banner_area">
@@ -731,43 +1912,7 @@
 						<ul class="list_col">
 							<li class="looking_for"></li>
 
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68720?url=%2Fevent%2F249301" target="_blank"
-								title="Jira Automation - 단순 반복 작업은 자동화하고 전략적인 업무에 집중하기"
-								data-event_no="249301"
-								data-event_title="Jira Automation - 단순 반복 작업은 자동화하고 전략적인 업무에 집중하기"
-								data-creative_name="PC_카테고리_기타_모임" data-creative_slot="1"> <img
-									src="https://cfile1.onoffmix.com/images/event/249301/s"
-									alt="Jira Automation - 단순 반복 작업은 자동화하고 전략적인 업무에 집중하기">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68762?url=%2Fevent%2F249058" target="_blank"
-								title="2022년 상반기 경기글로벌게임센터 신규 입주기업 모집" data-event_no="249058"
-								data-event_title="2022년 상반기 경기글로벌게임센터 신규 입주기업 모집"
-								data-creative_name="PC_카테고리_기타_모임" data-creative_slot="2"> <img
-									src="https://cfile1.onoffmix.com/images/event/249058/s"
-									alt="2022년 상반기 경기글로벌게임센터 신규 입주기업 모집">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68801?url=%2Fevent%2F249397" target="_blank"
-								title="[Microsoft Power Platform] 기업용 RPA &amp; APP 개발 무료 교육에 초대합니다!"
-								data-event_no="249397"
-								data-event_title="[Microsoft Power Platform] 기업용 RPA &amp; APP 개발 무료 교육에 초대합니다!"
-								data-creative_name="PC_카테고리_기타_모임" data-creative_slot="3"> <img
-									src="https://cfile1.onoffmix.com/images/event/249397/s"
-									alt="[Microsoft Power Platform] 기업용 RPA &amp; APP 개발 무료 교육에 초대합니다!">
-							</a></li>
-							<li class="list_item"><a class="gtag_bn_item_type1"
-								href="/cs/a/68164?url=%2Fevent%2F248298" target="_blank"
-								title="KBS방송아카데미 115기 정규과정 수강생 모집" data-event_no="248298"
-								data-event_title="KBS방송아카데미 115기 정규과정 수강생 모집"
-								data-creative_name="PC_카테고리_기타_모임" data-creative_slot="4"> <img
-									src="https://cfile1.onoffmix.com/images/event/248298/s"
-									alt="KBS방송아카데미 115기 정규과정 수강생 모집">
-							</a></li>
-							<li class="see_more"><a href="/event/main?c=096"
-								class="btn_all_event">더보기 <span>></span>
-							</a></li>
+							
 
 						</ul>
 						<div class="banner_area">
@@ -796,7 +1941,7 @@
 						<%if(dto!=null) {%>
 						<a href="/prom/exhibition" class="link_item exhibition"
 							data-c="b09b92031">나의 캘린더</a> <a href="/ch"
-							class="link_item channel" data-c="b09b92041">우리들의 이야기</a>
+							class="link_item channel" data-c="b09b92041">공유게시판</a>
 						<%}else {%>
 						<a href="/ch" class="link_item channel" data-c="b09b92041">우리들의
 							이야기</a>
@@ -839,163 +1984,110 @@
 			<div class="content_wrap wide_max_width_area">
 				<div class="banner_branding"></div>
 
-				<div class="banner_top_area">
+				<div class="banner_top_area" style="text-align:center;margin:0 auto;" >
+					<div style="border:0px solid;display:inline-block; padding:50 50 50 50"; height:100; width:>
+						
+						<section class="keyword_search_area">
+				<form name="searchBoxEventForm" action="/event?s="
+					origaction="https://www.onoffmix.com/event?s="
+					class="keyword_search_form" origtarget>
+					<input type="hidden" name="pageRows" value="12" _default="12"
+						_search="12"> <input type="hidden" name="page" value="1"
+						id="page"> <input type="hidden" id="sort-category"
+						value="categoryIdx|ASC"> <input type="hidden" name="order"
+						value="popularity"> <input type="hidden" name="searchAll"
+						value=""> <input type="hidden" name="research" value="">
+					<input type="hidden" name="search_date" id="search_date" value="">
+					<input type="hidden" name="exclude" value=""> <input
+						type="hidden" name="getPinCount" value="true"> <input
+						type="hidden" name="getAttendCount" value="true"> <input
+						type="hidden" name="blockAbuse" value="true"> <input
+						type="hidden" name="nowRecruitingEvent" value=""> <input
+						type="hidden" name="IngData" value=""> <input
+						type="hidden" name="order_gubun" value="N"> <input
+						type="hidden" id="endEventPage" value=""> <input
+						type="hidden" id="totalEventPage" value=""> <input
+						type="hidden" name="page_gubun" id="page_gubun" value="">
+					<input type="hidden" name="eof" id="eof" value="0">
 
+					<!-- data reset -->
+					<div class="search_form_top" style="m">
+						<h3 class="sub_title">상세검색</h3>
 
-					<ul class="title_list_area"></ul>
-					<ul class="banner_text">
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68588?url=%2Fevent%2F248973" target="_blank"
-							title="[AICON 광주 2021] 컨퍼런스 참가자 사전등록" data-c="aa16fe1a1"
-							data-event_no="248973"
-							data-event_title="[AICON 광주 2021] 컨퍼런스 참가자 사전등록"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="1"> <img
-								src="https://cfile1.onoffmix.com/attach/5V2FOpfPCzxL97lgbmNYT0DI4StKqnwk"
-								alt="[AICON 광주 2021] 컨퍼런스 참가자 사전등록">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68693?url=%2Fevent%2F249157" target="_blank"
-							title="2022 세계시장 진출전략 설명회" data-c="aa16fe1a2"
-							data-event_no="249157" data-event_title="2022 세계시장 진출전략 설명회"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="2"> <img
-								src="https://cfile1.onoffmix.com/attach/nF6IWO3GUp7fJerjt5XVdQxKRc21ETsL"
-								alt="2022 세계시장 진출전략 설명회">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68818?url=%2Fevent%2F249452" target="_blank"
-							title="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나" data-c="aa16fe1a3"
-							data-event_no="249452"
-							data-event_title="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="3"> <img
-								src="https://cfile1.onoffmix.com/attach/6WHCUGrqPSViI4bz2t7sAmD3Q5XJodBL"
-								alt="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68883?url=%2Fevent%2F249195" target="_blank"
-							title="더쿼드포럼 제 2회 청년을 위한 지식캠프" data-c="aa16fe1a4"
-							data-event_no="249195" data-event_title="더쿼드포럼 제 2회 청년을 위한 지식캠프"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="4"> <img
-								src="https://cfile1.onoffmix.com/attach/IzVLHWs8vYEiaNRBdgT5w1rX0QSbotl2"
-								alt="더쿼드포럼 제 2회 청년을 위한 지식캠프">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68894?url=%2Fevent%2F249295" target="_blank"
-							title="검단신도시 스마트서비스 아이디어 공모전" data-c="aa16fe1a5"
-							data-event_no="249295" data-event_title="검단신도시 스마트서비스 아이디어 공모전"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="5"> <img
-								src="https://cfile1.onoffmix.com/attach/w6qfnDIbuBs0PKxolXk97L8zZVhU3eF1"
-								alt="검단신도시 스마트서비스 아이디어 공모전">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68903?url=%2Fevent%2F249379" target="_blank"
-							title="익스트림 성장 플랫폼 EXA 13기 모집" data-c="aa16fe1a6"
-							data-event_no="249379"
-							data-event_title="[EXA] 익스트림 성장 플랫폼 EXA 13기 모집 (~12/27)"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="6"> <img
-								src="https://cfile1.onoffmix.com/attach/80pvxtfYCWoZEsTuPFnHLg9S61rdbX2y"
-								alt="익스트림 성장 플랫폼 EXA 13기 모집">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/68872?url=%2Fevent%2F249482" target="_blank"
-							title="한전KDN 사회적경제 기업 경영개선 지원사업" data-c="aa16fe1a7"
-							data-event_no="249482"
-							data-event_title="한전KDN 사회적경제 기업 경영개선 지원사업"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="7"> <img
-								src="https://cfile1.onoffmix.com/attach/ExDTubGtJzHjqihBm3dRS6crpOFwPokZ"
-								alt="한전KDN 사회적경제 기업 경영개선 지원사업">
-						</a></li>
-						<li><a class="gtag_bn_item_type1"
-							href="/cs/a/59475?url=https%3A%2F%2Fonoffmix.com%2Fservice%2Fadvert%2Fproduct%2Fpartner%3F39degree"
-							target="_blank" title="&quot;릴레이&quot; 라이브 서비스"
-							data-c="aa16fe1a8" data-event_no="out_59475"
-							data-event_title="릴레이 라이브 서비스"
-							data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="8"> <img
-								src="https://cfile1.onoffmix.com/attach/V2QUHb796yIcX3khLxRaivmKgB0pMESz"
-								alt="&quot;릴레이&quot; 라이브 서비스">
-						</a></li>
-					</ul>
-					<div class="full_view_area">
-						<ul>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68588?url=%2Fevent%2F248973" target="_blank"
-								title="[AICON 광주 2021] 컨퍼런스 참가자 사전등록" data-c="aa16fe1a1"
-								data-event_no="248973"
-								data-event_title="[AICON 광주 2021] 컨퍼런스 참가자 사전등록"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="1">
-									<img
-									src="https://cfile1.onoffmix.com/attach/5V2FOpfPCzxL97lgbmNYT0DI4StKqnwk"
-									alt="[AICON 광주 2021] 컨퍼런스 참가자 사전등록">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68693?url=%2Fevent%2F249157" target="_blank"
-								title="2022 세계시장 진출전략 설명회" data-c="aa16fe1a2"
-								data-event_no="249157" data-event_title="2022 세계시장 진출전략 설명회"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="2">
-									<img
-									src="https://cfile1.onoffmix.com/attach/nF6IWO3GUp7fJerjt5XVdQxKRc21ETsL"
-									alt="2022 세계시장 진출전략 설명회">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68818?url=%2Fevent%2F249452" target="_blank"
-								title="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나" data-c="aa16fe1a3"
-								data-event_no="249452"
-								data-event_title="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="3">
-									<img
-									src="https://cfile1.onoffmix.com/attach/6WHCUGrqPSViI4bz2t7sAmD3Q5XJodBL"
-									alt="세일즈포스를 활용한 영업 프로세스 혁신 전략 웨비나">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68883?url=%2Fevent%2F249195" target="_blank"
-								title="더쿼드포럼 제 2회 청년을 위한 지식캠프" data-c="aa16fe1a4"
-								data-event_no="249195" data-event_title="더쿼드포럼 제 2회 청년을 위한 지식캠프"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="4">
-									<img
-									src="https://cfile1.onoffmix.com/attach/IzVLHWs8vYEiaNRBdgT5w1rX0QSbotl2"
-									alt="더쿼드포럼 제 2회 청년을 위한 지식캠프">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68894?url=%2Fevent%2F249295" target="_blank"
-								title="검단신도시 스마트서비스 아이디어 공모전" data-c="aa16fe1a5"
-								data-event_no="249295" data-event_title="검단신도시 스마트서비스 아이디어 공모전"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="5">
-									<img
-									src="https://cfile1.onoffmix.com/attach/w6qfnDIbuBs0PKxolXk97L8zZVhU3eF1"
-									alt="검단신도시 스마트서비스 아이디어 공모전">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68903?url=%2Fevent%2F249379" target="_blank"
-								title="익스트림 성장 플랫폼 EXA 13기 모집" data-c="aa16fe1a6"
-								data-event_no="249379"
-								data-event_title="[EXA] 익스트림 성장 플랫폼 EXA 13기 모집 (~12/27)"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="6">
-									<img
-									src="https://cfile1.onoffmix.com/attach/80pvxtfYCWoZEsTuPFnHLg9S61rdbX2y"
-									alt="익스트림 성장 플랫폼 EXA 13기 모집">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/68872?url=%2Fevent%2F249482" target="_blank"
-								title="한전KDN 사회적경제 기업 경영개선 지원사업" data-c="aa16fe1a7"
-								data-event_no="249482"
-								data-event_title="한전KDN 사회적경제 기업 경영개선 지원사업"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="7">
-									<img
-									src="https://cfile1.onoffmix.com/attach/ExDTubGtJzHjqihBm3dRS6crpOFwPokZ"
-									alt="한전KDN 사회적경제 기업 경영개선 지원사업">
-							</a></li>
-							<li><a class="gtag_bn_item_type1"
-								href="/cs/a/59475?url=https%3A%2F%2Fonoffmix.com%2Fservice%2Fadvert%2Fproduct%2Fpartner%3F39degree"
-								target="_blank" title="&quot;릴레이&quot; 라이브 서비스"
-								data-c="aa16fe1a8" data-event_no="out_59475"
-								data-event_title="릴레이 라이브 서비스"
-								data-creative_name="PC_메인_상단배너 타입2" data-creative_slot="8">
-									<img
-									src="https://cfile1.onoffmix.com/attach/V2QUHb796yIcX3khLxRaivmKgB0pMESz"
-									alt="&quot;릴레이&quot; 라이브 서비스">
-							</a></li>
-						</ul>
-						<button type="button" class="full_view_close_btn">리스트 보기
-							닫기</button>
+						<input type="reset" class="btn_reset  hidden" id="reset"
+							value="초기화" rel="s=%EC%9E%90%EB%B0%94">
+					</div>
+
+					<input type="hidden" id="hostNumber" name="u" value="">
+
+					<!-- category -->
+					<fieldset class="filter_category_area">
+
+						<select id="area_sel" name="mem_area" style="width: 200px;">
+							<option value="">지역(전체)</option>
+							<option value="서울">서울</option>
+							<option value="부산">부산</option>
+							<option value="대구">대구</option>
+							<option value="인천">인천</option>
+							<option value="광주">광주</option>
+							<option value="대전">대전</option>
+							<option value="울산">울산</option>
+							<option value="세종">세종</option>
+							<option value="경기">경기</option>
+							<option value="강원">강원</option>
+							<option value="충청북도">충북</option>
+							<option value="충청남도">충남</option>
+							<option value="전라북도">전북</option>
+							<option value="전라남도">전남</option>
+							<option value="경상북도">경북</option>
+							<option value="경상남도">경남</option>
+							<option value="제주">제주</option>
+						</select>
+					</fieldset>
+					<!-- Time -->
+					<fieldset class="filter_time_pay_type">
+						<select id="part_sel" name="mem_part" style="width: 200px; margin: 10px;">
+							<option value="">교육분야(전체)</option>
+							<option value="빅데이터">빅데이터</option>
+							<option value="인공지능">인공지능</option>
+							<option value="백엔드">백엔드</option>
+							<option value="프론트엔드">프론트엔드</option>
+							<option value="풀스택">풀스택</option>
+							<option value="모바일">모바일</option>
+							<option value="보안등">보안.네트워크.클라우드</option>
+							<option value="융합기술">융합기술</option>
+							<option value="콘텐츠제작">콘텐츠제작</option>
+							<option value="데이터베이스">데이터베이스</option>
+							<option value="블록체인">블록체인</option>
+							<option value="자격과정">자격과정</option>
+							<option value="기타">기타</option>
+						</select>
+					</fieldset>
+				
+					<!-- search_scope -->
+					<fieldset class="filter_search_scope ">
+						<select id="kind_sel" name="mem_kind" style="width: 200px;">
+							<option value="">교육유형(전체)</option>
+							<option value="내일배움카드">구직자 : 내일배움카드</option>
+							<option value="국가기간전략산업직종">구직자 : 국가기간전략산업직종</option>
+							<option value="근로자카드">근로자 : 일반훈련</option>
+							<option value="사업주">근로자 : 기업훈련</option>
+						</select>
+					</fieldset>
+
+					<div>
+						<!-- search -->
+						<fieldset class="search_area">
+							<input type="text" id="keywordSearch" name="edu_info"
+								class="keyword_search" placeholder="검색어 입력" title="검색어 입력"
+								style="width: 500px;"> <input type="text"
+								style="display: none">
+
+							<button onClick="EduSearch()" type="button" class="btn_keyword_search">검색</button>
+						</fieldset>
+						
+						
+						
 					</div>
 				</div>
 			</div>

@@ -1,5 +1,4 @@
 
-<%@page import="DTO.Member_DTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <html lang="ko">
@@ -302,11 +301,16 @@
    font-weight: bold;
 }
 
+#교육분야 {
+	background-image: url("img/보안등.png");
+	width: 100%;
+	height: 60%;
+	object-fit: cover;
+}
 
 </style>
 </head>
 <body class="onoffmix">
-<%Member_DTO dto = (Member_DTO)session.getAttribute("dto");%>
 	<article class="ie_end_support_popup_wrap">
 		<h1>인터넷 익스플로러 (IE) 브라우저 지원 종료 안내</h1>
 		<p>
@@ -388,12 +392,8 @@
 
 			<div class="user_area">
 				<ul class="service_menu">
-					<%if(dto==null){ %>
-                                                            <li class="list_item login"><a href="./Login.html">로그인</a></li>
-                                    <li class="list_item join"><a href="./Join.html">회원가입</a></li>
-                                    <%}else{ %>
-                                    <li class="list_item login"><a href="LogoutCon">로그아웃</a></li>
-                                    <%} %>
+					<li class="list_item login"><a href="Login.html">로그인</a></li>
+					<li class="list_item join"><a href="Join.html">회원가입</a></li>
 				</ul>
 
 				<ul class="member_menu">
@@ -435,7 +435,7 @@
 						<section class="category_event">
 							<ul class="list_col">
 
-								<li class="list_item"><a href="Edu_빅데이터.jsp">빅데이터</a>
+								<li class="list_item"><a href="Edu_빅데이터">빅데이터</a>
 								</li>
 								<li class="list_item"><a href="/event/main/?c=087">인공지능</a>
 								</li>
@@ -953,14 +953,11 @@
 					<div class="link_section">
 
 
-						<%if(dto!=null) {%>
 						<a href="/prom/exhibition" class="link_item exhibition"
-							data-c="b09b92031">나의 캘린더</a> <a href="/ch"
-							class="link_item channel" data-c="b09b92041">우리들의 이야기</a>
-						<%}else {%>
-						<a href="/ch" class="link_item channel" data-c="b09b92041">우리들의
-							이야기</a>
-						<%} %>
+							data-c="b09b92031">기획전</a> <a href="/ch"
+							class="link_item channel" data-c="b09b92041">채널</a>
+					</div>
+
 					<!-- partner center -->
 
 					<!---->
@@ -983,121 +980,14 @@
 			<h2 class="main_title">
 				<span class="keyword"></span> 검색결과 <span class="total"></span>
 			</h2>
-			<!-- keyword search area -->
-			<section class="keyword_search_area">
-				<form name="searchBoxEventForm" action="/event?s="
-					origaction="https://www.onoffmix.com/event?s="
-					class="keyword_search_form" origtarget>
-					<input type="hidden" name="pageRows" value="12" _default="12"
-						_search="12"> <input type="hidden" name="page" value="1"
-						id="page"> <input type="hidden" id="sort-category"
-						value="categoryIdx|ASC"> <input type="hidden" name="order"
-						value="popularity"> <input type="hidden" name="searchAll"
-						value=""> <input type="hidden" name="research" value="">
-					<input type="hidden" name="search_date" id="search_date" value="">
-					<input type="hidden" name="exclude" value=""> <input
-						type="hidden" name="getPinCount" value="true"> <input
-						type="hidden" name="getAttendCount" value="true"> <input
-						type="hidden" name="blockAbuse" value="true"> <input
-						type="hidden" name="nowRecruitingEvent" value=""> <input
-						type="hidden" name="IngData" value=""> <input
-						type="hidden" name="order_gubun" value="N"> <input
-						type="hidden" id="endEventPage" value=""> <input
-						type="hidden" id="totalEventPage" value=""> <input
-						type="hidden" name="page_gubun" id="page_gubun" value="">
-					<input type="hidden" name="eof" id="eof" value="0">
-
-					<!-- data reset -->
-					<div class="search_form_top">
-						<h3 class="sub_title">상세검색</h3>
-
-						<input type="reset" class="btn_reset  hidden" id="reset"
-							value="초기화" rel="s=%EC%9E%90%EB%B0%94">
-					</div>
-
-					<input type="hidden" id="hostNumber" name="u" value="">
-
-					<!-- category -->
-					<fieldset class="filter_category_area">
-
-						<select id="area_sel" name="mem_area" style="width: 200px;">
-							<option value="">지역(전체)</option>
-							<option value="서울">서울</option>
-							<option value="부산">부산</option>
-							<option value="대구">대구</option>
-							<option value="인천">인천</option>
-							<option value="광주">광주</option>
-							<option value="대전">대전</option>
-							<option value="울산">울산</option>
-							<option value="세종">세종</option>
-							<option value="경기">경기</option>
-							<option value="강원">강원</option>
-							<option value="충청북도">충북</option>
-							<option value="충청남도">충남</option>
-							<option value="전라북도">전북</option>
-							<option value="전라남도">전남</option>
-							<option value="경상북도">경북</option>
-							<option value="경상남도">경남</option>
-							<option value="제주">제주</option>
-						</select>
-					</fieldset>
-					<!-- Time -->
-					<fieldset class="filter_time_pay_type">
-						<select id="part_sel" name="mem_part" style="width: 200px;">
-							<option value="">교육분야(전체)</option>
-							<option value="빅데이터">빅데이터</option>
-							<option value="인공지능">인공지능</option>
-							<option value="백엔드">백엔드</option>
-							<option value="프론트엔드">프론트엔드</option>
-							<option value="풀스택">풀스택</option>
-							<option value="모바일">모바일</option>
-							<option value="보안등">보안.네트워크.클라우드</option>
-							<option value="융합기술">융합기술</option>
-							<option value="콘텐츠제작">콘텐츠제작</option>
-							<option value="데이터베이서">데이터베이스</option>
-							<option value="블록체인">블록체인</option>
-							<option value="자격과정">자격과정</option>
-							<option value="기타">기타</option>
-						</select>
-					</fieldset>
+			
+			
+			
+			<div id="교육분야">
 				
-					<!-- search_scope -->
-					<fieldset class="filter_search_scope ">
-						<select id="kind_sel" name="mem_kind" style="width: 200px;">
-							<option value="">교육유형(전체)</option>
-							<option value="내일배움카드">구직자 : 내일배움카드</option>
-							<option value="국가기간전략산업직종">구직자 : 국가기간전략산업직종</option>
-							<option value="근로자카드">근로자 : 일반훈련</option>
-							<option value="사업주">근로자 : 기업훈련</option>
-						</select>
-					</fieldset>
-
-					<div>
-						<!-- search -->
-						<fieldset class="search_area">
-							<input type="text" id="keywordSearch" name="edu_info"
-								class="keyword_search" placeholder="검색어 입력" title="검색어 입력"
-								style="width: 400px;"> <input type="text"
-								style="display: none">
-
-							<button onClick="EduSearch()" type="button" class="btn_keyword_search">검색</button>
-						</fieldset>
-
-						<!-- end event -->
-						<fieldset class="end_event">
-							<input type="checkbox" class="endEvent" id="out_time_data"
-								name="out_time_data" value="Y"> <label
-								for="out_time_data">종료된 교육과정 포함</label>
-						</fieldset>
-					</div>
-
-					<!-- search word area -->
-					<div class="search_word_area"></div>
-				</form>
-
-			</section>
-
-
+			</div>
+			<!-- keyword search area -->
+			
 			<section class="event_main_area">
 				<div class="title_bar" style="">
 					<ul class="sort_menu">
@@ -1138,7 +1028,7 @@
      						 <p>훈련대상</p>
     					</div>
   					</div>
-
+  					
 				</div>
 				
 
@@ -1173,77 +1063,7 @@
 	<script src="/static_html/js/pc/dist/event/event-search.js"></script> -->
 
 	<!-- =================================== Footer Start =================================== -->
-	<footer id="footer" class="footer_wrap ">
-		<div class="information_area wide_max_width_area">
-			<div class="contact_list">
-				<strong>(주)온오프믹스</strong>
-				<ul>
-					<li>대표이사 <span>양준철</span></li>
-					<li>개인정보관리책임자 <span>이승희</span></li>
-					<li>사업자등록번호 <span><i>221-81-34988</i></span></li>
-					<li>통신판매업 신고번호 <span>제<i>2015</i>&nbsp;-&nbsp;서울서초&nbsp;-&nbsp;<i>0928</i>호
-					</span></li>
-					<li>서울특별시 서초구 강남대로<i>79</i>길&nbsp;<i>59</i>&nbsp;새로나빌딩&nbsp;<i>3</i>층
-					</li>
-					<li><span>Tel : 02-6080-5579</span> <span>Fax :
-							02-6080-8089</span> <span>Email : <a
-							href="mailto:webmaster@onoffmix.com"> webmaster@onoffmix.com</a></span>
-					</li>
-				</ul>
-			</div>
-			<div class="link_list">
-				<ul class="company_link">
-					<li><a href="http://corp.onoffmix.com/" target="_blank">회사소개</a></li>
-					<li><a href="https://www.onoffmix.com/legal/agreement"
-						target="_blank">서비스약관 및 정책</a></li>
-					<li><a href="https://www.onoffmix.com/legal/privacy"
-						target="_blank"><strong>개인정보처리방침</strong></a></li>
-				</ul>
-				<ul class="cs_link">
-					<li><a href="https://www.onoffmix.com/cs" target="_blank"><strong>고객센터</strong></a></li>
-					<li><a href="https://www.onoffmix.com/cs/inquire"
-						target="_blank">문의하기</a></li>
-					<li><a href="/service#join" target="_blank">서비스안내</a></li>
-					<li><a href="/cs/faq" target="_blank">FAQ</a></li>
-					<li><a href="http://apps.onoffmix.com" target="_blank">앱다운로드</a></li>
-				</ul>
-				<ul class="channel_link">
-					<li><a href="/ch" target="_blank">채널</a>
-					<li>
-					<li><a href="https://place.onoffmix.com/" target="_blank">플레이스</a>
-					<li>
-					<li><a href="/service/advert/product/partner" target="_blank">파트너센터</a>
-					<li>
-					<li><a href="/ir/main" target="_blank">투자정보</a>
-					<li>
-				</ul>
-				<div class="link_button">
-					<a href="/newsletter" target="_blank">뉴스레터 구독하기</a> <a
-						href="/service/advert/product/guide" target="_blank">광고상품안내</a>
-				</div>
-			</div>
-			<div class="footer_bottom">
-				<p>
-					<span>온오프믹스는 통신판매중개자이며 모임에 대한 당사자 및 주최자가 아닙니다. 따라서 온오프믹스는
-						등록된 모임에 대하여 책임을 지지 않습니다.</span> <span>copyright © ONOFFMIX.COM,
-						All Rights Reserved.</span>
-				</p>
-				<ul>
-					<li><a href="https://blog.naver.com/onoffmix" target="_blank"
-						title="온오프믹스 네이버블로그">온오프믹스 네이버블로그</a></li>
-					<li><a href="https://brunch.co.kr/@onoffmix" target="_blank"
-						title="온오프믹스 브런치">온오프믹스 브런치</a></li>
-					<li><a href="https://www.facebook.com/onoffmix"
-						target="_blank" title="온오프믹스 페이스북">온오프믹스 페이스북</a></li>
-					<li><a href="https://www.instagram.com/onoffmix"
-						target="_blank" title="온오프믹스 인스타그램">온오프믹스 인스타그램</a></li>
-					<li><a
-						href="https://www.youtube.com/channel/UC2W4gjEfJBaEheQ1vwACVTg"
-						target="_blank" title="온오프믹스 유튜브">온오프믹스 유튜브</a></li>
-				</ul>
-			</div>
-		</div>
-	</footer>
+	
 	<!-- =================================== Footer End =================================== -->
 
 	<!-- Plugin  -->
@@ -1271,7 +1091,7 @@
 	
 	let boardList;
 	
-	function EduSearch() {
+	$(document).ready(function() {
 		
 		$.ajax({
 			url : "EduCon",
@@ -1279,13 +1099,13 @@
 			// async: false,
 			data : {
 				
-				"edu_info" : $('input[name=edu_info]').val(),
+				"edu_info" : "",
 				// edu_name, edu_org
 				
-				"edu_addr" : $('#area_sel').val(),
-				"edu_part" : $('#part_sel').val(),
-				"edu_kind" : $('#kind_sel').val(),
-				"out_time_data" : $('input[name=out_time_data]:checked').val()
+				"edu_addr" : "",
+				"edu_part" : "보안등",
+				"edu_kind" : "",
+				"out_time_data" : ""
 					
 				},
 				
@@ -1315,7 +1135,7 @@
 			}
 		});
 		
-	}
+	});
 	
 	function paging(totalData, dataPerPage, pageCount, currentPage) {
 		  console.log("currentPage : " + currentPage);
@@ -1412,7 +1232,7 @@
 				table += '<div class="table-cell"><p>' + result.edu_kind + '</p></div></div>';
 			$('.table').append(table);
 		  }
-		} 
+		}
 	
 	</script>
 	
